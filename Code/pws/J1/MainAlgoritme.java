@@ -1,6 +1,5 @@
 package pws.J1;
 
-import pws.engine.*;
 import javax.swing.*;
 import java.awt.event.*;
 import java.awt.Color;

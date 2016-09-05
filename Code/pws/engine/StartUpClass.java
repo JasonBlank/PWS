@@ -14,11 +14,6 @@ public class StartUpClass {
 	public static void main(String[] args) {
 		Window window = new Window();
 		MainAlgoritme alg = new MainAlgoritme(window);
-		
-		for(int i = 0; i<5;i++){
-			try{TimeUnit.SECONDS.sleep(1);}catch(Exception e){System.out.println(e);}
-			Window wind = new Window();
-		}
 	}
 
 }
@@ -30,8 +25,9 @@ class Window extends JFrame{
 		setVisible(true);
 		double time = System.currentTimeMillis();
 		System.out.println(time);
-		boolean upwards = true, leftwards = true;
-		while(true){
+		
+		boolean upwards = true, leftwards = true;	
+		while(!upwards){
 			try{TimeUnit.MILLISECONDS.sleep(3);}catch(Throwable e){System.out.println(e);}
 			
 			if(getX() == 0) {leftwards = false;setLocation(1,getY());}
@@ -45,6 +41,7 @@ class Window extends JFrame{
 			if(upwards == false && leftwards == true) setLocation(getX()-1, getY()+1);
 			if(upwards == false && leftwards == false)setLocation(getX()+1, getY()+1);
 		}
+		
 	}
 	
 	private void initUI(){
@@ -52,10 +49,10 @@ class Window extends JFrame{
 		setIconImage(ding.getImage());
 		
 		setUndecorated(false);
-		setTitle("it's time to kill yourself you piece of shit");
+		setTitle("hey boy");
 		setLocationRelativeTo(rootPane);
 		setDefaultCloseOperation(EXIT_ON_CLOSE);
-		setBackground(Color.BLUE);
+		setBackground(Color.WHITE);
 		setResizable(true);
 		setSize(300,300);
 		
@@ -94,7 +91,7 @@ class Window extends JFrame{
 	private void createLayout(JComponent... arg) {
 
         Container pane = getContentPane();
-        pane.setBackground(Color.BLUE);
+        pane.setBackground(Color.WHITE);
         GroupLayout gl = new GroupLayout(pane);
         pane.setLayout(gl);
 
