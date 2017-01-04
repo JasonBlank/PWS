@@ -22,7 +22,7 @@ public class Rij {
 	public Vliegtuig get(){
 		if(putloc == getloc){
 			System.out.println("Rij leeg.");
-			return new Vliegtuig(300.0,300);
+			return new Vliegtuig(300.0,1,50 );
 		}
 		else{
 		Vliegtuig vgt = vtrij[getloc];

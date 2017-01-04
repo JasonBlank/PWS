@@ -1,4 +1,4 @@
-package pws.J1;
+package pws.algoritme;
 
 import javax.swing.*;
 import java.awt.event.*;
@@ -13,9 +13,22 @@ public class MainAlgoritme implements Runnable{
 		this.window = window;
 	}
 
-	public mainLoop(){
+
+	public void start(){
+		try{run();}catch (Exception e){
+			System.out.println("Error starting run() on MainAlgoritme");
+		}
+	}
+
+	public void run(){
 		while(running){		//Main loop
 
 		}
 	}
+
+	public void update(){
+
+	}
+
+
 }
