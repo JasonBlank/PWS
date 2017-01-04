@@ -26,7 +26,7 @@ class Window extends JFrame{
 		setVisible(true);
 		double time = System.currentTimeMillis();
 		System.out.println(time);
-		
+
 		boolean upwards = true, leftwards = true;	
 		while(upwards){
 			try{TimeUnit.MILLISECONDS.sleep(3);}catch(Throwable e){System.out.println(e);}
@@ -78,7 +78,7 @@ class Window extends JFrame{
 		normal.addActionListener((ActionEvent e) -> {setSize(500,300);});
 		view.add(normal);
 		JMenuItem fullscreen = new JMenuItem("Full Screen");
-		fullscreen.addActionListener((ActionEvent e) -> {setSize(1920,1080);setLocation(2,3);});
+		fullscreen.addActionListener((ActionEvent e) -> {setSize(Toolkit.getDefaultToolkit().getScreenSize());setLocation(2, 3);});
 		view.add(fullscreen);
 		menubar.add(view);
 		
