@@ -27,7 +27,7 @@ class Window extends JFrame{
 		System.out.println(time);
 		
 		boolean upwards = true, leftwards = true;	
-		while(!upwards){
+		while(upwards){
 			try{TimeUnit.MILLISECONDS.sleep(3);}catch(Throwable e){System.out.println(e);}
 			
 			if(getX() == 0) {leftwards = false;setLocation(1,getY());}
@@ -49,14 +49,14 @@ class Window extends JFrame{
 		setIconImage(ding.getImage());
 		
 		setUndecorated(false);
-		setTitle("hey boy");
+		setTitle("Algorhythm");
 		setLocationRelativeTo(rootPane);
 		setDefaultCloseOperation(EXIT_ON_CLOSE);
 		setBackground(Color.WHITE);
 		setResizable(true);
 		setSize(300,300);
 		
-		JButton button = new JButton("kms");
+		JButton button = new JButton("Exit");
 		button.addActionListener((ActionEvent event) -> {
             System.exit(0);
         }); 
