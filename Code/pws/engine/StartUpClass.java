@@ -3,7 +3,7 @@ package pws.engine;
 
 import javax.swing.*;
 import java.awt.Toolkit;
-import pws.J1.*;
+import pws.algoritme.*;
 import java.awt.event.*;
 import java.awt.Color;
 import java.awt.Container;
