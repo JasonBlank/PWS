@@ -3,7 +3,7 @@ package pws.engine;
 import java.util.Random;
 
 public class Timegeneration {
-	public static void main(String[] args){
+	public Timegeneration(){
 		int n = 40;
 		int[] ft = new int[n+1];
 		int[] tt = new int[n+1];
