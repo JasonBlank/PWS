@@ -11,7 +11,7 @@ import java.util.concurrent.TimeUnit;
 
 public class StartUpClass {
 
-	public static void main(String[] args)
+	public static void main(String[] args){
 		Window window = new Window();
 		MainAlgoritme alg = new MainAlgoritme(window);
 		alg.run();

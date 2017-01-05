@@ -7,6 +7,7 @@ import java.awt.Container;
 
 public class MainAlgoritme implements Runnable{
 	Object window;
+	private Vliegtuig vt;
 	boolean running = false;
 
 	public MainAlgoritme(Object window){
@@ -21,7 +22,11 @@ public class MainAlgoritme implements Runnable{
 	}
 
 	public void run(){
-		while(running){		//Main loop
+		Rij rij = new Rij();
+		while(running) {       				//Main loop
+			if(!rij.empty) vt = rij.get();
+
+			update();
 
 		}
 	}
