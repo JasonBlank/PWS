@@ -3,7 +3,7 @@ package pws.engine;
 public class Vliegtuig {
 	private double afstand_tot_landingsbaan, v_current;					//Afstand in m; Snelheid in m/s
 	private final int klasse, v_cruise;									//Gewichtsklasse (1-4); Zuinigste snelheid in m/s
-	private String name = "v1";
+	private String name = "v1";											//Naam van vliegtuig om te kunnen gebruiken in console output
 
 	public Vliegtuig(double afstand_tot_landingsbaan, int klasse, int v_cruise) {
 		this.afstand_tot_landingsbaan = afstand_tot_landingsbaan;
