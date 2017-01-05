@@ -5,10 +5,11 @@ import java.util.Random;
 public class Timegeneration {
 	public Timegeneration(){
 		int n = 40;
-		int[] ft = new int[n+1];
-		int[] tt = new int[n+1];
-		int[] lt = new int[n+1];
-		int randomtt = 0;
+		int[] ft = new int[n+1]; //first time
+		int[] tt = new int[n+1]; //target time
+		int[] lt = new int[n+1]; //latest time
+		int randomtt = 0;        //dat is het getal dat gegenereerd wordt per vliegtuig waarop ft tt en lt gebaseerd worden. Dit getal wordt zo geproduceerd dat alles als het goed is binnen de perken blijft
+		
 		
 		Random randomint = new Random();
 		
@@ -33,7 +34,7 @@ public class Timegeneration {
 			}
 			
 			
-			int zf = ft[i]/60;
+			int zf = ft[i]/60;                     // zf en af zijn gewoon random namen voor variablen die ik hier nodig had om de tijden in minuten:seconden te kunnen weergeven
 			int af = ft[i] - (zf*60);
 			System.out.println(zf + ":" + af);
 			
