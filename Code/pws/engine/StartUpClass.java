@@ -27,7 +27,10 @@ class Window extends JFrame{
 		double time = System.currentTimeMillis();
 		System.out.println(time);
 
-		boolean upwards = true, leftwards = true;	
+
+		//Leuk schermstuiterdingetje
+
+		/*boolean upwards = true, leftwards = true;
 		while(upwards){
 			try{TimeUnit.MILLISECONDS.sleep(3);}catch(Throwable e){System.out.println(e);}
 			
@@ -41,7 +44,7 @@ class Window extends JFrame{
 			if(upwards == true && leftwards == false) setLocation(getX()+1, getY()-1);
 			if(upwards == false && leftwards == true) setLocation(getX()-1, getY()+1);
 			if(upwards == false && leftwards == false)setLocation(getX()+1, getY()+1);
-		}
+		}*/
 		
 	}
 	
