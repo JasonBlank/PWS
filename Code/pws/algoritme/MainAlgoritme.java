@@ -5,19 +5,18 @@ import java.awt.event.*;
 import java.awt.Color;
 import java.awt.Container;
 
-public class MainAlgoritme implements Runnable{
+public static class MainAlgoritme implements Runnable{
 	Object window;
 	private Vliegtuig vt;
 	boolean running = false;
-	int septime[] = [[60,145,167,189],[60,98,122,145],[60,60,60,122],[60,60,60,60]];
 	public MainAlgoritme(Object window){
 		this.window = window;
 	}
-	int septime_now = septime[3][1];
 
 
 	public void start(){
-		System.out.println(septime_now);
+		System.out.println("Alg start");
+		System.out.println(SepTime.getSepTime(1,4));
 		try{run();}catch (Exception e){
 			System.out.println("Error starting run() on MainAlgoritme");
 		}
@@ -28,7 +27,7 @@ public class MainAlgoritme implements Runnable{
 		Rij rij = new Rij();
 		while(running) {       				//Main loop
 			if(!rij.empty) vt = rij.get();
-			System.out.println(SepTime.getSepTime(1,4));
+
 			update();
 
 		}
