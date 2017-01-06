@@ -10,8 +10,8 @@ import java.awt.Color;
 import java.awt.Container;
 
 public class MainAlgoritme implements Runnable{
-	
-	Object window;
+
+	private Object window;
 	private Vliegtuig vt;
 	boolean running = false;
 
@@ -20,11 +20,12 @@ public class MainAlgoritme implements Runnable{
 	}
 
 
-	public static void start(){
+	public void start(){
 		System.out.println("Alg start");
 		System.out.println(SepTime.getSepTime(1,4));
 		try{run();}catch (Exception e){
 			System.out.println("Error starting run() on MainAlgoritme");
+
 		}
 
 	}
