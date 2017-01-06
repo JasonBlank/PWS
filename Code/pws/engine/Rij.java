@@ -13,7 +13,7 @@ public class Rij {
 	}
 	
 	public void put(Vliegtuig vt){
-		private Vliegtuig vtrij2[] = new Vliegtuig[vtrij.length+1];
+		Vliegtuig vtrij2[] = new Vliegtuig[vtrij.length+1];
 		vtrij = vtrij2;
 		vtrij2[putloc] = vt;
 		putloc++;
