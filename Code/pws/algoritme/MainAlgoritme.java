@@ -5,6 +5,8 @@ import java.awt.event.*;
 import java.awt.Color;
 import java.awt.Container;
 
+import pws.engine.*;
+
 public static class MainAlgoritme implements Runnable{
 	Object window;
 	private Vliegtuig vt;
@@ -14,7 +16,7 @@ public static class MainAlgoritme implements Runnable{
 	}
 
 
-	public void start(){
+	public static void start(){
 		System.out.println("Alg start");
 		System.out.println(SepTime.getSepTime(1,4));
 		try{run();}catch (Exception e){
