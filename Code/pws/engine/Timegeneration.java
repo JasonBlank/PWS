@@ -15,10 +15,9 @@ public class Timegeneration {
 		
 		for(int i=1; i<=n; i++ ){
 			randomtt = randomint.nextInt(2100); // minimale tijd is 1960, maar ik neem 2100 omdat het anders door de random getallen kan zijn dat het niet kan anders, voornamelijk aan het begin of aan het eind, daar moeten we het nog even over hebben.
-		tt[i] = randomtt;
-	
-			
+			tt[i] = randomtt;
 		}
+
 		for(int i=1; i<=n; i++){
 			if(tt[i]<=60){
 				ft[i] = 0;

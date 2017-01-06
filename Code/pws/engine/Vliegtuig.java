@@ -25,7 +25,7 @@ public class Vliegtuig {
 		if(afstand_tot_landingsbaan > 0) {
 			afstand_tot_landingsbaan -= v_current * dtime;
 		}else{
-			System.out.println("--------------------\n|      plane " + name +"    |\n| Plane has landed |\n--------------------");
+			System.out.println("--------------------\n|      plane " + name + "    |\n| Plane has landed |\n--------------------");
 		}
 	}
 }
