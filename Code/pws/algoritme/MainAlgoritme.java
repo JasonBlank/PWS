@@ -1,11 +1,15 @@
 package pws.algoritme;
 
 import javax.swing.*;
+
+import pws.engine.Rij;
+import pws.engine.Vliegtuig;
+
 import java.awt.event.*;
 import java.awt.Color;
 import java.awt.Container;
 
-public static class MainAlgoritme implements Runnable{
+public class MainAlgoritme implements Runnable{
 	Object window;
 	private Vliegtuig vt;
 	boolean running = false;
@@ -23,7 +27,7 @@ public static class MainAlgoritme implements Runnable{
 
 	}
 
-	void run(){
+	public void run(){
 		Rij rij = new Rij();
 		while(running) {       				//Main loop
 			if(!rij.empty) vt = rij.get();
@@ -40,7 +44,7 @@ public static class MainAlgoritme implements Runnable{
 
 }
 
-static class SepTime {
+class SepTime {
 	static private int[][] septime = new int[][]{{60,145,167,189},{60,98,122,145},{60,60,60,122},{60,60,60,60}};
 
 	static int getSepTime(int x, int y){

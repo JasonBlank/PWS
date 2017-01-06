@@ -13,7 +13,8 @@ public class StartUpClass {
 
 	public static void main(String[] args){
 		Window window = new Window();
-		MainAlgoritme.start();
+		MainAlgoritme alg = new MainAlgoritme(window);
+		alg.start();
 	}
 
 }
