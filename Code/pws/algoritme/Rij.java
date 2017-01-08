@@ -9,19 +9,20 @@ public class Rij {
 	private Vliegtuig abraham;											//Willekeurige naam want ik had daar zin in. Dit is de
 																		//variabele waar het gevonden al ingeplande vliegtuig
 																		//tijdelijk in komt voor berekeningen enzo.
-
+	public int getCt(){
+		return ct;
+	}
 
 	public void timeLoop(){												//Tijdbijhouding om benodigde snelheid te kunnen berekenen
 		ct = (int) System.currentTimeMillis()/1000 - bt;
 	}
 
-	public void checknPlace(Vliegtuig vt){								//Hoofd controle functie; wt is Wanted Time
+	public void checknPlace(int wt, Vliegtuig vt){								//Hoofd controle functie; wt is Wanted Time
 
-		long wt = (int)(vt.getAfstand()/vt.v_cruise);
 
-		switch (checkBefore(wt, vt)){									//0 is problematisch; 1 is ruimte
+		switch (checkBefore(wt, vt)){											//0 is problematisch; 1 is ruimte
 			case 0:
-				switch (checkAfter(wt)){
+				switch (checkAfter(wt,vt)){
 					case 0:
 						//nu moeten we gaan schuiven. Aan allebei de kanten zit een vliegtuig.
 						break;
@@ -32,18 +33,28 @@ public class Rij {
 				break;
 
 			case 1:
-				switch (checkAfter(wt)){
+				switch (checkAfter(wt,vt)){
 					case 0:
 						//Links is ruimte dus op naar links met Vx.
-						vtl[abraham.getAt()-sep] = vt;
-						vt.assignTime(abraham.getAt()-sep);
-						vt.setV_current(vt.getAfstand()/(vt.getAt()-ct));
+						//Zo verder kijken
+						if(checkBefore(abraham.getAt()-sep,vt) == 1){
+								vtl[abraham.getAt()-sep] = vt;
+								vt.assignTime(abraham.getAt()-sep);
+								vt.setV_current(vt.getAfstand()/(vt.getAt()-ct));
+						} else{
+							checknPlace(abraham.getAt()-sep,vt);
+						}
+
 
 						break;
 					case 1:
 						//Jee alle ruimte die er is. Nu lekker plaatsen op de optimale tijd.
-						int diff = (int)wt - bt;
+						//done
+						int diff = (int)wt;
 						vtl[diff] = vt;
+						vt.assignTime(diff);
+						vt.setV_current(vt.getAfstand()/(vt.getAt()-ct));
+						System.out.println("Placement successful. Assigned time: "+vt.getAt());
 						break;
 				}
 				break;
@@ -57,13 +68,13 @@ public class Rij {
 	private int checkBefore(long wt, Vliegtuig vt){		//Is er al een vliegtuig gepland op het gewenste tijdstip?
 
 		for(int i = 0; i <= maxsep; i++) {
-			if(wt-bt-i >= 0) {
-				if (vtl[(int) wt - bt - i] != null) {
+			if(wt-i >= 0 && wt < 2100) {
+				if (vtl[(int) wt - i] != null) {
 					abraham = vtl[(int) wt - bt - i];
 					sep = SepTime.getSepTime(abraham.getKlasse(), vt.getKlasse());
 
-					for(int j = 0; j <= sep; j++) {
-						if (vtl[(int) (wt - bt) - j] != null) {
+					for(int j = 0; j<= sep; j++) {
+						if (vtl[(int) wt - bt - j] != null) {
 							return 0;
 						}
 					}
@@ -76,10 +87,23 @@ public class Rij {
 		return 1;
 	}
 
-	private int checkAfter(long wt){							//Nog verbeteren
+	private int checkAfter(long wt, Vliegtuig vt){							//Nog verbeteren
 		for(int i = 0; i <= maxsep; i++) {
-			if (vtl[(int) (wt - bt) + i] != null)return 0;
+			if(wt-bt+i < 2100) {
+				if (vtl[(int) wt - bt + i] != null) {
+					abraham = vtl[(int) wt - bt + i];
+					sep = SepTime.getSepTime(abraham.getKlasse(), vt.getKlasse());
+					for (int j = 0; j <= sep; j++) {
+						if (vtl[(int) wt - bt + j] != null) {
+							return 0;
+						}
+					}
+					return 1;
+				}
+			}
 		}
+
+
 		return 1;
 	}
 

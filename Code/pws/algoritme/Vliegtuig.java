@@ -5,11 +5,14 @@ public class Vliegtuig {
 	public final int klasse, v_cruise = 255, v_max = 271;				//Gewichtsklasse (1-4); Zuinigste snelheid in m/s
 	private int lt, ft, at;												//Last time, first time en assigned time
 	private String name = "v1";											//Naam van vliegtuig om te kunnen gebruiken in console output
+	private Rij rij;
 
-	public Vliegtuig(double afstand_tot_landingsbaan, int klasse) {
+
+	public Vliegtuig(double afstand_tot_landingsbaan, int klasse, Rij rij) {
 		this.afstand_tot_landingsbaan = afstand_tot_landingsbaan;
 		this.klasse = klasse;
 		v_current = v_cruise;
+		rij.checknPlace((int)(this.getAfstand()/this.v_cruise)+rij.getCt(),this);
 	}
 
 	public void assignTime(int newat){
