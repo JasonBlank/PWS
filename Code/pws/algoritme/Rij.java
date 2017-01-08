@@ -27,6 +27,24 @@ public class Rij {
 						//nu moeten we gaan schuiven. Aan allebei de kanten zit een vliegtuig.
 						break;
 					case 1:
+					if(checkBefore(/*hierkijken of er ruimte is is voor abraham om naar links te gaan*/)){
+						//abraham.At = abraham.getAt() - ((abraham.getAt()+sep)-wt);
+						//Extra kosten van deze stap = (abraham.getAt()+sep-wt)*kosten van te vroeg;
+					}
+					else{
+						if(checkAfter(abraham.getAt()+sep,vt) == 1){
+							vtl[abraham.getAt()+sep] = vt;
+							vt.assignTime(abraham.getAt()+sep);
+							vt.setV_current(vt.getAfstand()/(vt.getAt()-ct));
+							//extra kosten deze stap = ((wt-abraham.getAt()+sep)*Kosten van te laat;
+					} 	else{
+							checknPlace(abraham.getAt()+sep,vt);
+							//chenknPlace(abraham.getAt()+sep -1, vt);
+							//we willen dus dat we hier sws naar case 0.0 gaan. Zie voor uitleg 1.1
+							//dit kunnen we doen zoals bij 1.1 uitgelegd. Maar ook mis door ze ze meteen door te sturen naar 0.0 
+							//maar ik denk dat het makkelijkst is om manier te doen zoals bij 1.1 omdat het anders wel erg moeilijk wordt om het te programmeren in 0.0
+						}
+					}
 						//Rechts is ruimte maar kijk eerst of V1 naar links kan; is goedkoper.
 						break;
 				}
@@ -41,8 +59,13 @@ public class Rij {
 								vtl[abraham.getAt()-sep] = vt;
 								vt.assignTime(abraham.getAt()-sep);
 								vt.setV_current(vt.getAfstand()/(vt.getAt()-ct));
+								//extra kosten deze stap = ((abraham.getAt()-sep)-wt)*Kosten van te vroeg;
 						} else{
 							checknPlace(abraham.getAt()-sep,vt);
+							//chenknPlace(abraham.getAt()-sep +1, vt);
+							//hier gaat het fout nu. Want als je hem nu op nieuw laat lopen komt hij als het goed is uit bij 0.1 omdat er precies genoeg ruimte zou zijn om geen last te hebben van die van rechts. 
+							//In de 1.0 als hij niet naar links kan schuiven gaat hij weer terug naar wanneer hij precies geen lans meer heeft van links. En op die manier blijft hij dan bounchen tussen die twee. 
+							//We moeten er dus voor zorgen dat we de wt niet veranderen in precies sep er vanaf maar iets minder dat hij bij 0.0 komt zodat we het kunnen oplossen. 
 						}
 
 
@@ -55,6 +78,7 @@ public class Rij {
 						vt.assignTime(diff);
 						vt.setV_current(vt.getAfstand()/(vt.getAt()-ct));
 						System.out.println("Placement successful. Assigned time: "+vt.getAt());
+						//extra kosten = 0
 						break;
 				}
 				break;
