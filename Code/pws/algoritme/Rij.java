@@ -30,6 +30,7 @@ public class Rij {
 					if(checkBefore(/*hierkijken of er ruimte is is voor abraham om naar links te gaan*/)){
 						//abraham.At = abraham.getAt() - ((abraham.getAt()+sep)-wt);
 						//Extra kosten van deze stap = (abraham.getAt()+sep-wt)*kosten van te vroeg;
+						//vtl[wt] = vt;
 					}
 					else{
 						if(checkAfter(abraham.getAt()+sep,vt) == 1){
