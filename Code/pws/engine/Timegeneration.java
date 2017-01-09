@@ -3,11 +3,20 @@ package pws.engine;
 import java.util.Random;
 
 public class Timegeneration {
+	public static int n = 40;
+	private int ttn;			//targettime van vliegtuig n;
+	
+
+	public void getttn(){ 
+		ttn = tt[/*vliegtuignummer*/];  //????
+		return ttn;			
+		
+	}
+	
 	public Timegeneration(){
-		int n = 40;
-		int[] ft = new int[n+1]; //first time
-		int[] tt = new int[n+1]; //target time
-		int[] lt = new int[n+1]; //latest time
+		int[] ft = new int[n+1];	//first time
+		int[] tt = new int[n+1];	//target time
+		int[] lt = new int[n+1];	//latest time
 		int randomtt = 0;        //dat is het getal dat gegenereerd wordt per vliegtuig waarop ft tt en lt gebaseerd worden. Dit getal wordt zo geproduceerd dat alles als het goed is binnen de perken blijft
 		
 		
@@ -31,7 +40,7 @@ public class Timegeneration {
 			else{
 				lt[i] = tt[i]+300;
 			}
-			
+				
 			
 			int zf = ft[i]/60;                     // zf en af zijn gewoon random namen voor variablen die ik hier nodig had om de tijden in minuten:seconden te kunnen weergeven
 			int af = ft[i] - (zf*60);

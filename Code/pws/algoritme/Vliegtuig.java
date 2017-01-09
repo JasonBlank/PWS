@@ -1,11 +1,26 @@
 package pws.algoritme;
 
+import pws.engine.Timegeneration;
+import pws.algoritme.Rij;
+
 public class Vliegtuig {
 	private double afstand_tot_landingsbaan, v_current;					//Afstand in m; Snelheid in m/s
 	public final int klasse, v_cruise = 255, v_max = 271;				//Gewichtsklasse (1-4); Zuinigste snelheid in m/s
 	private int lt, ft, at;												//Last time, first time en assigned time
 	private String name = "v1";											//Naam van vliegtuig om te kunnen gebruiken in console output
 	private Rij rij;
+	public int Beginafstand;											//De afstand waar het vliegtuig op begint
+		
+	public int getBeginafstand(){
+		Beginafstand = (Timegeneration.getttn[/*nummer vliegtuig*/]-ct)*v_cruise;
+		return Beginafstand;
+	}
+	
+	public int getFristtime(double afstand_tot_landingsbaan){
+		ft = (int) (afstand_tot_landingsbaan/v_max);
+		return ft;
+		
+	}
 
 
 	public Vliegtuig(double afstand_tot_landingsbaan, int klasse, Rij rij) {
