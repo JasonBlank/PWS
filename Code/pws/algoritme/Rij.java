@@ -27,8 +27,8 @@ public class Rij {
 						//nu moeten we gaan schuiven. Aan allebei de kanten zit een vliegtuig.
 						break;
 					case 1:
-					if(checkBefore(/*hierkijken of er ruimte is is voor abraham om naar links te gaan*/)){
-						//abraham.At = abraham.getAt() - ((abraham.getAt()+sep)-wt);
+					if(checkBefore(wt-SepTime.getSepTime(abraham.getKlasse(),vt.getKlasse()),abraham) == 1){			//hier kijken of er ruimte is is voor abraham om naar links te gaan
+						//abraham.setAt = abraham.getAt() - ((abraham.getAt()+sep)-wt);
 						//Extra kosten van deze stap = (abraham.getAt()+sep-wt)*kosten van te vroeg;
 						//vtl[wt] = vt;
 					}
