@@ -1,8 +1,8 @@
 package pws.algoritme;
 
 public class Rij {
-	private int bt = (int) System.currentTimeMillis()/1000;				//Begin time, current time
-	static int ct;
+	private int bt = (int) System.currentTimeMillis()/1000;				//Begin time 						R E A L T I M E
+	static int ct, wt;													//Current time en Wanted time:		I N D E X T I M E
 	private Vliegtuig[] vtl = new Vliegtuig[2100];						//Vliegtuig timeline
 	private int sep, maxsep = 189;										//Seperation
 	//private int[] maxsepn = {0, 189, 145, 122, 60};					//Ik stel voor om het zo te doen omdat er anders is een gebied gezocht wordt dat niet nodig is.
@@ -14,23 +14,27 @@ public class Rij {
 		return ct;
 	}
 
+	Vliegtuig[] getvtl(){
+		return vtl;
+	}
+
 	void timeLoop(){													//Tijdbijhouding om benodigde snelheid te kunnen berekenen
 		ct = (int) System.currentTimeMillis()/1000 - bt;
 	}
 
-	void checknPlace(int wt, Vliegtuig vt){								//Hoofd controle functie; wt is Wanted Time
+	void checknPlace(int wt, Vliegtuig vt){												//Hoofd controle functie; wt is Wanted Time
 
-
-		if (checkBefore(wt, vt)) {                                    //false is problematisch; true is ruimte
+		if (checkBefore(wt, vt)) {                                    					//true is problematisch; false is ruimte
 			if (checkAfter(wt, vt)) {
 				//nu moeten we gaan schuiven. Aan allebei de kanten zit een vliegtuig.
+
 			} else {//Rechts is ruimte, links niet.
-				if (checkBefore(wt - SepTime.getSepTime(abraham.getKlasse(), vt.getKlasse()), abraham) == true) {            //hier kijken of er ruimte is is voor abraham om naar links te gaan
+				if (checkBefore(wt - SepTime.getSepTime(abraham.getKlasse(), vt.getKlasse()), abraham)) {            //hier kijken of er ruimte is is voor abraham om naar links te gaan
 					abraham.assignTime(abraham.getAt() - ((abraham.getAt() + sep) - wt));
 					//Extra kosten van deze stap = (abraham.getAt()+sep-wt)*kosten van te vroeg;
 					vtl[wt - bt] = vt;
 				} else {
-					if (checkAfter(abraham.getAt() + sep, vt) == true) {
+					if (checkAfter(abraham.getAt() + sep, vt)) {
 						vtl[abraham.getAt() + sep] = vt;
 						vt.assignTime(abraham.getAt() + sep);
 						vt.setV_current(vt.getAfstand() / (vt.getAt() - ct));
@@ -38,7 +42,7 @@ public class Rij {
 					} else {
 						checknPlace(abraham.getAt() + sep, vt);
 						//chenknPlace(abraham.getAt()+sep -1, vt);
-						//we willen dus dat we hier sws naar case false.false gaan. Zie voor uitleg true.true
+						//we willen dus dat we hier sws naar case false-false gaan. Zie voor uitleg true.true
 						//dit kunnen we doen zoals bij true.true uitgelegd. Maar ook mis door ze ze meteen door te sturen naar false.false
 						//maar ik denk dat het makkelijkst is om manier te doen zoals bij true.true omdat het anders wel erg moeilijk wordt om het te programmeren in false.false
 					}
@@ -48,7 +52,7 @@ public class Rij {
 			if(checkAfter(wt,vt)) {									//Niet schrikken, ik heb 0 en 1 vervangen voor true en false, en de switch toch maar een if gemaakt
 				//Links is ruimte dus op naar links met Vx.
 				//Zo verder kijken
-				if (checkBefore(abraham.getAt() - sep, vt) == true) {
+				if (checkBefore(abraham.getAt() - sep, vt)) {
 					vtl[abraham.getAt() - sep] = vt;
 					vt.assignTime(abraham.getAt() - sep);
 					vt.setV_current(vt.getAfstand() / (vt.getAt() - ct));
@@ -83,14 +87,15 @@ public class Rij {
 			if(wt-i >= 0 && wt < 2100) {
 				if (vtl[(int) wt - i] != null) {
 					abraham = vtl[(int) wt - bt - i];
+					System.out.println(abraham + " haha hoi");
 					sep = SepTime.getSepTime(abraham.getKlasse(), vt.getKlasse());
 
 					for(int j = 0; j<= sep; j++) {
 						if (vtl[(int) wt - bt - j] != null) {
-							return false;
+							return true;
 						}
 					}
-					return true;
+					return false;
 				}
 			}
 		}
@@ -101,32 +106,21 @@ public class Rij {
 
 	private boolean checkAfter(long wt, Vliegtuig vt){							//Nog verbeteren
 		for(int i = 0; i <= maxsep; i++) {
-			if(wt-bt+i < 2100) {
-				if (vtl[(int) wt - bt + i] != null) {
-					abraham = vtl[(int) wt - bt + i];
+			System.out.print('R');
+			if(wt+i < 2100) {
+				if (vtl[(int) wt + i] != null) {
+					abraham = vtl[(int) wt + i];
+					System.out.println(abraham);
 					sep = SepTime.getSepTime(abraham.getKlasse(), vt.getKlasse());
 					for (int j = 0; j <= sep; j++) {
-						if (vtl[(int) wt - bt + j] != null) {
-							return false;
+						if (vtl[(int) wt + j] != null) {
+							return true;
 						}
 					}
-					return true;
+					return false;
 				}
 			}
 		}
-
-
-		return true;
-	}
-
-
-
-	public void update(){										//Ook nog verbeteren
-		for(int i = 0; i < vtl.length; i++){
-			if(vtl[i] != null){
-				Vliegtuig v = vtl[i];
-				v.update(ct-bt);
-			}
-		}
+		return false;
 	}
 }

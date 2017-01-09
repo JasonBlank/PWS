@@ -10,6 +10,7 @@ public class Vliegtuig {
 	private int name = 1;												//Naam van vliegtuig om te kunnen gebruiken in console output
 	private Rij rij;
 	public int Beginafstand;											//De afstand waar het vliegtuig op begint
+	private boolean tedichtbij = false;
 
 	public int getBeginafstand(){
 		Beginafstand = (Timegeneration.getttn(name /*vliegtuignummer*/ )-rij.ct)*v_cruise;
@@ -38,17 +39,19 @@ public class Vliegtuig {
 		return afstand_tot_landingsbaan;
 	}
 	public void setAfstand(double afstand) {
-		afstand_tot_landingsbaan = afstand;
+		if(afstand > 500){
+			afstand_tot_landingsbaan = afstand;
+		}
+
 	}
 	public double getV_current(){return v_current;}
-	public void setV_current(double v_current){this.v_current = v_current;}
-	public int getKlasse(){return klasse;}
-	public int getAt(){return at;}
+	void setV_current(double v_current){this.v_current = v_current;}
+	int getKlasse(){return klasse;}
+	int getAt(){return at;}
 
 
-	public void update(double dtime){
-		if(afstand_tot_landingsbaan > 0) {
-
+	void update(double dtime){
+		if(afstand_tot_landingsbaan > 500) { //Vanaf 500 meter van de landingsbaan gaat hij 'van de kaart'.
 			afstand_tot_landingsbaan -= v_current * dtime;
 			ft = (int) afstand_tot_landingsbaan * v_max;
 

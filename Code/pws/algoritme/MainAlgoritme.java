@@ -5,6 +5,7 @@ public class MainAlgoritme implements Runnable{
 	private Object window;
 	private Vliegtuig vt;
 	boolean running = false;
+	private Rij rij;
 
 	public MainAlgoritme(Object window){
 		this.window = window;
@@ -14,24 +15,35 @@ public class MainAlgoritme implements Runnable{
 	public void start(){
 		System.out.println("Alg start");
 		run();
-		try{run();}catch (Exception e){
-			System.out.println(e);
-		}
+		System.out.println("Passed first run()");
+		//try{run();}catch (Exception e){System.out.println(e);}
 	}
 
 	public void run(){
-		Rij rij = new Rij();
+		rij = new Rij();
 		Vliegtuig vtg = new Vliegtuig(6000, 3, rij);
-		while(running) {       				//Main loop
-			rij.timeLoop();
-			rij.update();
-			update();
+		double now, lasttime = System.currentTimeMillis();
 
+
+
+		while(true) {	//Main loop
+			if(running) {
+				rij.timeLoop();
+				now = System.currentTimeMillis();
+				update(now-lasttime);
+				lasttime = now;
+
+			}
 		}
 	}
 
-	public void update(){
-
+	public void update(double dtime){
+		Vliegtuig[] vtl = rij.getvtl();
+		for(int i = 0; i < vtl.length; i++){
+			if(vtl[i] != null){
+				vtl[i].update(dtime);
+			}
+		}
 	}
 
 
