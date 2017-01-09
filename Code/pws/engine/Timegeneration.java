@@ -4,18 +4,18 @@ import java.util.Random;
 
 public class Timegeneration {
 	public static int n = 40;
-	private int ttn;			//targettime van vliegtuig n;
-	
+	private static int ttn;//targettime van vliegtuig n;
+	static int tt[];
 
-	public void getttn(){ 
-		ttn = tt[/*vliegtuignummer*/];  //????
+	public static int getttn(int vn){
+		ttn = tt[vn];  //????
 		return ttn;			
 		
 	}
 	
 	public Timegeneration(){
 		int[] ft = new int[n+1];	//first time
-		int[] tt = new int[n+1];	//target time
+		tt = new int[n+1];	//target time
 		int[] lt = new int[n+1];	//latest time
 		int randomtt = 0;        //dat is het getal dat gegenereerd wordt per vliegtuig waarop ft tt en lt gebaseerd worden. Dit getal wordt zo geproduceerd dat alles als het goed is binnen de perken blijft
 		

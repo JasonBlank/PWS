@@ -1,7 +1,8 @@
 package pws.algoritme;
 
 public class Rij {
-	private int bt = (int) System.currentTimeMillis()/1000, ct = 0;		//Begin time, current time
+	private int bt = (int) System.currentTimeMillis()/1000;				//Begin time, current time
+	static int ct;
 	private Vliegtuig[] vtl = new Vliegtuig[2100];						//Vliegtuig timeline
 	private int sep, maxsep = 189;										//Seperation
 	//private int[] maxsepn = {0, 189, 145, 122, 60};					//Ik stel voor om het zo te doen omdat er anders is een gebied gezocht wordt dat niet nodig is.
@@ -9,29 +10,29 @@ public class Rij {
 	private Vliegtuig abraham;											//Willekeurige naam want ik had daar zin in. Dit is de
 																		//variabele waar het gevonden al ingeplande vliegtuig
 																		//tijdelijk in komt voor berekeningen enzo.
-	public int getCt(){
+	int getCt(){
 		return ct;
 	}
 
-	public void timeLoop(){												//Tijdbijhouding om benodigde snelheid te kunnen berekenen
+	void timeLoop(){													//Tijdbijhouding om benodigde snelheid te kunnen berekenen
 		ct = (int) System.currentTimeMillis()/1000 - bt;
 	}
 
-	public void checknPlace(int wt, Vliegtuig vt){								//Hoofd controle functie; wt is Wanted Time
+	void checknPlace(int wt, Vliegtuig vt){								//Hoofd controle functie; wt is Wanted Time
 
 
-		switch (checkBefore(wt, vt)){											//0 is problematisch; 1 is ruimte
+		switch (checkBefore(wt, vt)){									//0 is problematisch; 1 is ruimte
 			case 0:
 				switch (checkAfter(wt,vt)){
 					case 0:
 						//nu moeten we gaan schuiven. Aan allebei de kanten zit een vliegtuig.
 						break;
-					case 1:
-					if(checkBefore(wt-SepTime.getSepTime(abraham.getKlasse(),vt.getKlasse()),abraham) == 1){			//hier kijken of er ruimte is is voor abraham om naar links te gaan
-						//abraham.setAt = abraham.getAt() - ((abraham.getAt()+sep)-wt);
-						//Extra kosten van deze stap = (abraham.getAt()+sep-wt)*kosten van te vroeg;
-						//vtl[wt] = vt;
-					}
+					case 1: //Rechts is ruimte, links niet.
+						if(checkBefore(wt-SepTime.getSepTime(abraham.getKlasse(),vt.getKlasse()),abraham) == 1){			//hier kijken of er ruimte is is voor abraham om naar links te gaan
+							abraham.assignTime(abraham.getAt() - ((abraham.getAt()+sep)-wt));
+							//Extra kosten van deze stap = (abraham.getAt()+sep-wt)*kosten van te vroeg;
+							vtl[wt-bt] = vt;
+						}
 					else{
 						if(checkAfter(abraham.getAt()+sep,vt) == 1){
 							vtl[abraham.getAt()+sep] = vt;
@@ -42,7 +43,7 @@ public class Rij {
 							checknPlace(abraham.getAt()+sep,vt);
 							//chenknPlace(abraham.getAt()+sep -1, vt);
 							//we willen dus dat we hier sws naar case 0.0 gaan. Zie voor uitleg 1.1
-							//dit kunnen we doen zoals bij 1.1 uitgelegd. Maar ook mis door ze ze meteen door te sturen naar 0.0 
+							//dit kunnen we doen zoals bij 1.1 uitgelegd. Maar ook mis door ze ze meteen door te sturen naar 0.0
 							//maar ik denk dat het makkelijkst is om manier te doen zoals bij 1.1 omdat het anders wel erg moeilijk wordt om het te programmeren in 0.0
 						}
 					}
@@ -64,9 +65,9 @@ public class Rij {
 						} else{
 							checknPlace(abraham.getAt()-sep,vt);
 							//chenknPlace(abraham.getAt()-sep +1, vt);
-							//hier gaat het fout nu. Want als je hem nu op nieuw laat lopen komt hij als het goed is uit bij 0.1 omdat er precies genoeg ruimte zou zijn om geen last te hebben van die van rechts. 
-							//In de 1.0 als hij niet naar links kan schuiven gaat hij weer terug naar wanneer hij precies geen lans meer heeft van links. En op die manier blijft hij dan bounchen tussen die twee. 
-							//We moeten er dus voor zorgen dat we de wt niet veranderen in precies sep er vanaf maar iets minder dat hij bij 0.0 komt zodat we het kunnen oplossen. 
+							//hier gaat het fout nu. Want als je hem nu op nieuw laat lopen komt hij als het goed is uit bij 0.1 omdat er precies genoeg ruimte zou zijn om geen last te hebben van die van rechts.
+							//In de 1.0 als hij niet naar links kan schuiven gaat hij weer terug naar wanneer hij precies geen lans meer heeft van links. En op die manier blijft hij dan bounchen tussen die twee.
+							//We moeten er dus voor zorgen dat we de wt niet veranderen in precies sep er vanaf maar iets minder dat hij bij 0.0 komt zodat we het kunnen oplossen.
 						}
 
 
