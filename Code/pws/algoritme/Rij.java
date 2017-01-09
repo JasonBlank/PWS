@@ -23,7 +23,6 @@ public class Rij {
 	}
 
 	void checknPlace(int wt, Vliegtuig vt){												//Hoofd controle functie; wt is Wanted Time
-
 		if (checkBefore(wt, vt)) {                                    					//true is problematisch; false is ruimte
 			if (checkAfter(wt, vt)) {
 				//nu moeten we gaan schuiven. Aan allebei de kanten zit een vliegtuig.
