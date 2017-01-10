@@ -1,5 +1,9 @@
 package pws.algoritme;
 
+import pws.engine.Timegeneration;
+
+import java.sql.Time;
+
 public class MainAlgoritme implements Runnable{
 
 	private Object window;
@@ -20,6 +24,7 @@ public class MainAlgoritme implements Runnable{
 	}
 
 	public void run(){
+		Timegeneration tg = new Timegeneration();
 		rij = new Rij();
 		Vliegtuig vtg = new Vliegtuig(1,60000,2, rij);
 		Vliegtuig vtd = new Vliegtuig(2,90000,2, rij);
