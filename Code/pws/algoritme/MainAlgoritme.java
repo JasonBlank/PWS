@@ -21,8 +21,8 @@ public class MainAlgoritme implements Runnable{
 
 	public void run(){
 		rij = new Rij();
-		Vliegtuig vtg = new Vliegtuig("1",60000,2, rij);
-		Vliegtuig vtd = new Vliegtuig("2",90000,2, rij);
+		Vliegtuig vtg = new Vliegtuig("1",160000,2, rij, 250);
+		Vliegtuig vtd = new Vliegtuig("2",160000,2, rij, 250);
 		double now, lasttime = System.currentTimeMillis();
 
 

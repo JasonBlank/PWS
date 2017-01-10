@@ -5,11 +5,11 @@ import pws.algoritme.Rij;
 
 public class Vliegtuig {
 	private double afstand_tot_landingsbaan, v_current;					//Afstand in m; Snelheid in m/s
-	public final int klasse, v_cruise = 255, v_max = 271;				//Gewichtsklasse (1-4); Zuinigste snelheid in m/s
+	public final int klasse, v_max = 271;								//Gewichtsklasse (1-4); Zuinigste snelheid in m/s
 	private int lt, ft, at;												//Last time, first time en assigned time
 	private String name;												//Naam van vliegtuig om te kunnen gebruiken in console output
 	private Rij rij;
-	public int Beginafstand;											//De afstand waar het vliegtuig op begint
+	public int Beginafstand, v_cruise;							//De afstand waar het vliegtuig op begint
 	private boolean tedichtbij = false;
 
 	public String toString(){
@@ -21,7 +21,7 @@ public class Vliegtuig {
 	}
 
 	public int getBeginafstand(){
-		Beginafstand = (Timegeneration.getttn(name /*vliegtuignummer*/ )-rij.ct)*v_cruise;
+		Beginafstand = (Timegeneration.getttn(name)-Rij.ct)*v_cruise;
 		return Beginafstand;
 	}
 
@@ -31,13 +31,14 @@ public class Vliegtuig {
 	}
 
 
-	public Vliegtuig(String name,double afstand_tot_landingsbaan, int klasse, Rij rij) {
+	public Vliegtuig(String name,double afstand_tot_landingsbaan, int klasse, Rij rij, int v_cruise) {
 		this.afstand_tot_landingsbaan = afstand_tot_landingsbaan;
 		this.klasse = klasse;
+		this.v_cruise = v_cruise;
 		v_current = v_cruise;
 		this.rij = rij;
 		this.name = name;
-		toString();
+		System.out.println(toString());
 		rij.checknPlace((int)(this.getAfstand()/this.v_cruise)+rij.getCt(),this);
 	}
 
@@ -67,7 +68,7 @@ public class Vliegtuig {
 
 		}
 		else{
-			//Vliegtuig is te dichtbij de landingsbaan om nog te wijzigen
+			//Vliegtuig is te dichtbij de landingsbaan om target time nog te wijzigen
 
 
 		}
