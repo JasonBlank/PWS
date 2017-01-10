@@ -9,7 +9,7 @@ public class Vliegtuig {
 	private int lt, ft, at;												//Last time, first time en assigned time
 	private int name;												//Naam van vliegtuig om te kunnen gebruiken in console output
 	private Rij rij;
-	public int Beginafstand;											//De afstand waar het vliegtuig op begint
+	public int Beginafstand, v_cruise;							//De afstand waar het vliegtuig op begint
 	private boolean tedichtbij = false;
 
 	public String toString(){
@@ -20,8 +20,13 @@ public class Vliegtuig {
 		return name;
 	}
 
+<<<<<<< HEAD
 	public int getBeginafstand(int vn){
 		Beginafstand = (Timegeneration.gettt(name )-rij.ct)*Timegeneration.getV_cruise(vn); //hier moeten we nog even naar kijken
+=======
+	public int getBeginafstand(){
+		Beginafstand = (Timegeneration.getttn(name)-Rij.ct)*v_cruise;
+>>>>>>> origin/master
 		return Beginafstand;
 	}
 
@@ -31,6 +36,7 @@ public class Vliegtuig {
 	}
 
 
+<<<<<<< HEAD
 	public Vliegtuig(int name,double afstand_tot_landingsbaan, int klasse, Rij rij) {
 		this.afstand_tot_landingsbaan = afstand_tot_landingsbaan;
 		this.klasse = klasse;
@@ -39,6 +45,17 @@ public class Vliegtuig {
 		this.name = name;
 		toString();
 		rij.checknPlace((int)(this.getAfstand()/Timegeneration.getV_cruise(name))+rij.getCt(),this); // hier lukt het met niet om de v_cruise op te vragen uit Timegeneration en bij andere wel. 
+=======
+	public Vliegtuig(String name,double afstand_tot_landingsbaan, int klasse, Rij rij, int v_cruise) {
+		this.afstand_tot_landingsbaan = afstand_tot_landingsbaan;
+		this.klasse = klasse;
+		this.v_cruise = v_cruise;
+		v_current = v_cruise;
+		this.rij = rij;
+		this.name = name;
+		System.out.println(toString());
+		rij.checknPlace((int)(this.getAfstand()/this.v_cruise)+rij.getCt(),this);
+>>>>>>> origin/master
 	}
 
 	public void assignTime(int newat){
@@ -67,7 +84,7 @@ public class Vliegtuig {
 
 		}
 		else{
-			//Vliegtuig is te dichtbij de landingsbaan om nog te wijzigen
+			//Vliegtuig is te dichtbij de landingsbaan om target time nog te wijzigen
 
 
 		}

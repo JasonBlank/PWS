@@ -27,7 +27,7 @@ public class Rij {
 		if (checkBefore(wt, vt)) {                                    					//true is problematisch; false is ruimte
 			if (checkAfter(wt, vt)) {
 				//nu moeten we gaan schuiven. Aan allebei de kanten zit een vliegtuig.
-
+				System.out.println();
 			}
 			//---------------------------------------------------------------------------------------------------
 			else {//Rechts is ruimte, links niet.
@@ -43,6 +43,7 @@ public class Rij {
 						vtl[abraham.getAt() + sep] = vt;
 						vt.assignTime(abraham.getAt() + sep);
 						vt.setV_current(vt.getAfstand() / (vt.getAt() - ct));
+						printShit(vt);
 						//extra kosten deze stap = ((wt-abraham.getAt()+sep)*Kosten van te laat;
 					} else {
 						checknPlace(abraham.getAt() + sep, vt);
@@ -69,6 +70,10 @@ public class Rij {
 					//hier gaat het fout nu. Want als je hem nu op nieuw laat lopen komt hij als het goed is uit bij false.true omdat er precies genoeg ruimte zou zijn om geen last te hebben van die van rechts.
 					//In de true.false als hij niet naar links kan schuiven gaat hij weer terug naar wanneer hij precies geen lans meer heeft van links. En op die manier blijft hij dan bounchen tussen die twee.
 					//We moeten er dus voor zorgen dat we de wt niet veranderen in precies sep er vanaf maar iets minder dat hij bij false.false komt zodat we het kunnen oplossen.
+
+					if(checkBefore(wt,vt)){
+						System.out.println("Cost: "+moveLeftCost(wt,4,vt));
+					}
 				}
 				//-----------------------------------------------------------------------------------------------
 			} else{
@@ -128,5 +133,18 @@ public class Rij {
 
 	private void printShit(Vliegtuig vt){
 		System.out.println("Placement successful for plane \""+vt.getName()+"\". Assigned time: "+vt.getAt()+" Assigned speed: "+vt.getV_current()+" Distance from airport: "+vt.getAfstand());
+	}
+
+	private int moveLeftCost(long wt, int dtime, Vliegtuig vtg){
+		int movedtimeleft = 0;
+		for(int i =(int) wt; i >= wt-dtime; i--){
+			if(vtl[i]!=null){
+				if(!checkBefore(vtl[i].getAt(),vtl[i])) {
+					movedtimeleft += wt - vtl[i].getAt() - SepTime.getSepTime(vtl[i].getKlasse(), vtg.getKlasse());
+				}
+			}
+		}
+
+		return movedtimeleft;
 	}
 }

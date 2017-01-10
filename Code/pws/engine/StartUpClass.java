@@ -25,27 +25,6 @@ class Window extends JFrame{
 		initUI();
 		setVisible(true);
 		double time = System.currentTimeMillis();
-		System.out.println(time);
-
-
-		//Leuk schermstuiterdingetje
-
-		/*boolean upwards = true, leftwards = true;
-		while(upwards){
-			try{TimeUnit.MILLISECONDS.sleep(3);}catch(Throwable e){System.out.println(e);}
-			
-			if(getX() == 0) {leftwards = false;setLocation(1,getY());}
-			if(getY() == 0) {upwards = false;setLocation(getX(),1);}
-			if(getX() == Toolkit.getDefaultToolkit().getScreenSize().getWidth()-300) {leftwards = true;setLocation(getX()-1,getY());};
-			if(getY() == Toolkit.getDefaultToolkit().getScreenSize().getHeight()-80) {upwards = true;setLocation(getX(),getY()-1);};
-			
-			
-			if(upwards == true && leftwards == true)  setLocation(getX()-1, getY()-1);
-			if(upwards == true && leftwards == false) setLocation(getX()+1, getY()-1);
-			if(upwards == false && leftwards == true) setLocation(getX()-1, getY()+1);
-			if(upwards == false && leftwards == false)setLocation(getX()+1, getY()+1);
-		}*/
-		
 	}
 	
 	private void initUI(){
@@ -53,7 +32,7 @@ class Window extends JFrame{
 		setIconImage(ding.getImage());
 		
 		setUndecorated(false);
-		setTitle("Algorhythm");
+		setTitle("Algoritme");
 		setLocationRelativeTo(rootPane);
 		setDefaultCloseOperation(EXIT_ON_CLOSE);
 		setBackground(Color.WHITE);
