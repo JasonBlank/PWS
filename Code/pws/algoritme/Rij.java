@@ -28,7 +28,9 @@ public class Rij {
 			if (checkAfter(wt, vt)) {
 				//nu moeten we gaan schuiven. Aan allebei de kanten zit een vliegtuig.
 
-			} else {//Rechts is ruimte, links niet.
+			}
+			//-----------------------------------------------------------------------------------------------------
+			else {//Rechts is ruimte, links niet.
 				if (checkBefore(wt - SepTime.getSepTime(abraham.getKlasse(), vt.getKlasse()), abraham)) {            //hier kijken of er ruimte is is voor abraham om naar links te gaan
 					abraham.assignTime(abraham.getAt() - ((abraham.getAt() + sep) - wt));
 					//Extra kosten van deze stap = (abraham.getAt()+sep-wt)*kosten van te vroeg;
@@ -48,6 +50,7 @@ public class Rij {
 					}
 				}
 			}
+			//----------------------------------------------------------------------------------------------------
 		} else{
 			if(checkAfter(wt,vt)) {									//Niet schrikken, ik heb 0 en 1 vervangen voor true en false, en de switch toch maar een if gemaakt
 				//Links is ruimte dus op naar links met Vx.
@@ -64,6 +67,7 @@ public class Rij {
 					//In de true.false als hij niet naar links kan schuiven gaat hij weer terug naar wanneer hij precies geen lans meer heeft van links. En op die manier blijft hij dan bounchen tussen die twee.
 					//We moeten er dus voor zorgen dat we de wt niet veranderen in precies sep er vanaf maar iets minder dat hij bij false.false komt zodat we het kunnen oplossen.
 				}
+				//-------------------------------------------------------------------------------------------------
 			} else{
 					//Jee alle ruimte die er is. Nu lekker plaatsen op de optimale tijd.
 					//done
@@ -75,7 +79,7 @@ public class Rij {
 					//extra kosten = 0
 			}
 		}
-
+		//--------------------------------------------------------------------------------------------------
 
 	}
 
