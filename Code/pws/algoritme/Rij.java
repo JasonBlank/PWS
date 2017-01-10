@@ -23,13 +23,13 @@ public class Rij {
 	}
 
 	void checknPlace(int wt, Vliegtuig vt){												//Hoofd controle functie; wt is Wanted Time
-
+			//---------------------------------------------------------------------------------------------------
 		if (checkBefore(wt, vt)) {                                    					//true is problematisch; false is ruimte
 			if (checkAfter(wt, vt)) {
 				//nu moeten we gaan schuiven. Aan allebei de kanten zit een vliegtuig.
 
 			}
-			//-----------------------------------------------------------------------------------------------------
+			//---------------------------------------------------------------------------------------------------
 			else {//Rechts is ruimte, links niet.
 				if (checkBefore(wt - SepTime.getSepTime(abraham.getKlasse(), vt.getKlasse()), abraham)) {            //hier kijken of er ruimte is is voor abraham om naar links te gaan
 					abraham.assignTime(abraham.getAt() - ((abraham.getAt() + sep) - wt));
@@ -50,9 +50,9 @@ public class Rij {
 					}
 				}
 			}
-			//----------------------------------------------------------------------------------------------------
+			//---------------------------------------------------------------------------------------------------
 		} else{
-			if(checkAfter(wt,vt)) {									//Niet schrikken, ik heb 0 en 1 vervangen voor true en false, en de switch toch maar een if gemaakt
+			if(checkAfter(wt,vt)) {
 				//Links is ruimte dus op naar links met Vx.
 				//Zo verder kijken
 				if (checkBefore(abraham.getAt() - sep, vt)) {
@@ -67,7 +67,7 @@ public class Rij {
 					//In de true.false als hij niet naar links kan schuiven gaat hij weer terug naar wanneer hij precies geen lans meer heeft van links. En op die manier blijft hij dan bounchen tussen die twee.
 					//We moeten er dus voor zorgen dat we de wt niet veranderen in precies sep er vanaf maar iets minder dat hij bij false.false komt zodat we het kunnen oplossen.
 				}
-				//-------------------------------------------------------------------------------------------------
+				//-----------------------------------------------------------------------------------------------
 			} else{
 					//Jee alle ruimte die er is. Nu lekker plaatsen op de optimale tijd.
 					//done
@@ -79,7 +79,7 @@ public class Rij {
 					//extra kosten = 0
 			}
 		}
-		//--------------------------------------------------------------------------------------------------
+		//-------------------------------------------------------------------------------------------------------
 
 	}
 
@@ -105,12 +105,11 @@ public class Rij {
 		}
 
 
-		return true;
+		return false;
 	}
 
 	private boolean checkAfter(long wt, Vliegtuig vt){							//Nog verbeteren
 		for(int i = 0; i <= maxsep; i++) {
-			System.out.print('R');
 			if(wt+i < 2100) {
 				if (vtl[(int) wt + i] != null) {
 					abraham = vtl[(int) wt + i];
