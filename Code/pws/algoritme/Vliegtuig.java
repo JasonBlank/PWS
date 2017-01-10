@@ -7,10 +7,18 @@ public class Vliegtuig {
 	private double afstand_tot_landingsbaan, v_current;					//Afstand in m; Snelheid in m/s
 	public final int klasse, v_cruise = 255, v_max = 271;				//Gewichtsklasse (1-4); Zuinigste snelheid in m/s
 	private int lt, ft, at;												//Last time, first time en assigned time
-	private int name = 1;												//Naam van vliegtuig om te kunnen gebruiken in console output
+	private String name;												//Naam van vliegtuig om te kunnen gebruiken in console output
 	private Rij rij;
 	public int Beginafstand;											//De afstand waar het vliegtuig op begint
 	private boolean tedichtbij = false;
+
+	public String toString(){
+		return name;
+	}
+
+	public String getName(){
+		return name;
+	}
 
 	public int getBeginafstand(){
 		Beginafstand = (Timegeneration.getttn(name /*vliegtuignummer*/ )-rij.ct)*v_cruise;
@@ -23,11 +31,13 @@ public class Vliegtuig {
 	}
 
 
-	public Vliegtuig(double afstand_tot_landingsbaan, int klasse, Rij rij) {
+	public Vliegtuig(String name,double afstand_tot_landingsbaan, int klasse, Rij rij) {
 		this.afstand_tot_landingsbaan = afstand_tot_landingsbaan;
 		this.klasse = klasse;
 		v_current = v_cruise;
 		this.rij = rij;
+		this.name = name;
+		toString();
 		rij.checknPlace((int)(this.getAfstand()/this.v_cruise)+rij.getCt(),this);
 	}
 

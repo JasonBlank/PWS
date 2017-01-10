@@ -7,8 +7,8 @@ public class Timegeneration {
 	private static int ttn;//targettime van vliegtuig n;
 	static int tt[];
 
-	public static int getttn(int vn){
-		ttn = tt[vn];  //????
+	public static int getttn(String vn){
+		ttn = tt[Integer.valueOf(vn)];  //????
 		return ttn;			
 		
 	}

@@ -34,7 +34,10 @@ public class Rij {
 				if (checkBefore(wt - SepTime.getSepTime(abraham.getKlasse(), vt.getKlasse()), abraham)) {            //hier kijken of er ruimte is is voor abraham om naar links te gaan
 					abraham.assignTime(abraham.getAt() - ((abraham.getAt() + sep) - wt));
 					//Extra kosten van deze stap = (abraham.getAt()+sep-wt)*kosten van te vroeg;
-					vtl[wt - bt] = vt;
+					vtl[wt] = vt;
+					vt.assignTime(wt);
+					vt.setV_current(vt.getAfstand()/(vt.getAt()-ct));
+					printShit(vt);
 				} else {
 					if (checkAfter(abraham.getAt() + sep, vt)) {
 						vtl[abraham.getAt() + sep] = vt;
@@ -75,7 +78,7 @@ public class Rij {
 					vtl[diff] = vt;
 					vt.assignTime(diff);
 					vt.setV_current(vt.getAfstand()/(vt.getAt()-ct));
-					System.out.println("Placement successful. Assigned time: "+vt.getAt());
+					printShit(vt);
 					//extra kosten = 0
 			}
 		}
@@ -90,12 +93,10 @@ public class Rij {
 		for(int i = 0; i <= maxsep; i++) {
 			if(wt-i >= 0 && wt < 2100) {
 				if (vtl[(int) wt - i] != null) {
-					abraham = vtl[(int) wt - bt - i];
-					System.out.println(abraham + " haha hoi");
+					abraham = vtl[(int) wt - i];
 					sep = SepTime.getSepTime(abraham.getKlasse(), vt.getKlasse());
-
 					for(int j = 0; j<= sep; j++) {
-						if (vtl[(int) wt - bt - j] != null) {
+						if (vtl[(int) wt - j] != null) {
 							return true;
 						}
 					}
@@ -103,8 +104,6 @@ public class Rij {
 				}
 			}
 		}
-
-
 		return false;
 	}
 
@@ -125,5 +124,9 @@ public class Rij {
 			}
 		}
 		return false;
+	}
+
+	private void printShit(Vliegtuig vt){
+		System.out.println("Placement successful for plane \""+vt.getName()+"\". Assigned time: "+vt.getAt()+" Assigned speed: "+vt.getV_current()+" Distance from airport: "+vt.getAfstand());
 	}
 }

@@ -21,7 +21,8 @@ public class MainAlgoritme implements Runnable{
 
 	public void run(){
 		rij = new Rij();
-		Vliegtuig vtg = new Vliegtuig(6000, 3, rij);
+		Vliegtuig vtg = new Vliegtuig("1",60000,2, rij);
+		Vliegtuig vtd = new Vliegtuig("2",90000,2, rij);
 		double now, lasttime = System.currentTimeMillis();
 
 
@@ -37,9 +38,11 @@ public class MainAlgoritme implements Runnable{
 		}
 	}
 
-	public void update(double dtime){
+	private void update(double dtime){
 		Vliegtuig[] vtl = rij.getvtl();
-		for(int i = 0; i < vtl.length; i++){
+
+		for(int i = 0; i < vtl.length;i++){
+			System.out.println("Update, dtime: "+dtime);
 			if(vtl[i] != null){
 				vtl[i].update(dtime);
 			}
