@@ -113,8 +113,8 @@ public class Rij {
 	}
 
 	private boolean checkAfter(long wt, Vliegtuig vt){							//Nog verbeteren
-		for(int i = 0; i <= maxsep; i++) {
-			if(wt+i < 2100) {
+		for(int i = 0; i <= maxsep; i++) {										//hier moeten we zorgen dat als abraham te dicht bij is dat hij dan aan geeft dat hij niet de ruimte heeft om te verplaatsen anders moeten we kijken waar we het anders doen.
+			if(wt+i < 2100) {													//Dit hier boven geld ook voor het checken van er na. Maar de kans dat het vliegtuig dan niet meer kan verplaatsen is zeer klein. Maar moeten het voor de zekerheid maar wel checken anders gaan we problemen krijgen
 				if (vtl[(int) wt + i] != null) {
 					abraham = vtl[(int) wt + i];
 					System.out.println(abraham);
