@@ -4,19 +4,28 @@ import java.util.Random;
 
 public class Timegeneration {
 	public static int n = 40;
-	private static int ttn;//targettime van vliegtuig n;
-	static int tt[];
+	private static int tt;//targettime van vliegtuig n;
+	private static int lt;//latesttime van vliegtuig n;
+	private static int v_cruise;
+	static int ttlist[];
+	static int v_cruiselist[];
 
-	public static int getttn(String vn){
-		ttn = tt[Integer.valueOf(vn)];  //????
-		return ttn;			
+	public static int gettt(int vn){
+		tt = ttlist[vn];  //????
+		return tt;			
+	}
+	
+	public static int getV_cruise(int vn){
+		v_cruise = v_cruiselist[vn];
+		return v_cruise;
 		
 	}
 	
 	public Timegeneration(){
-		int[] ft = new int[n+1];	//first time
-		tt = new int[n+1];	//target time
-		int[] lt = new int[n+1];	//latest time
+		int[] v_cruiselist = new int[n+1];	//first time
+		ttlist = new int[n+1];	//target time
+		int[] namelist = new int[n+1];
+		int[] ltlist = new int[n+1];	//latest time
 		int randomtt = 0;        //dat is het getal dat gegenereerd wordt per vliegtuig waarop ft tt en lt gebaseerd worden. Dit getal wordt zo geproduceerd dat alles als het goed is binnen de perken blijft
 		
 		
@@ -24,34 +33,27 @@ public class Timegeneration {
 		
 		for(int i=1; i<=n; i++ ){
 			randomtt = randomint.nextInt(2100); // minimale tijd is 1960, maar ik neem 2100 omdat het anders door de random getallen kan zijn dat het niet kan anders, voornamelijk aan het begin of aan het eind, daar moeten we het nog even over hebben.
-			tt[i] = randomtt;
+			ttlist[i] = randomtt;
+			int randomcruise = randomint.nextInt(64);
+			v_cruiselist[i] = randomcruise + 225;
+			namelist[i] = i;
 		}
 
 		for(int i=1; i<=n; i++){
-			if(tt[i]<=60){
-				ft[i] = 0;
-			}
-			else {
-				ft[i] = tt[i]-60;
-			}
-			if(tt[i]>=1800){
-				lt[i] = 2100;  
+			
+			if(ttlist[i]>=1800){
+				ltlist[i] = 2100;  
 			}
 			else{
-				lt[i] = tt[i]+300;
+				ltlist[i] = ttlist[i]+300;
 			}
-				
-			
-			int zf = ft[i]/60;                     // zf en af zijn gewoon random namen voor variablen die ik hier nodig had om de tijden in minuten:seconden te kunnen weergeven
-			int af = ft[i] - (zf*60);
-			System.out.println(zf + ":" + af);
-			
-			int zt = tt[i]/60;
-			int at = tt[i] - (zt*60);
+							
+			int zt = ttlist[i]/60;
+			int at = ttlist[i] - (zt*60);
 			System.out.println(zt + ":" + at);
 			
-			int zl = lt[i]/60;
-			int al = lt[i] - (zl*60);
+			int zl = ltlist[i]/60;
+			int al = ltlist[i] - (zl*60);
 			System.out.println(zl + ":" + al);
 			
 			System.out.println(" ");
