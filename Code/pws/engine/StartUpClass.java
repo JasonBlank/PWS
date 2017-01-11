@@ -13,8 +13,6 @@ public class StartUpClass {
 
 	public static void main(String[] args){
 		Window window = new Window();
-		MainAlgoritme alg = new MainAlgoritme(window);
-		alg.start();
 	}
 
 }
@@ -39,9 +37,10 @@ class Window extends JFrame{
 		setResizable(true);
 		setSize(300,300);
 		
-		JButton button = new JButton("Exit");
+		JButton button = new JButton("START TIME");
 		button.addActionListener((ActionEvent event) -> {
-            System.exit(0);
+            MainAlgoritme alg = new MainAlgoritme(this);
+            alg.start();
         }); 
 		
 		JMenuBar menubar = new JMenuBar();

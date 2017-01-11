@@ -1,6 +1,12 @@
 package pws.algoritme;
 
 public class Rij {
+
+
+	/*-----------------------------
+	|    VARIABLE DECLARATIONS    |
+	-----------------------------*/
+
 	private int bt = (int) System.currentTimeMillis()/1000;				//Begin time 						R E A L T I M E
 	static int ct, wt;													//Current time en Wanted time:		I N D E X T I M E
 	private Vliegtuig[] vtl = new Vliegtuig[2800];						//Vliegtuig timeline
@@ -9,7 +15,10 @@ public class Rij {
 	//private int[] maxsepv = {0, 60, 145, 167, 189}; 					//De 0 is om te zorgen dat je bij klasse 1 plek 1 kan opvragen
 	private Vliegtuig abraham;											//Willekeurige naam want ik had daar zin in. Dit is de
 																		//variabele waar het gevonden al ingeplande vliegtuig																	//tijdelijk in komt voor berekeningen enzo.
-	
+
+	/*---------------
+	|    GETTERS    |
+	---------------*/
 	
 	int getCt(){
 		return ct;
@@ -19,9 +28,12 @@ public class Rij {
 		return vtl;
 	}
 
-	void timeLoop(){													//Tijdbijhouding om benodigde snelheid te kunnen berekenen
-		ct = (int) System.currentTimeMillis()/1000 - bt;
-	}
+
+
+
+	/*------------------------
+	|    CHECKING METHODS    |
+	------------------------*/
 
 	void checknPlace(int wt, Vliegtuig vt){												//Hoofd controle functie; wt is Wanted Time
 			//---------------------------------------------------------------------------------------------------
@@ -92,8 +104,6 @@ public class Rij {
 
 	}
 
-
-
 	private boolean checkBefore(long wt, Vliegtuig vt){		//Is er al een vliegtuig gepland op het gewenste tijdstip?
 
 		for(int i = 0; i <= maxsep; i++) {
@@ -132,12 +142,6 @@ public class Rij {
 		return false;
 	}
 
-	private void printShit(Vliegtuig vt){
-		int zl = vt.getAt()/60;
-		int al = vt.getAt() - (zl*60);
-		System.out.println("Placement successful for plane \""+vt.getName()+"\". Assigned time: "+zl + ":" + al+" Assigned speed: "+vt.getV_current()+" Distance from airport: "+vt.getAfstand());
-	}
-
 	private int moveLeftCost(long wt, int dtime, Vliegtuig vtg){
 		int movedtimeleft = 0;
 		for(int i =(int) wt; i >= wt-dtime; i--){
@@ -149,5 +153,20 @@ public class Rij {
 		}
 
 		return movedtimeleft;
+	}
+
+
+	/*---------------------
+	|    MISCELLANEOUS    |
+	---------------------*/
+
+	private void printShit(Vliegtuig vt){
+		int zl = vt.getAt()/60;
+		int al = vt.getAt() - (zl*60);
+		System.out.println("Placement successful for plane \""+vt.getName()+"\". Assigned time: "+zl + ":" + al+" Assigned speed: "+vt.getV_current()+" Distance from airport: "+vt.getAfstand());
+	}
+
+	void timeLoop(){													//Tijdbijhouding om benodigde snelheid te kunnen berekenen
+		ct = (int) System.currentTimeMillis()/1000 - bt;
 	}
 }

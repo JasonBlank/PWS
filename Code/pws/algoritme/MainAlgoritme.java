@@ -6,15 +6,29 @@ import java.sql.Time;
 
 public class MainAlgoritme implements Runnable{
 
+
+	/*-----------------------------
+	|    VARIABLE DECLARATIONS    |
+	-----------------------------*/
+
 	private Object window;
 	private Vliegtuig vt;
 	boolean running = false;
 	private Rij rij;
 
+
+	/*-------------------
+	|    CONSTRUCTOR    |
+	-------------------*/
+
 	public MainAlgoritme(Object window){
 		this.window = window;
 	}
 
+
+	/*---------------
+	|    METHODS    |
+	---------------*/
 
 	public void start(){
 		System.out.println("Alg start");
