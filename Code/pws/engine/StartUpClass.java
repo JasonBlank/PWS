@@ -14,6 +14,7 @@ public class StartUpClass {
 	public static void main(String[] args){
 		Window window = new Window();
 		MainAlgoritme alg = new MainAlgoritme(window);
+		alg.start();
 	}
 
 }
@@ -38,7 +39,7 @@ class Window extends JFrame{
 		setResizable(true);
 		setSize(800,600);
 
-		JButton button = new JButton("START TIME");
+		JButton button = new JButton("KmSmYsElF");
 		button.addActionListener((ActionEvent event) -> {
 			System.exit(WindowConstants.EXIT_ON_CLOSE);
 		});
