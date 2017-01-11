@@ -13,6 +13,7 @@ public class StartUpClass {
 
 	public static void main(String[] args){
 		Window window = new Window();
+		MainAlgoritme alg = new MainAlgoritme(window);
 	}
 
 }
@@ -32,17 +33,16 @@ class Window extends JFrame{
 		setUndecorated(false);
 		setTitle("Algoritme");
 		setLocationRelativeTo(rootPane);
-		setDefaultCloseOperation(EXIT_ON_CLOSE);
+		setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
 		setBackground(Color.WHITE);
 		setResizable(true);
-		setSize(300,300);
-		
+		setSize(800,600);
+
 		JButton button = new JButton("START TIME");
 		button.addActionListener((ActionEvent event) -> {
-            MainAlgoritme alg = new MainAlgoritme(this);
-            alg.start();
-        }); 
-		
+			System.exit(WindowConstants.EXIT_ON_CLOSE);
+		});
+
 		JMenuBar menubar = new JMenuBar();
 		
 		JMenu file = new JMenu("File");
