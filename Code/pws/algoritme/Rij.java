@@ -3,13 +3,14 @@ package pws.algoritme;
 public class Rij {
 	private int bt = (int) System.currentTimeMillis()/1000;				//Begin time 						R E A L T I M E
 	static int ct, wt;													//Current time en Wanted time:		I N D E X T I M E
-	private Vliegtuig[] vtl = new Vliegtuig[2100];						//Vliegtuig timeline
+	private Vliegtuig[] vtl = new Vliegtuig[2800];						//Vliegtuig timeline
 	private int sep, maxsep = 189;										//Seperation
 	//private int[] maxsepn = {0, 189, 145, 122, 60};					//Ik stel voor om het zo te doen omdat er anders is een gebied gezocht wordt dat niet nodig is.
 	//private int[] maxsepv = {0, 60, 145, 167, 189}; 					//De 0 is om te zorgen dat je bij klasse 1 plek 1 kan opvragen
 	private Vliegtuig abraham;											//Willekeurige naam want ik had daar zin in. Dit is de
-																		//variabele waar het gevonden al ingeplande vliegtuig
-																		//tijdelijk in komt voor berekeningen enzo.
+																		//variabele waar het gevonden al ingeplande vliegtuig																	//tijdelijk in komt voor berekeningen enzo.
+	
+	
 	int getCt(){
 		return ct;
 	}
@@ -132,7 +133,9 @@ public class Rij {
 	}
 
 	private void printShit(Vliegtuig vt){
-		System.out.println("Placement successful for plane \""+vt.getName()+"\". Assigned time: "+vt.getAt()+" Assigned speed: "+vt.getV_current()+" Distance from airport: "+vt.getAfstand());
+		int zl = vt.getAt()/60;
+		int al = vt.getAt() - (zl*60);
+		System.out.println("Placement successful for plane \""+vt.getName()+"\". Assigned time: "+zl + ":" + al+" Assigned speed: "+vt.getV_current()+" Distance from airport: "+vt.getAfstand());
 	}
 
 	private int moveLeftCost(long wt, int dtime, Vliegtuig vtg){

@@ -16,6 +16,10 @@ public class Timegeneration {
 	static int ltlist[];
 	static int v_maxlist[];
 	static int klasselist[];
+	private int presenttimeline[] = new int[2800];
+	
+	
+
 	
 	public static int getKlasse(int vn){
 		klasse = klasselist[vn];
@@ -61,8 +65,8 @@ public class Timegeneration {
 		//bedacht me dat de array niet gesort hoeft te worden, omdat we een lijst hebben met welk vliegtuig zich wanneer presenteerd en we dus al alle in de goede volgorde hebben
 		Random randomint = new Random();
 		
-		for(int i=1; i<=n; i++ ){
-			randomtt = randomint.nextInt(2000); // minimale tijd is 1960, maar ik neem 2100 omdat het anders door de random getallen kan zijn dat het niet kan anders, voornamelijk aan het begin of aan het eind, daar moeten we het nog even over hebben.
+		for(int i=1; i<=n+1; i++ ){
+			randomtt = randomint.nextInt(2000) + 800; // 2000 voor de target time. De timeline verlengen we met 800 want dat is hoeveel de maximale tijd tussen melden en target time is. En we moeten zorgen dat de index time 800 eerder begint want anders wordt het lastig van het maken van de vliegtuigen die in de eerste 800 sec de tt hebben
 			ttlist[i] = randomtt;
 			int randomcruise = randomint.nextInt(64);
 			v_cruiselist[i] = randomcruise + 225;
@@ -71,10 +75,10 @@ public class Timegeneration {
 			
 		}
 
-		for(int i=1; i<=n; i++){
+		for(int i=1; i<=n+1; i++){
 			
 			presenttimelist[i] = ttlist[i]-(180000/v_cruiselist[i]);
-			
+			presenttimeline[presenttimelist[i]] = i;					//als het goed is zou dit er voor moeten zorgen dat er een timeline is met de moementen dat het bepaalde vliegtuig zich plaatst
 			v_maxlist[i] = v_cruiselist[i] + 16;
 			
 			if(i<=2){
@@ -91,8 +95,8 @@ public class Timegeneration {
 				klasselist[i] = 4;
 			}
 				
-			if(ttlist[i]>=1800){
-				ltlist[i] = 2100;  
+			if(ttlist[i]>=2500){
+				ltlist[i] = 2800;  
 			}
 			else{
 				ltlist[i] = ttlist[i]+300;
