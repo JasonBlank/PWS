@@ -15,7 +15,7 @@ public class Rij {
 	//private int[] maxsepv = {0, 60, 145, 167, 189}; 					//De 0 is om te zorgen dat je bij klasse 1 plek 1 kan opvragen
 	private Vliegtuig abraham;											//Willekeurige naam want ik had daar zin in. Dit is de
 																		//variabele waar het gevonden al ingeplande vliegtuig																	//tijdelijk in komt voor berekeningen enzo.
-
+	public boolean landingsbaanok;
 	/*---------------
 	|    GETTERS    |
 	---------------*/
@@ -24,7 +24,7 @@ public class Rij {
 		return ct;
 	}
 
-	Vliegtuig[] getvtl(){
+	Vliegtuig[] getVtl(){
 		return vtl;
 	}
 
@@ -39,8 +39,17 @@ public class Rij {
 			//---------------------------------------------------------------------------------------------------
 		if (checkBefore(wt, vt)) {                                    					//true is problematisch; false is ruimte
 			if (checkAfter(wt, vt)) {
-				//nu moeten we gaan schuiven. Aan allebei de kanten zit een vliegtuig.
-				System.out.println();
+				int neededspaceRight = -(abraham.getAt()-wt-SepTime.getSepTime(vt.getKlasse(),abraham.getKlasse()));
+				checkBefore(wt,vt);
+				int neededspaceLeft = -(wt- abraham.getAt() - SepTime.getSepTime(abraham.getKlasse(),vt.getKlasse()));
+				int neededspaceTotal = neededspaceLeft + neededspaceRight;
+
+				if(neededspaceLeft > neededspaceRight * 1.4){
+					checkAfter(wt,vt);
+					checknPlace(abraham.getAt() + neededspaceTotal - 1,abraham);
+				}else{
+					checknPlace(abraham.getAt() - neededspaceTotal + 1,abraham);
+				}
 			}
 			//---------------------------------------------------------------------------------------------------
 			else {//Rechts is ruimte, links niet.
@@ -59,8 +68,7 @@ public class Rij {
 						printShit(vt);
 						//extra kosten deze stap = ((wt-abraham.getAt()+sep)*Kosten van te laat;
 					} else {
-						checknPlace(abraham.getAt() + sep, vt);
-						//chenknPlace(abraham.getAt()+sep -1, vt);
+						checknPlace(abraham.getAt() + sep + 1, vt);
 						//we willen dus dat we hier sws naar case false-false gaan. Zie voor uitleg true.true
 						//dit kunnen we doen zoals bij true.true uitgelegd. Maar ook mis door ze ze meteen door te sturen naar false.false
 						//maar ik denk dat het makkelijkst is om manier te doen zoals bij true.true omdat het anders wel erg moeilijk wordt om het te programmeren in false.false
@@ -78,14 +86,14 @@ public class Rij {
 					vt.setV_current(vt.getAfstand() / (vt.getAt() - ct));
 					//extra kosten deze stap = ((abraham.getAt()-sep)-wt)*Kosten van te vroeg;
 				} else {
-					checknPlace(abraham.getAt() - sep, vt);
+					checknPlace(abraham.getAt() - sep + 1, vt);
 					//chenknPlace(abraham.getAt()-sep +1, vt);
 					//hier gaat het fout nu. Want als je hem nu op nieuw laat lopen komt hij als het goed is uit bij false.true omdat er precies genoeg ruimte zou zijn om geen last te hebben van die van rechts.
 					//In de true.false als hij niet naar links kan schuiven gaat hij weer terug naar wanneer hij precies geen lans meer heeft van links. En op die manier blijft hij dan bounchen tussen die twee.
 					//We moeten er dus voor zorgen dat we de wt niet veranderen in precies sep er vanaf maar iets minder dat hij bij false.false komt zodat we het kunnen oplossen.
 
 					if(checkBefore(wt,vt)){
-						System.out.println("Cost: "+moveLeftCost(wt,4,vt));
+						moveLeft(wt,4,abraham,vt,false);
 					}
 				}
 				//-----------------------------------------------------------------------------------------------
@@ -128,7 +136,6 @@ public class Rij {
 			if(wt+i < 2100) {													//Dit hier boven geld ook voor het checken van er na. Maar de kans dat het vliegtuig dan niet meer kan verplaatsen is zeer klein. Maar moeten het voor de zekerheid maar wel checken anders gaan we problemen krijgen
 				if (vtl[(int) wt + i] != null) {
 					abraham = vtl[(int) wt + i];
-					System.out.println(abraham);
 					sep = SepTime.getSepTime(abraham.getKlasse(), vt.getKlasse());
 					for (int j = 0; j <= sep; j++) {
 						if (vtl[(int) wt + j] != null) {
@@ -142,17 +149,51 @@ public class Rij {
 		return false;
 	}
 
-	private int moveLeftCost(long wt, int dtime, Vliegtuig vtg){
+	private int moveLeft(long wt, int dtime, Vliegtuig vtg, Vliegtuig org, boolean forced){
 		int movedtimeleft = 0;
-		for(int i =(int) wt; i >= wt-dtime; i--){
-			if(vtl[i]!=null){
-				if(!checkBefore(vtl[i].getAt(),vtl[i])) {
-					movedtimeleft += wt - vtl[i].getAt() - SepTime.getSepTime(vtl[i].getKlasse(), vtg.getKlasse());
+		checkBefore(wt, vtg);
+		if(!forced) {
+			if (vtg.getAt() - vtg.getFirsttime(vtg.getAfstand()) >= dtime) {
+				if (!checkBefore(vtg.getAt() - dtime, vtg)) {
+					vtg.assignTime(vtg.getAt() - dtime);
+					System.out.println("Abraham wordt " + dtime + " naar links verplaatst");
+					checknPlace(vtg.getAt() + SepTime.getSepTime(vtg.getKlasse(), org.getKlasse()), org);
+				} else {
+					int vp_max = vtg.getAt() - abraham.getAt() - SepTime.getSepTime(abraham.getKlasse(), vtg.getKlasse());
+					int vp_right = dtime - vp_max;
+					vtg.assignTime(vtg.getAt() - vp_max);
+					System.out.println("VTG wordt " + vp_max + " naar links verplaatst. " + dtime + " nog naar rechts te verplaatsen.");
+					moveRight(vtg.getAt() + SepTime.getSepTime(vtg.getKlasse(), org.getKlasse()), vp_right, org);
 				}
+			}else{
+				//Shit
 			}
+
+		}else{
+			//Check twee of meer vliegtuigen naar links.
+		}
+		return movedtimeleft;
+	}
+
+	private int moveRight(long wt, int dtime, Vliegtuig org){
+		checkAfter(wt,org);
+		Vliegtuig vtg = abraham;
+		if(vtg.getAt()+300-wt  >= dtime){
+			if(!checkAfter(wt+SepTime.getSepTime(org.getKlasse(),vtg.getKlasse()),vtg)){
+				vtg.assignTime(vtg.getAt()+dtime);								//abraham.getAt()-vtg.getAt()
+				org.assignTime((int)wt);
+			}else{
+				int vp_max = abraham.getAt()-vtg.getAt();
+				int vp_left = dtime - vp_max;
+				vtg.assignTime(vtg.getAt()+vp_max);
+				checkBefore(wt-vp_left,org);
+				moveLeft(wt-vp_left,vp_left,abraham,org, true);
+			}
+		}else{
+			landingsbaanok = false;
 		}
 
-		return movedtimeleft;
+		return 0;
 	}
 
 

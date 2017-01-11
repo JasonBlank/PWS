@@ -85,6 +85,9 @@ public class Vliegtuig {
 		return ft;
 	}
 
+	public boolean getTeDichtbij(){
+		return tedichtbij;
+	}
 
 
 	void update(double dtime){ // 500 meter is wel erg weinig afstand om nog dingen nog te gaan veranderen, we kunnen het beter iets van 1 minuut maken of 30 seconden, omdat de snelheid ook verschilt en dus een afstand niet optimaal is

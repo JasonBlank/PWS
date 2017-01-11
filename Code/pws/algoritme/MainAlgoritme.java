@@ -14,7 +14,7 @@ public class MainAlgoritme implements Runnable{
 
 	private Object window;
 	private Vliegtuig vt;
-	boolean running = false;
+	boolean running = true;
 	private Rij rij;
 
 
@@ -41,9 +41,8 @@ public class MainAlgoritme implements Runnable{
 	public void run(){
 		Timegeneration tg = new Timegeneration();
 		rij = new Rij();
-		Vliegtuig vtg = new Vliegtuig(1,60000,2, rij);
-		Vliegtuig vtd = new Vliegtuig(2,90000,2, rij);
 		double now, lasttime = System.currentTimeMillis();
+		System.out.println("Continuing to main loop");
 
 
 
@@ -51,22 +50,28 @@ public class MainAlgoritme implements Runnable{
 			if(running) {
 				rij.timeLoop();
 				now = System.currentTimeMillis();
-				update(now-lasttime);
-				lasttime = now;
-
+				if(now-lasttime >= 10) {
+					update(now - lasttime, tg);
+					lasttime = now;
+				}
 			}
 		}
 	}
 
-	private void update(double dtime){
-		Vliegtuig[] vtl = rij.getvtl();
-
+	private void update(double dtime, Timegeneration tg){
+		Vliegtuig[] vtl = rij.getVtl();
 		for(int i = 0; i < vtl.length;i++){
-			System.out.println("Update, dtime: "+dtime);
 			if(vtl[i] != null){
 				vtl[i].update(dtime);
 			}
 		}
+
+		int[] ptl = tg.getPresentTimeLine();
+		int ct = rij.getCt();
+		if(ptl[ct] != 0){
+			Vliegtuig vt = new Vliegtuig(ptl[ct], 180000, Timegeneration.getKlasse(ptl[ct]), rij);
+		}
+
 	}
 
 

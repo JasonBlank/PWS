@@ -11,17 +11,17 @@ public class Timegeneration {
 	public static int n = 40;
 	private static int tt;                            // Target time van vliegtuig n
 	private static int lt;                            // Latest time van vliegtuig n
-	private static int v_cruise;                    // Optimale (cruise) snelheid van vliegtuig n
-	private static int presenttime;                    // Vgm de tijd waarop het vliegtuig announced wordt bij het algoritme
-	private static int v_max;                        // Maximale snelheid van vliegtuig n
+	private static int v_cruise;                      // Optimale (cruise) snelheid van vliegtuig n
+	private static int presenttime;                   // Vgm de tijd waarop het vliegtuig announced wordt bij het algoritme
+	private static int v_max;                         // Maximale snelheid van vliegtuig n
 	private static int klasse;                        // Gewichtsklasse (zie SepTime) van vliegtuig n
-	static int ttlist[];                            // Lijst van target times (tt) van alle vliegtuigen
+	static int ttlist[];                              // Lijst van target times (tt) van alle vliegtuigen
 	static int v_cruiselist[];                        // Lijst van cruisesnelheden (v_cruise) van alle vliegtuigen
-	static int presenttimelist[];                    // Lijst van aanmeldtijden (presenttime) van alle vliegtuigen
-	static int ltlist[];                            // Lijst van laatste landingstijden (lt) van alle vliegtuigen
-	static int v_maxlist[];                            // Lijst van maximale snelheden (v_max) van alle vliegtuigen
-	static int klasselist[];                        // Lijst van gewichtsklasses van alle vliegtuigen
-	private int presenttimeline[] = new int[2800];    // Tijdlijn met de indeling van de planning van vliegtuigen
+	static int presenttimelist[];                     // Lijst van aanmeldtijden (presenttime) van alle vliegtuigen
+	static int ltlist[];                              // Lijst van laatste landingstijden (lt) van alle vliegtuigen
+	static int v_maxlist[];                           // Lijst van maximale snelheden (v_max) van alle vliegtuigen
+	static int klasselist[];                          // Lijst van gewichtsklasses van alle vliegtuigen
+	private int presenttimeline[] = new int[2801];    // Tijdlijn met de indeling van de planning van vliegtuigen
 	
 
 	/*-------------------
@@ -125,6 +125,10 @@ public class Timegeneration {
 	public static int getPresenttime(int vn) {
 		presenttime = presenttimelist[vn];
 		return presenttime;
+	}
+
+	public int[] getPresentTimeLine(){
+		return presenttimeline;
 	}
 
 }
