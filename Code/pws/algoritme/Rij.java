@@ -37,6 +37,28 @@ public class Rij {
 	/*------------------------
 	|    CHECKING METHODS    |
 	------------------------*/
+	void Kosttotal(int dtime){
+		int x = 1;
+		int y = 1;
+		float kostendan = 0;
+		while(dtime > 0){
+			if(x<(y*costlate)){
+				kostendan = gekkeFunctievroeg()[x];
+				dtime -= kostendan;
+				x++;
+				totalcostL1 += kostendan;
+			}
+			else{
+				kostendan = gekkeFunctielaat()[y];
+				dtime -= (kostendan/costlate);
+				y++;
+				totalcostL1 += kostendan;
+			}
+				
+			
+		}
+	}
+
 
 	void checknPlace(int wt, Vliegtuig vt){												//Hoofd controle functie; wt is Wanted Time
 			//---------------------------------------------------------------------------------------------------
