@@ -51,6 +51,8 @@ public class Vliegtuig {
 	private void setAfstand(double afstand) {
 		if(afstand > 500){
 			afstand_tot_landingsbaan = afstand;
+		}else{
+			System.out.println("Afstand te kort om afstand te zetten");
 		}
 	}
 

@@ -221,7 +221,7 @@ public class Rij {
 	private void printShit(Vliegtuig vt){
 		int zl = vt.getAt()/60;
 		int al = vt.getAt() - (zl*60);
-		System.out.println("Placement successful for plane \""+vt.getName()+"\". Assigned time: "+zl + ":" + al+" Assigned speed: "+vt.getV_current()+" Distance from airport: "+vt.getAfstand());
+		System.out.println("Placement successful for plane no. "+vt.getName()+". Assigned time: "+zl + ":" + al+" Assigned speed: "+vt.getV_current()+" Distance from airport: "+vt.getAfstand());
 	}
 
 	void timeLoop(){													//Tijdbijhouding om benodigde snelheid te kunnen berekenen
