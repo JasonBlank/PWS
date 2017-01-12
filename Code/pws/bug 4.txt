@@ -1,0 +1,33 @@
+162
+Afstand van Vliegtuig 7 tot landingsbaan: 156662.38767650977
+163
+Afstand van Vliegtuig 7 tot landingsbaan: 156431.32220796036
+164
+Afstand van Vliegtuig 7 tot landingsbaan: 156200.25673941095
+Vliegtuig 22
+CheckBefore() heeft Vliegtuig 7 gevonden
+CheckBefore() heeft geen vliegtuigen voor Vliegtuig 7 gevonden
+CheckBefore() heeft geen vliegtuigen voor Vliegtuig 22 gevonden
+Placement successful for plane no. 22. Assigned time: 15:40 Assigned speed: 232.25806451612902 Distance from airport: 180000.0
+CheckBefore() heeft Vliegtuig 7 gevonden
+CheckAfter() heeft 22 gevonden
+Vliegtuigen links en rechts gevonden van Vliegtuig 22
+CheckBefore() heeft Vliegtuig 7 gevonden
+Plaats Vliegtuig 22 naar links vanwege kosten
+CheckBefore() heeft Vliegtuig 7 gevonden
+CheckAfter() heeft 22 gevonden
+Vliegtuigen links en rechts gevonden van Vliegtuig 7
+CheckBefore() heeft Vliegtuig 7 gevonden
+Plaats Vliegtuig 7 naar links vanwege kosten
+CheckBefore() heeft Vliegtuig 7 gevonden
+CheckAfter() heeft 22 gevonden
+Vliegtuigen links en rechts gevonden van Vliegtuig 7
+CheckBefore() heeft Vliegtuig 7 gevonden
+Plaats Vliegtuig 7 naar links vanwege kosten
+CheckBefore() heeft Vliegtuig 7 gevonden
+CheckAfter() heeft 22 gevonden
+Vliegtuigen links en rechts gevonden van Vliegtuig 7
+CheckBefore() heeft Vliegtuig 7 gevonden
+Plaats Vliegtuig 7 naar links vanwege kosten
+CheckBefore() heeft Vliegtuig 7 gevonden
+CheckAfter() heeft 22 gevonden

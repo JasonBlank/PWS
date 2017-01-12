@@ -7,7 +7,7 @@ public class Rij {
 	|    VARIABLE DECLARATIONS    |
 	-----------------------------*/
 
-	private int bt = (int) System.currentTimeMillis()/1000;				//Begin time 						R E A L T I M E
+	private long bt = System.currentTimeMillis()/1000;				//Begin time 						R E A L T I M E
 	static int ct, wt;													//Current time en Wanted time:		I N D E X T I M E
 	private Vliegtuig[] vtl = new Vliegtuig[2800];						//Vliegtuig timeline
 	private int sep, maxsep = 189;										//Seperation
@@ -42,26 +42,31 @@ public class Rij {
 			//---------------------------------------------------------------------------------------------------
 		if (checkBefore(wt, vt)) {                                    					//true is problematisch; false is ruimte
 			if (checkAfter(wt, vt)) {
-				System.out.println("Found planes left and right of no. "+vt.getAfstand());
+				System.out.println("Vliegtuigen links en rechts gevonden van "+vt);
 				int neededspaceRight = -(abraham.getAt()-wt-SepTime.getSepTime(vt.getKlasse(),abraham.getKlasse()));
 				checkBefore(wt,vt);
 				int neededspaceLeft = -(wt- abraham.getAt() - SepTime.getSepTime(abraham.getKlasse(),vt.getKlasse()));
-				int neededspaceTotal = neededspaceLeft + neededspaceRight;
+				int neededspaceTotal = -(neededspaceLeft + neededspaceRight);
 
 				if(neededspaceLeft > neededspaceRight * costlate){
-					checkAfter(wt,vt);
 					System.out.println("Plaats "+vt+" naar rechts vanwege kosten");
+					checkAfter(wt,vt);
 					checknPlace(abraham.getAt() + neededspaceTotal - 1,abraham);
 				}else{
 					System.out.println("Plaats "+vt+" naar links vanwege kosten");
 					checknPlace(abraham.getAt() - neededspaceTotal + 1,abraham);
+					checknPlace(wt,vt);
 				}
 			}
 			//---------------------------------------------------------------------------------------------------
 			else {//Rechts is ruimte, links niet.
 				if (checkBefore(wt - SepTime.getSepTime(abraham.getKlasse(), vt.getKlasse()), abraham)) {            //hier kijken of er ruimte is is voor abraham om naar links te gaan
 					System.out.println("Abraham kan en gaat naar links zodat "+vt+" geplaatst kan worden om "+wt);
+					vtl[abraham.getAt()] = null;
 					abraham.assignTime(abraham.getAt() - ((abraham.getAt() + sep) - wt));
+					vtl[abraham.getAt()] = abraham;
+					abraham.setV_current(abraham.getAfstand()/(abraham.getAt()-ct));
+					printShit(abraham);
 					//Extra kosten van deze stap = (abraham.getAt()+sep-wt)*kosten van te vroeg;
 					//totalkostL1 = (abraham.getAt() + SepTime.getSepTime(abraham.getKlasse(), vt.getKlasse()) - wt)*costearly;
 					vtl[wt] = vt;
@@ -78,6 +83,7 @@ public class Rij {
 						//totalkostL1 = ((wt + SepTime.getSepTime(vt.getKlasse(), abraham.getKlasse()) - abraham.getAt())*costlate;
 					} else {
 						checknPlace(abraham.getAt() + sep + 1, vt);
+						checknPlace(wt,vt);
 						//geen kosten functie wat wordt doorgestuurd
 						//we willen dus dat we hier sws naar case false-false gaan. Zie voor uitleg true.true
 						//dit kunnen we doen zoals bij true.true uitgelegd. Maar ook mis door ze ze meteen door te sturen naar false.false
@@ -119,7 +125,7 @@ public class Rij {
 					vt.assignTime(diff);
 					vt.setV_current(vt.getAfstand()/(vt.getAt()-ct));
 					printShit(vt);
-									//extra kosten = 0
+					//extra kosten = 0
 					//totalkostL1 = 0;
 			}
 		}
@@ -136,13 +142,14 @@ public class Rij {
 					sep = SepTime.getSepTime(abraham.getKlasse(), vt.getKlasse());
 					for(int j = 0; j<= sep; j++) {
 						if (vtl[(int) wt - j] != null) {
+							System.out.println("CheckBefore() heeft " + vtl[(int)wt-j] + " gevonden");
 							return true;
 						}
 					}
-					return false;
 				}
 			}
 		}
+		System.out.println("CheckBefore() heeft geen vliegtuigen voor " + vt + " gevonden");
 		return false;
 	}
 
@@ -168,16 +175,50 @@ public class Rij {
 					sep = SepTime.getSepTime(abraham.getKlasse(), vt.getKlasse());
 					for (int j = 0; j <= sep; j++) {
 						if (vtl[(int) wt + j] != null) {
-							System.out.println("CheckAfter() found plane no. "+abraham.getName());
+							System.out.println("CheckAfter() heeft "+abraham.getName()+" gevonden");
 							return true;
 						}
 					}
-					System.out.println("CheckAfter() found no planes right to plane no. "+vt.getName());
+					System.out.println("CheckAfter() heeft geen vliegtuigen gevonden rechts van "+vt.getName());
 					return false;
 				}
 			}
 		}
 		return false;
+	}
+
+	private int moveLeftCost(long wt, int dtime, Vliegtuig vtg, Vliegtuig org){
+		int movabletime = 0, n = 0;
+		int lastnumber = vtg.getAt();
+		Vliegtuig[] lijstje1 = new Vliegtuig[0];
+		Vliegtuig[] lijstje2 = new Vliegtuig[0];
+
+		while (movabletime < dtime){
+			for(int i = lastnumber; lastnumber > 0; lastnumber--){
+				if(vtl[i] != null){
+					n++;
+					lijstje2 = new Vliegtuig[n];
+					for(int j = 0; j < lijstje1.length;j++){
+						lijstje2[j] = lijstje1[j];
+					}
+					lijstje2[n-1] = vtl[i];
+					lijstje1 = lijstje2;
+					//Moet nog een if inplementeren met controle of het vliegtuig wel zo ver naar links kan als gewenst.
+					if(lijstje1.length < 2){
+						movabletime += (vtg.getAt()-lijstje1[0].getAt()-SepTime.getSepTime(lijstje1[0].getKlasse(),vtg.getKlasse()));
+					}else{
+						movabletime += ((lijstje1[n-1].getAt()-lijstje1[n].getAt()-SepTime.getSepTime(lijstje1[n].getKlasse(),lijstje1[n-1].getKlasse())));
+					}
+
+				}
+			}
+			if(movabletime < dtime){
+				//Kan niet ver genoeg naar links schuiven
+			}
+		}
+		//Het is gelukt!! De lijst met alle naar links te verplaatsen vliegtuigen staat in lijstje2!!
+
+		return movabletime;
 	}
 
 	private int moveLeft(long wt, int dtime, Vliegtuig vtg, Vliegtuig org, boolean forced){
@@ -201,7 +242,6 @@ public class Rij {
 			}
 
 		}else{
-			System.out.println("MoveLeft tweede else");
 			//Check twee of meer vliegtuigen naar links.
 		}
 		return movedtimeleft;
@@ -214,7 +254,7 @@ public class Rij {
 			if(!checkAfter(wt+SepTime.getSepTime(org.getKlasse(),vtg.getKlasse()),vtg)){
 				vtg.assignTime(vtg.getAt()+dtime);								//abraham.getAt()-vtg.getAt()
 				org.assignTime((int)wt);
-				System.out.println("MoveRight(): org planned at "+wt+"; vtg planned at "+vtg.getAt());
+				System.out.println("MoveRight(): " + org + " is gepland om " + wt + "; " + vtg + " is gepland om " + vtg.getAt());
 			}else{
 				int vp_max = abraham.getAt()-vtg.getAt();
 				int vp_left = dtime - vp_max;
@@ -241,7 +281,7 @@ public class Rij {
 		System.out.println("Placement successful for plane no. "+vt.getName()+". Assigned time: "+zl + ":" + al+" Assigned speed: "+vt.getV_current()+" Distance from airport: "+vt.getAfstand());
 	}
 
-	void timeLoop(){													//Tijdbijhouding om benodigde snelheid te kunnen berekenen
-		ct = (int) (System.currentTimeMillis()/1000 - bt)*MainAlgoritme.cycles_per_second;
+	void timeLoop(){							//Tijdbijhouding om benodigde snelheid te kunnen berekenen
+		ct = (int) (((System.currentTimeMillis()/1000.0) - bt)*(double)MainAlgoritme.cycles_per_second);
 	}
 }

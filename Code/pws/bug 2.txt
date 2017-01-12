@@ -1,0 +1,67 @@
+Afstand van Vliegtuig 8 tot landingsbaan: 55784.21052631417
+Afstand van Vliegtuig 1 tot landingsbaan: 84934.59961022506
+Afstand van Vliegtuig 7 tot landingsbaan: 114105.31507174642
+Afstand van Vliegtuig 12 tot landingsbaan: 119107.02542745353
+Afstand van Vliegtuig 36 tot landingsbaan: 125449.99999999847
+Afstand van Vliegtuig 15 tot landingsbaan: 164296.26168224256
+Afstand van Vliegtuig 31 tot landingsbaan: 168676.41509434002
+Afstand van Vliegtuig 37 tot landingsbaan: 134858.11974657027
+Afstand van Vliegtuig 28 tot landingsbaan: 170549.39434724126
+Vliegtuig 11
+CheckBefore() heeft Vliegtuig 37 gevonden
+CheckAfter() heeft 28 gevonden
+Vliegtuigen links en rechts gevonden van Vliegtuig 11
+CheckBefore() heeft Vliegtuig 37 gevonden
+Plaats Vliegtuig 11 naar links vanwege kosten
+CheckBefore() heeft Vliegtuig 28 gevonden
+CheckBefore() heeft Vliegtuig 37 gevonden
+Abraham kan en gaat naar links zodat Vliegtuig 37 geplaatst kan worden om 1368
+Placement successful for plane no. 37. Assigned time: 21:48 Assigned speed: 190.7469869116977 Distance from airport: 134858.11974657027
+Placement successful for plane no. 37. Assigned time: 22:48 Assigned speed: 175.825449474016 Distance from airport: 134858.11974657027
+CheckBefore() heeft Vliegtuig 31 gevonden
+CheckAfter() heeft 28 gevonden
+Vliegtuigen links en rechts gevonden van Vliegtuig 11
+CheckBefore() heeft Vliegtuig 31 gevonden
+Plaats Vliegtuig 11 naar links vanwege kosten
+CheckBefore() heeft Vliegtuig 31 gevonden
+CheckAfter() heeft 28 gevonden
+Vliegtuigen links en rechts gevonden van Vliegtuig 31
+CheckBefore() heeft Vliegtuig 31 gevonden
+Plaats Vliegtuig 31 naar links vanwege kosten
+CheckBefore() heeft Vliegtuig 31 gevonden
+CheckAfter() heeft 28 gevonden
+Vliegtuigen links en rechts gevonden van Vliegtuig 15
+CheckBefore() heeft Vliegtuig 31 gevonden
+Plaats Vliegtuig 15 naar links vanwege kosten
+CheckBefore() heeft Vliegtuig 31 gevonden
+CheckAfter() heeft 28 gevonden
+Vliegtuigen links en rechts gevonden van Vliegtuig 31
+CheckBefore() heeft Vliegtuig 31 gevonden
+Plaats Vliegtuig 31 naar links vanwege kosten
+CheckBefore() heeft Vliegtuig 31 gevonden
+CheckAfter() heeft 28 gevonden
+Vliegtuigen links en rechts gevonden van Vliegtuig 15
+CheckBefore() heeft Vliegtuig 31 gevonden
+Plaats Vliegtuig 15 naar links vanwege kosten
+CheckBefore() heeft Vliegtuig 31 gevonden
+CheckAfter() heeft 28 gevonden
+Vliegtuigen links en rechts gevonden van Vliegtuig 31
+CheckBefore() heeft Vliegtuig 31 gevonden
+Plaats Vliegtuig 31 naar links vanwege kosten
+CheckBefore() heeft Vliegtuig 31 gevonden
+CheckAfter() heeft 28 gevonden
+Vliegtuigen links en rechts gevonden van Vliegtuig 15
+CheckBefore() heeft Vliegtuig 31 gevonden
+Plaats Vliegtuig 15 naar links vanwege kosten
+CheckBefore() heeft Vliegtuig 31 gevonden
+CheckAfter() heeft 28 gevonden
+Vliegtuigen links en rechts gevonden van Vliegtuig 31
+CheckBefore() heeft Vliegtuig 31 gevonden
+Plaats Vliegtuig 31 naar links vanwege kosten
+CheckBefore() heeft Vliegtuig 31 gevonden
+CheckAfter() heeft 28 gevonden
+Vliegtuigen links en rechts gevonden van Vliegtuig 15
+CheckBefore() heeft Vliegtuig 31 gevonden
+Plaats Vliegtuig 15 naar links vanwege kosten
+CheckBefore() heeft Vliegtuig 31 gevonden
+CheckAfter() heeft 28 gevonden

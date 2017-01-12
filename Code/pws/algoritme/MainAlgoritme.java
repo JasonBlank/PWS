@@ -16,7 +16,8 @@ public class MainAlgoritme implements Runnable{
 	private Vliegtuig vt;
 	boolean running = true;
 	private Rij rij;
-	static int cycles_per_second = 1;
+	private Timegeneration tg;
+	static int cycles_per_second = 10;
 
 
 	/*-------------------
@@ -38,7 +39,7 @@ public class MainAlgoritme implements Runnable{
 	}
 
 	public void run(){
-		Timegeneration tg = new Timegeneration();
+		tg = new Timegeneration();
 		rij = new Rij();
 		double now, lasttime = System.currentTimeMillis();
 		System.out.println("Continuing to main loop");
@@ -50,7 +51,7 @@ public class MainAlgoritme implements Runnable{
 				now = System.currentTimeMillis();
 				if(now-lasttime >= 1000/cycles_per_second) {
 					rij.timeLoop();
-					update((now - lasttime)*cycles_per_second, tg);
+					update((now - lasttime)/1000*cycles_per_second, tg);
 					System.out.println(rij.getCt());
 					lasttime = now;
 				}

@@ -1,0 +1,2693 @@
+Alg start
+Target time: 14:34
+Latest time: 19:34
+ 
+Target time: 40:15
+Latest time: 45:15
+ 
+Target time: 25:29
+Latest time: 30:29
+ 
+Target time: 34:47
+Latest time: 39:47
+ 
+Target time: 29:56
+Latest time: 34:56
+ 
+Target time: 27:42
+Latest time: 32:42
+ 
+Target time: 16:59
+Latest time: 21:59
+ 
+Target time: 13:33
+Latest time: 18:33
+ 
+Target time: 33:38
+Latest time: 38:38
+ 
+Target time: 43:9
+Latest time: 46:40
+ 
+Target time: 20:57
+Latest time: 25:57
+ 
+Target time: 18:14
+Latest time: 23:14
+ 
+Target time: 36:55
+Latest time: 41:55
+ 
+Target time: 44:57
+Latest time: 46:40
+ 
+Target time: 19:47
+Latest time: 24:47
+ 
+Target time: 44:55
+Latest time: 46:40
+ 
+Target time: 28:46
+Latest time: 33:46
+ 
+Target time: 30:20
+Latest time: 35:20
+ 
+Target time: 36:16
+Latest time: 41:16
+ 
+Target time: 39:24
+Latest time: 44:24
+ 
+Target time: 46:5
+Latest time: 46:40
+ 
+Target time: 36:24
+Latest time: 41:24
+ 
+Target time: 39:16
+Latest time: 44:16
+ 
+Target time: 30:20
+Latest time: 35:20
+ 
+Target time: 23:16
+Latest time: 28:16
+ 
+Target time: 35:20
+Latest time: 40:20
+ 
+Target time: 27:39
+Latest time: 32:39
+ 
+Target time: 21:45
+Latest time: 26:45
+ 
+Target time: 29:33
+Latest time: 34:33
+ 
+Target time: 34:12
+Latest time: 39:12
+ 
+Target time: 19:57
+Latest time: 24:57
+ 
+Target time: 43:42
+Latest time: 46:40
+ 
+Target time: 37:47
+Latest time: 42:47
+ 
+Target time: 39:23
+Latest time: 44:23
+ 
+Target time: 39:54
+Latest time: 44:54
+ 
+Target time: 19:13
+Latest time: 24:13
+ 
+Target time: 19:41
+Latest time: 24:41
+ 
+Target time: 26:48
+Latest time: 31:48
+ 
+Target time: 45:49
+Latest time: 46:40
+ 
+Target time: 31:12
+Latest time: 36:12
+ 
+Continuing to main loop
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76
+77
+78
+79
+80
+81
+82
+83
+84
+85
+86
+87
+88
+89
+90
+91
+92
+93
+94
+95
+96
+97
+98
+99
+100
+101
+102
+103
+104
+105
+106
+107
+108
+109
+110
+111
+112
+113
+114
+115
+116
+117
+118
+119
+120
+121
+122
+123
+124
+125
+126
+127
+128
+Vliegtuig 8
+CheckBefore() heeft geen vliegtuigen voor Vliegtuig 8 gevonden
+Placement successful for plane no. 8. Assigned time: 13:33 Assigned speed: 263.1578947368421 Distance from airport: 180000.0
+129
+Afstand van Vliegtuig 8 tot landingsbaan: 179736.84210526315
+130
+Afstand van Vliegtuig 8 tot landingsbaan: 179473.6842105263
+131
+Afstand van Vliegtuig 8 tot landingsbaan: 179210.52631578944
+132
+Afstand van Vliegtuig 8 tot landingsbaan: 178947.36842105258
+133
+Afstand van Vliegtuig 8 tot landingsbaan: 178684.21052631573
+134
+Afstand van Vliegtuig 8 tot landingsbaan: 178421.05263157887
+135
+Afstand van Vliegtuig 8 tot landingsbaan: 178157.89473684202
+136
+Afstand van Vliegtuig 8 tot landingsbaan: 177894.73684210517
+137
+Afstand van Vliegtuig 8 tot landingsbaan: 177631.5789473683
+138
+Afstand van Vliegtuig 8 tot landingsbaan: 177368.42105263146
+139
+Afstand van Vliegtuig 8 tot landingsbaan: 177105.2631578946
+140
+Afstand van Vliegtuig 8 tot landingsbaan: 176842.10526315775
+141
+Afstand van Vliegtuig 8 tot landingsbaan: 176578.9473684209
+142
+Afstand van Vliegtuig 8 tot landingsbaan: 176315.78947368404
+143
+Afstand van Vliegtuig 8 tot landingsbaan: 176052.63157894718
+144
+Afstand van Vliegtuig 8 tot landingsbaan: 175789.47368421033
+145
+Afstand van Vliegtuig 8 tot landingsbaan: 175526.31578947348
+146
+Afstand van Vliegtuig 8 tot landingsbaan: 175263.15789473662
+147
+Afstand van Vliegtuig 8 tot landingsbaan: 174999.99999999977
+148
+Afstand van Vliegtuig 8 tot landingsbaan: 174736.8421052629
+149
+Afstand van Vliegtuig 8 tot landingsbaan: 174473.68421052606
+150
+Afstand van Vliegtuig 8 tot landingsbaan: 174210.5263157892
+151
+Afstand van Vliegtuig 8 tot landingsbaan: 173947.36842105235
+152
+Afstand van Vliegtuig 8 tot landingsbaan: 173684.2105263155
+153
+Afstand van Vliegtuig 8 tot landingsbaan: 173421.05263157864
+154
+Afstand van Vliegtuig 8 tot landingsbaan: 173157.8947368418
+155
+Afstand van Vliegtuig 8 tot landingsbaan: 172894.73684210493
+156
+Afstand van Vliegtuig 8 tot landingsbaan: 172631.57894736808
+157
+Afstand van Vliegtuig 8 tot landingsbaan: 172368.42105263122
+158
+Afstand van Vliegtuig 8 tot landingsbaan: 172105.26315789437
+159
+Afstand van Vliegtuig 8 tot landingsbaan: 171842.10526315751
+160
+Afstand van Vliegtuig 8 tot landingsbaan: 171578.94736842066
+161
+Afstand van Vliegtuig 8 tot landingsbaan: 171315.7894736838
+162
+Afstand van Vliegtuig 8 tot landingsbaan: 171052.63157894695
+163
+Afstand van Vliegtuig 8 tot landingsbaan: 170789.4736842101
+164
+Afstand van Vliegtuig 8 tot landingsbaan: 170526.31578947324
+165
+Afstand van Vliegtuig 8 tot landingsbaan: 170263.1578947364
+166
+Afstand van Vliegtuig 8 tot landingsbaan: 169999.99999999953
+167
+Afstand van Vliegtuig 8 tot landingsbaan: 169736.84210526268
+168
+Afstand van Vliegtuig 8 tot landingsbaan: 169473.68421052583
+169
+Afstand van Vliegtuig 8 tot landingsbaan: 169210.52631578897
+170
+Afstand van Vliegtuig 8 tot landingsbaan: 168947.36842105212
+171
+Afstand van Vliegtuig 8 tot landingsbaan: 168684.21052631526
+172
+Afstand van Vliegtuig 8 tot landingsbaan: 168421.0526315784
+173
+Afstand van Vliegtuig 8 tot landingsbaan: 168157.89473684155
+174
+Afstand van Vliegtuig 8 tot landingsbaan: 167894.7368421047
+175
+Afstand van Vliegtuig 8 tot landingsbaan: 167631.57894736785
+176
+Afstand van Vliegtuig 8 tot landingsbaan: 167368.421052631
+177
+Afstand van Vliegtuig 8 tot landingsbaan: 167105.26315789414
+178
+Afstand van Vliegtuig 8 tot landingsbaan: 166842.10526315728
+179
+Afstand van Vliegtuig 8 tot landingsbaan: 166578.94736842043
+180
+Afstand van Vliegtuig 8 tot landingsbaan: 166315.78947368357
+181
+Afstand van Vliegtuig 8 tot landingsbaan: 166052.63157894672
+182
+Afstand van Vliegtuig 8 tot landingsbaan: 165789.47368420986
+183
+Afstand van Vliegtuig 8 tot landingsbaan: 165526.315789473
+184
+Afstand van Vliegtuig 8 tot landingsbaan: 165263.15789473616
+185
+Afstand van Vliegtuig 8 tot landingsbaan: 164999.9999999993
+186
+Afstand van Vliegtuig 8 tot landingsbaan: 164736.84210526245
+187
+Afstand van Vliegtuig 8 tot landingsbaan: 164473.6842105256
+188
+Afstand van Vliegtuig 8 tot landingsbaan: 164210.52631578874
+189
+Afstand van Vliegtuig 8 tot landingsbaan: 163947.36842105188
+190
+Afstand van Vliegtuig 8 tot landingsbaan: 163684.21052631503
+191
+Afstand van Vliegtuig 8 tot landingsbaan: 163421.05263157818
+192
+Afstand van Vliegtuig 8 tot landingsbaan: 163157.89473684132
+193
+Afstand van Vliegtuig 8 tot landingsbaan: 162894.73684210447
+194
+Afstand van Vliegtuig 8 tot landingsbaan: 162631.5789473676
+195
+Afstand van Vliegtuig 8 tot landingsbaan: 162368.42105263076
+196
+Afstand van Vliegtuig 8 tot landingsbaan: 162105.2631578939
+197
+Afstand van Vliegtuig 8 tot landingsbaan: 161842.10526315705
+198
+Afstand van Vliegtuig 8 tot landingsbaan: 161578.9473684202
+199
+Afstand van Vliegtuig 8 tot landingsbaan: 161315.78947368334
+200
+Afstand van Vliegtuig 8 tot landingsbaan: 161052.6315789465
+201
+Afstand van Vliegtuig 8 tot landingsbaan: 160789.47368420963
+202
+Afstand van Vliegtuig 8 tot landingsbaan: 160526.31578947278
+203
+Afstand van Vliegtuig 8 tot landingsbaan: 160263.15789473592
+204
+Afstand van Vliegtuig 8 tot landingsbaan: 159999.99999999907
+205
+Afstand van Vliegtuig 8 tot landingsbaan: 159736.8421052622
+206
+Afstand van Vliegtuig 8 tot landingsbaan: 159473.68421052536
+207
+Afstand van Vliegtuig 8 tot landingsbaan: 159210.5263157885
+208
+Afstand van Vliegtuig 8 tot landingsbaan: 158947.36842105165
+209
+Afstand van Vliegtuig 8 tot landingsbaan: 158684.2105263148
+210
+Afstand van Vliegtuig 8 tot landingsbaan: 158421.05263157794
+211
+Afstand van Vliegtuig 8 tot landingsbaan: 158157.8947368411
+212
+Afstand van Vliegtuig 8 tot landingsbaan: 157894.73684210423
+213
+Afstand van Vliegtuig 8 tot landingsbaan: 157631.57894736738
+214
+Afstand van Vliegtuig 8 tot landingsbaan: 157368.42105263053
+215
+Afstand van Vliegtuig 8 tot landingsbaan: 157105.26315789367
+216
+Afstand van Vliegtuig 8 tot landingsbaan: 156842.10526315682
+217
+Afstand van Vliegtuig 8 tot landingsbaan: 156578.94736841996
+218
+Afstand van Vliegtuig 8 tot landingsbaan: 156315.7894736831
+219
+Afstand van Vliegtuig 8 tot landingsbaan: 156052.63157894625
+220
+Afstand van Vliegtuig 8 tot landingsbaan: 155789.4736842094
+221
+Afstand van Vliegtuig 8 tot landingsbaan: 155526.31578947254
+222
+Afstand van Vliegtuig 8 tot landingsbaan: 155263.1578947357
+223
+Afstand van Vliegtuig 8 tot landingsbaan: 154999.99999999884
+224
+Afstand van Vliegtuig 8 tot landingsbaan: 154736.84210526198
+225
+Afstand van Vliegtuig 8 tot landingsbaan: 154473.68421052513
+226
+Afstand van Vliegtuig 8 tot landingsbaan: 154210.52631578827
+Vliegtuig 1
+CheckBefore() heeft geen vliegtuigen voor Vliegtuig 1 gevonden
+Placement successful for plane no. 1. Assigned time: 14:34 Assigned speed: 278.20710973724886 Distance from airport: 180000.0
+227
+Afstand van Vliegtuig 8 tot landingsbaan: 153947.36842105142
+Afstand van Vliegtuig 1 tot landingsbaan: 179721.79289026276
+228
+Afstand van Vliegtuig 8 tot landingsbaan: 153684.21052631456
+Afstand van Vliegtuig 1 tot landingsbaan: 179443.58578052552
+229
+Afstand van Vliegtuig 8 tot landingsbaan: 153421.0526315777
+Afstand van Vliegtuig 1 tot landingsbaan: 179165.37867078828
+230
+Afstand van Vliegtuig 8 tot landingsbaan: 153157.89473684086
+Afstand van Vliegtuig 1 tot landingsbaan: 178887.17156105104
+231
+Afstand van Vliegtuig 8 tot landingsbaan: 152894.736842104
+Afstand van Vliegtuig 1 tot landingsbaan: 178608.9644513138
+232
+Afstand van Vliegtuig 8 tot landingsbaan: 152631.57894736715
+Afstand van Vliegtuig 1 tot landingsbaan: 178330.75734157657
+233
+Afstand van Vliegtuig 8 tot landingsbaan: 152368.4210526303
+Afstand van Vliegtuig 1 tot landingsbaan: 178052.55023183933
+234
+Afstand van Vliegtuig 8 tot landingsbaan: 152105.26315789344
+Afstand van Vliegtuig 1 tot landingsbaan: 177774.3431221021
+235
+Afstand van Vliegtuig 8 tot landingsbaan: 151842.10526315658
+Afstand van Vliegtuig 1 tot landingsbaan: 177496.13601236485
+236
+Afstand van Vliegtuig 8 tot landingsbaan: 151578.94736841973
+Afstand van Vliegtuig 1 tot landingsbaan: 177217.9289026276
+237
+Afstand van Vliegtuig 8 tot landingsbaan: 151315.78947368287
+Afstand van Vliegtuig 1 tot landingsbaan: 176939.72179289037
+238
+Afstand van Vliegtuig 8 tot landingsbaan: 151052.63157894602
+Afstand van Vliegtuig 1 tot landingsbaan: 176661.51468315313
+239
+Afstand van Vliegtuig 8 tot landingsbaan: 150789.47368420917
+Afstand van Vliegtuig 1 tot landingsbaan: 176383.3075734159
+240
+Afstand van Vliegtuig 8 tot landingsbaan: 150526.3157894723
+Afstand van Vliegtuig 1 tot landingsbaan: 176105.10046367865
+241
+Afstand van Vliegtuig 8 tot landingsbaan: 150263.15789473546
+Afstand van Vliegtuig 1 tot landingsbaan: 175826.8933539414
+242
+Afstand van Vliegtuig 8 tot landingsbaan: 149999.9999999986
+Afstand van Vliegtuig 1 tot landingsbaan: 175548.68624420417
+243
+Afstand van Vliegtuig 8 tot landingsbaan: 149736.84210526175
+Afstand van Vliegtuig 1 tot landingsbaan: 175270.47913446694
+244
+Afstand van Vliegtuig 8 tot landingsbaan: 149473.6842105249
+Afstand van Vliegtuig 1 tot landingsbaan: 174992.2720247297
+245
+Afstand van Vliegtuig 8 tot landingsbaan: 149210.52631578804
+Afstand van Vliegtuig 1 tot landingsbaan: 174714.06491499246
+246
+Afstand van Vliegtuig 8 tot landingsbaan: 148947.3684210512
+Afstand van Vliegtuig 1 tot landingsbaan: 174435.85780525522
+247
+Afstand van Vliegtuig 8 tot landingsbaan: 148684.21052631433
+Afstand van Vliegtuig 1 tot landingsbaan: 174157.65069551798
+248
+Afstand van Vliegtuig 8 tot landingsbaan: 148421.05263157748
+Afstand van Vliegtuig 1 tot landingsbaan: 173879.44358578074
+249
+Afstand van Vliegtuig 8 tot landingsbaan: 148157.89473684062
+Afstand van Vliegtuig 1 tot landingsbaan: 173601.2364760435
+250
+Afstand van Vliegtuig 8 tot landingsbaan: 147894.73684210377
+Afstand van Vliegtuig 1 tot landingsbaan: 173323.02936630626
+251
+Afstand van Vliegtuig 8 tot landingsbaan: 147631.5789473669
+Afstand van Vliegtuig 1 tot landingsbaan: 173044.82225656902
+252
+Afstand van Vliegtuig 8 tot landingsbaan: 147368.42105263006
+Afstand van Vliegtuig 1 tot landingsbaan: 172766.61514683178
+253
+Afstand van Vliegtuig 8 tot landingsbaan: 147105.2631578932
+Afstand van Vliegtuig 1 tot landingsbaan: 172488.40803709454
+254
+Afstand van Vliegtuig 8 tot landingsbaan: 146842.10526315635
+Afstand van Vliegtuig 1 tot landingsbaan: 172210.2009273573
+255
+Afstand van Vliegtuig 8 tot landingsbaan: 146578.9473684195
+Afstand van Vliegtuig 1 tot landingsbaan: 171931.99381762007
+256
+Afstand van Vliegtuig 8 tot landingsbaan: 146315.78947368264
+Afstand van Vliegtuig 1 tot landingsbaan: 171653.78670788283
+257
+Afstand van Vliegtuig 8 tot landingsbaan: 146052.6315789458
+Afstand van Vliegtuig 1 tot landingsbaan: 171375.5795981456
+258
+Afstand van Vliegtuig 8 tot landingsbaan: 145789.47368420893
+Afstand van Vliegtuig 1 tot landingsbaan: 171097.37248840835
+259
+Afstand van Vliegtuig 8 tot landingsbaan: 145526.31578947208
+Afstand van Vliegtuig 1 tot landingsbaan: 170819.1653786711
+260
+Afstand van Vliegtuig 8 tot landingsbaan: 145263.15789473522
+Afstand van Vliegtuig 1 tot landingsbaan: 170540.95826893387
+261
+Afstand van Vliegtuig 8 tot landingsbaan: 144999.99999999837
+Afstand van Vliegtuig 1 tot landingsbaan: 170262.75115919663
+262
+Afstand van Vliegtuig 8 tot landingsbaan: 144736.84210526152
+Afstand van Vliegtuig 1 tot landingsbaan: 169984.5440494594
+263
+Afstand van Vliegtuig 8 tot landingsbaan: 144473.68421052466
+Afstand van Vliegtuig 1 tot landingsbaan: 169706.33693972215
+264
+Afstand van Vliegtuig 8 tot landingsbaan: 144210.5263157878
+Afstand van Vliegtuig 1 tot landingsbaan: 169428.12982998491
+265
+Afstand van Vliegtuig 8 tot landingsbaan: 143947.36842105095
+Afstand van Vliegtuig 1 tot landingsbaan: 169149.92272024768
+266
+Afstand van Vliegtuig 8 tot landingsbaan: 143684.2105263141
+Afstand van Vliegtuig 1 tot landingsbaan: 168871.71561051044
+267
+Afstand van Vliegtuig 8 tot landingsbaan: 143421.05263157724
+Afstand van Vliegtuig 1 tot landingsbaan: 168593.5085007732
+268
+Afstand van Vliegtuig 8 tot landingsbaan: 143157.8947368404
+Afstand van Vliegtuig 1 tot landingsbaan: 168315.30139103596
+269
+Afstand van Vliegtuig 8 tot landingsbaan: 142894.73684210354
+Afstand van Vliegtuig 1 tot landingsbaan: 168037.09428129872
+270
+Afstand van Vliegtuig 8 tot landingsbaan: 142631.57894736668
+Afstand van Vliegtuig 1 tot landingsbaan: 167758.88717156148
+271
+Afstand van Vliegtuig 8 tot landingsbaan: 142368.42105262983
+Afstand van Vliegtuig 1 tot landingsbaan: 167480.68006182424
+272
+Afstand van Vliegtuig 8 tot landingsbaan: 142105.26315789297
+Afstand van Vliegtuig 1 tot landingsbaan: 167202.472952087
+273
+Afstand van Vliegtuig 8 tot landingsbaan: 141842.10526315612
+Afstand van Vliegtuig 1 tot landingsbaan: 166924.26584234976
+274
+Afstand van Vliegtuig 8 tot landingsbaan: 141578.94736841926
+Afstand van Vliegtuig 1 tot landingsbaan: 166646.05873261252
+275
+Afstand van Vliegtuig 8 tot landingsbaan: 141315.7894736824
+Afstand van Vliegtuig 1 tot landingsbaan: 166367.85162287529
+276
+Afstand van Vliegtuig 8 tot landingsbaan: 141052.63157894555
+Afstand van Vliegtuig 1 tot landingsbaan: 166089.64451313805
+277
+Afstand van Vliegtuig 8 tot landingsbaan: 140789.4736842087
+Afstand van Vliegtuig 1 tot landingsbaan: 165811.4374034008
+278
+Afstand van Vliegtuig 8 tot landingsbaan: 140526.31578947185
+Afstand van Vliegtuig 1 tot landingsbaan: 165533.23029366357
+279
+Afstand van Vliegtuig 8 tot landingsbaan: 140263.157894735
+Afstand van Vliegtuig 1 tot landingsbaan: 165255.02318392633
+280
+Afstand van Vliegtuig 8 tot landingsbaan: 139999.99999999814
+Afstand van Vliegtuig 1 tot landingsbaan: 164976.8160741891
+281
+Afstand van Vliegtuig 8 tot landingsbaan: 139736.84210526128
+Afstand van Vliegtuig 1 tot landingsbaan: 164698.60896445185
+282
+Afstand van Vliegtuig 8 tot landingsbaan: 139473.68421052443
+Afstand van Vliegtuig 1 tot landingsbaan: 164420.4018547146
+283
+Afstand van Vliegtuig 8 tot landingsbaan: 139210.52631578757
+Afstand van Vliegtuig 1 tot landingsbaan: 164142.19474497737
+284
+Afstand van Vliegtuig 8 tot landingsbaan: 138947.36842105072
+Afstand van Vliegtuig 1 tot landingsbaan: 163863.98763524013
+285
+Afstand van Vliegtuig 8 tot landingsbaan: 138684.21052631387
+Afstand van Vliegtuig 1 tot landingsbaan: 163585.7805255029
+286
+Afstand van Vliegtuig 8 tot landingsbaan: 138421.052631577
+Afstand van Vliegtuig 1 tot landingsbaan: 163307.57341576566
+287
+Afstand van Vliegtuig 8 tot landingsbaan: 138157.89473684016
+Afstand van Vliegtuig 1 tot landingsbaan: 163029.36630602842
+288
+Afstand van Vliegtuig 8 tot landingsbaan: 137894.7368421033
+Afstand van Vliegtuig 1 tot landingsbaan: 162751.15919629118
+289
+Afstand van Vliegtuig 8 tot landingsbaan: 137631.57894736645
+Afstand van Vliegtuig 1 tot landingsbaan: 162472.95208655394
+290
+Afstand van Vliegtuig 8 tot landingsbaan: 137368.4210526296
+Afstand van Vliegtuig 1 tot landingsbaan: 162194.7449768167
+291
+Afstand van Vliegtuig 8 tot landingsbaan: 137105.26315789274
+Afstand van Vliegtuig 1 tot landingsbaan: 161916.53786707946
+292
+Afstand van Vliegtuig 8 tot landingsbaan: 136842.10526315589
+Afstand van Vliegtuig 1 tot landingsbaan: 161638.33075734222
+293
+Afstand van Vliegtuig 8 tot landingsbaan: 136578.94736841903
+Afstand van Vliegtuig 1 tot landingsbaan: 161360.12364760498
+294
+Afstand van Vliegtuig 8 tot landingsbaan: 136315.78947368218
+Afstand van Vliegtuig 1 tot landingsbaan: 161081.91653786774
+295
+Afstand van Vliegtuig 8 tot landingsbaan: 136052.63157894532
+Afstand van Vliegtuig 1 tot landingsbaan: 160803.7094281305
+296
+Afstand van Vliegtuig 8 tot landingsbaan: 135789.47368420847
+Afstand van Vliegtuig 1 tot landingsbaan: 160525.50231839326
+297
+Afstand van Vliegtuig 8 tot landingsbaan: 135526.3157894716
+Afstand van Vliegtuig 1 tot landingsbaan: 160247.29520865603
+298
+Afstand van Vliegtuig 8 tot landingsbaan: 135263.15789473476
+Afstand van Vliegtuig 1 tot landingsbaan: 159969.0880989188
+299
+Afstand van Vliegtuig 8 tot landingsbaan: 134999.9999999979
+Afstand van Vliegtuig 1 tot landingsbaan: 159690.88098918155
+300
+Afstand van Vliegtuig 8 tot landingsbaan: 134736.84210526105
+Afstand van Vliegtuig 1 tot landingsbaan: 159412.6738794443
+301
+Afstand van Vliegtuig 8 tot landingsbaan: 134473.6842105242
+Afstand van Vliegtuig 1 tot landingsbaan: 159134.46676970707
+302
+Afstand van Vliegtuig 8 tot landingsbaan: 134210.52631578734
+Afstand van Vliegtuig 1 tot landingsbaan: 158856.25965996983
+303
+Afstand van Vliegtuig 8 tot landingsbaan: 133947.3684210505
+Afstand van Vliegtuig 1 tot landingsbaan: 158578.0525502326
+304
+Afstand van Vliegtuig 8 tot landingsbaan: 133684.21052631363
+Afstand van Vliegtuig 1 tot landingsbaan: 158299.84544049535
+305
+Afstand van Vliegtuig 8 tot landingsbaan: 133421.05263157678
+Afstand van Vliegtuig 1 tot landingsbaan: 158021.6383307581
+306
+Afstand van Vliegtuig 8 tot landingsbaan: 133157.89473683992
+Afstand van Vliegtuig 1 tot landingsbaan: 157743.43122102087
+307
+Afstand van Vliegtuig 8 tot landingsbaan: 132894.73684210307
+Afstand van Vliegtuig 1 tot landingsbaan: 157465.22411128363
+308
+Afstand van Vliegtuig 8 tot landingsbaan: 132631.57894736622
+Afstand van Vliegtuig 1 tot landingsbaan: 157187.0170015464
+309
+Afstand van Vliegtuig 8 tot landingsbaan: 132368.42105262936
+Afstand van Vliegtuig 1 tot landingsbaan: 156908.80989180916
+310
+Afstand van Vliegtuig 8 tot landingsbaan: 132105.2631578925
+Afstand van Vliegtuig 1 tot landingsbaan: 156630.60278207192
+311
+Afstand van Vliegtuig 8 tot landingsbaan: 131842.10526315565
+Afstand van Vliegtuig 1 tot landingsbaan: 156352.39567233468
+312
+Afstand van Vliegtuig 8 tot landingsbaan: 131578.9473684188
+Afstand van Vliegtuig 1 tot landingsbaan: 156074.18856259744
+313
+Afstand van Vliegtuig 8 tot landingsbaan: 131315.78947368194
+Afstand van Vliegtuig 1 tot landingsbaan: 155795.9814528602
+314
+Afstand van Vliegtuig 8 tot landingsbaan: 131052.6315789451
+Afstand van Vliegtuig 1 tot landingsbaan: 155517.77434312296
+315
+Afstand van Vliegtuig 8 tot landingsbaan: 130789.47368420826
+Afstand van Vliegtuig 1 tot landingsbaan: 155239.56723338572
+316
+Afstand van Vliegtuig 8 tot landingsbaan: 130526.31578947142
+Afstand van Vliegtuig 1 tot landingsbaan: 154961.36012364848
+317
+Afstand van Vliegtuig 8 tot landingsbaan: 130263.15789473458
+Afstand van Vliegtuig 1 tot landingsbaan: 154683.15301391124
+318
+Afstand van Vliegtuig 8 tot landingsbaan: 129999.99999999774
+Afstand van Vliegtuig 1 tot landingsbaan: 154404.945904174
+319
+Afstand van Vliegtuig 8 tot landingsbaan: 129736.8421052609
+Afstand van Vliegtuig 1 tot landingsbaan: 154126.73879443677
+320
+Afstand van Vliegtuig 8 tot landingsbaan: 129473.68421052406
+Afstand van Vliegtuig 1 tot landingsbaan: 153848.53168469953
+321
+Afstand van Vliegtuig 8 tot landingsbaan: 129210.52631578723
+Afstand van Vliegtuig 1 tot landingsbaan: 153570.3245749623
+322
+Afstand van Vliegtuig 8 tot landingsbaan: 128947.36842105039
+Afstand van Vliegtuig 1 tot landingsbaan: 153292.11746522505
+323
+Afstand van Vliegtuig 8 tot landingsbaan: 128684.21052631355
+Afstand van Vliegtuig 1 tot landingsbaan: 153013.9103554878
+324
+Afstand van Vliegtuig 8 tot landingsbaan: 128421.0526315767
+Afstand van Vliegtuig 1 tot landingsbaan: 152735.70324575057
+325
+Afstand van Vliegtuig 8 tot landingsbaan: 128157.89473683987
+Afstand van Vliegtuig 1 tot landingsbaan: 152457.49613601333
+326
+Afstand van Vliegtuig 8 tot landingsbaan: 127894.73684210303
+Afstand van Vliegtuig 1 tot landingsbaan: 152179.2890262761
+327
+Afstand van Vliegtuig 8 tot landingsbaan: 127631.57894736619
+Afstand van Vliegtuig 1 tot landingsbaan: 151901.08191653885
+328
+Afstand van Vliegtuig 8 tot landingsbaan: 127368.42105262935
+Afstand van Vliegtuig 1 tot landingsbaan: 151622.8748068016
+329
+Afstand van Vliegtuig 8 tot landingsbaan: 127105.2631578925
+Afstand van Vliegtuig 1 tot landingsbaan: 151344.66769706437
+330
+Afstand van Vliegtuig 8 tot landingsbaan: 126842.10526315567
+Afstand van Vliegtuig 1 tot landingsbaan: 151066.46058732714
+331
+Afstand van Vliegtuig 8 tot landingsbaan: 126578.94736841883
+Afstand van Vliegtuig 1 tot landingsbaan: 150788.2534775899
+332
+Afstand van Vliegtuig 8 tot landingsbaan: 126315.78947368199
+Afstand van Vliegtuig 1 tot landingsbaan: 150510.04636785266
+333
+Afstand van Vliegtuig 8 tot landingsbaan: 126052.63157894515
+Afstand van Vliegtuig 1 tot landingsbaan: 150231.83925811542
+334
+Afstand van Vliegtuig 8 tot landingsbaan: 125789.47368420831
+Afstand van Vliegtuig 1 tot landingsbaan: 149953.63214837818
+335
+Afstand van Vliegtuig 8 tot landingsbaan: 125526.31578947147
+Afstand van Vliegtuig 1 tot landingsbaan: 149675.42503864094
+336
+Afstand van Vliegtuig 8 tot landingsbaan: 125263.15789473463
+Afstand van Vliegtuig 1 tot landingsbaan: 149397.2179289037
+337
+Afstand van Vliegtuig 8 tot landingsbaan: 124999.99999999779
+Afstand van Vliegtuig 1 tot landingsbaan: 149119.01081916646
+338
+Afstand van Vliegtuig 8 tot landingsbaan: 124736.84210526095
+Afstand van Vliegtuig 1 tot landingsbaan: 148840.80370942922
+339
+Afstand van Vliegtuig 8 tot landingsbaan: 124473.68421052411
+Afstand van Vliegtuig 1 tot landingsbaan: 148562.59659969198
+Vliegtuig 7
+CheckBefore() heeft Vliegtuig 1 gevonden
+CheckBefore() heeft Vliegtuig 1 gevonden
+Abraham kan en gaat naar links zodat Vliegtuig 7 geplaatst kan worden om 1019
+Placement successful for plane no. 1. Assigned time: 15:59 Assigned speed: 240.00419482987397 Distance from airport: 148562.59659969198
+Placement successful for plane no. 7. Assigned time: 16:59 Assigned speed: 265.0957290132548 Distance from airport: 180000.0
+340
+Afstand van Vliegtuig 8 tot landingsbaan: 124210.52631578727
+Afstand van Vliegtuig 1 tot landingsbaan: 148322.5924048621
+Afstand van Vliegtuig 7 tot landingsbaan: 179734.90427098674
+341
+Afstand van Vliegtuig 8 tot landingsbaan: 123947.36842105043
+Afstand van Vliegtuig 1 tot landingsbaan: 148082.58821003223
+Afstand van Vliegtuig 7 tot landingsbaan: 179469.80854197347
+342
+Afstand van Vliegtuig 8 tot landingsbaan: 123684.21052631359
+Afstand van Vliegtuig 1 tot landingsbaan: 147842.58401520236
+Afstand van Vliegtuig 7 tot landingsbaan: 179204.7128129602
+343
+Afstand van Vliegtuig 8 tot landingsbaan: 123421.05263157675
+Afstand van Vliegtuig 1 tot landingsbaan: 147602.57982037248
+Afstand van Vliegtuig 7 tot landingsbaan: 178939.61708394694
+344
+Afstand van Vliegtuig 8 tot landingsbaan: 123157.89473683991
+Afstand van Vliegtuig 1 tot landingsbaan: 147362.5756255426
+Afstand van Vliegtuig 7 tot landingsbaan: 178674.52135493368
+345
+Afstand van Vliegtuig 8 tot landingsbaan: 122894.73684210307
+Afstand van Vliegtuig 1 tot landingsbaan: 147122.57143071273
+Afstand van Vliegtuig 7 tot landingsbaan: 178409.4256259204
+346
+Afstand van Vliegtuig 8 tot landingsbaan: 122631.57894736623
+Afstand van Vliegtuig 1 tot landingsbaan: 146882.56723588286
+Afstand van Vliegtuig 7 tot landingsbaan: 178144.32989690715
+347
+Afstand van Vliegtuig 8 tot landingsbaan: 122368.42105262939
+Afstand van Vliegtuig 1 tot landingsbaan: 146642.56304105298
+Afstand van Vliegtuig 7 tot landingsbaan: 177879.23416789388
+348
+Afstand van Vliegtuig 8 tot landingsbaan: 122105.26315789255
+Afstand van Vliegtuig 1 tot landingsbaan: 146402.5588462231
+Afstand van Vliegtuig 7 tot landingsbaan: 177614.13843888062
+349
+Afstand van Vliegtuig 8 tot landingsbaan: 121842.10526315571
+Afstand van Vliegtuig 1 tot landingsbaan: 146162.55465139323
+Afstand van Vliegtuig 7 tot landingsbaan: 177349.04270986735
+350
+Afstand van Vliegtuig 8 tot landingsbaan: 121578.94736841887
+Afstand van Vliegtuig 1 tot landingsbaan: 145922.55045656336
+Afstand van Vliegtuig 7 tot landingsbaan: 177083.9469808541
+351
+Afstand van Vliegtuig 8 tot landingsbaan: 121315.78947368203
+Afstand van Vliegtuig 1 tot landingsbaan: 145682.54626173349
+Afstand van Vliegtuig 7 tot landingsbaan: 176818.85125184082
+352
+Afstand van Vliegtuig 8 tot landingsbaan: 121052.63157894519
+Afstand van Vliegtuig 1 tot landingsbaan: 145442.5420669036
+Afstand van Vliegtuig 7 tot landingsbaan: 176553.75552282756
+353
+Afstand van Vliegtuig 8 tot landingsbaan: 120789.47368420835
+Afstand van Vliegtuig 1 tot landingsbaan: 145202.53787207374
+Afstand van Vliegtuig 7 tot landingsbaan: 176288.6597938143
+354
+Afstand van Vliegtuig 8 tot landingsbaan: 120526.31578947151
+Afstand van Vliegtuig 1 tot landingsbaan: 144962.53367724386
+Afstand van Vliegtuig 7 tot landingsbaan: 176023.56406480103
+355
+Afstand van Vliegtuig 8 tot landingsbaan: 120263.15789473467
+Afstand van Vliegtuig 1 tot landingsbaan: 144722.529482414
+Afstand van Vliegtuig 7 tot landingsbaan: 175758.46833578777
+356
+Afstand van Vliegtuig 8 tot landingsbaan: 119999.99999999783
+Afstand van Vliegtuig 1 tot landingsbaan: 144482.5252875841
+Afstand van Vliegtuig 7 tot landingsbaan: 175493.3726067745
+357
+Afstand van Vliegtuig 8 tot landingsbaan: 119736.84210526099
+Afstand van Vliegtuig 1 tot landingsbaan: 144242.52109275424
+Afstand van Vliegtuig 7 tot landingsbaan: 175228.27687776124
+358
+Afstand van Vliegtuig 8 tot landingsbaan: 119473.68421052415
+Afstand van Vliegtuig 1 tot landingsbaan: 144002.51689792436
+Afstand van Vliegtuig 7 tot landingsbaan: 174963.18114874797
+359
+Afstand van Vliegtuig 8 tot landingsbaan: 119210.52631578731
+Afstand van Vliegtuig 1 tot landingsbaan: 143762.5127030945
+Afstand van Vliegtuig 7 tot landingsbaan: 174698.0854197347
+Vliegtuig 12
+CheckBefore() heeft Vliegtuig 7 gevonden
+CheckBefore() heeft Vliegtuig 1 gevonden
+Abraham kan en gaat naar links zodat Vliegtuig 12 geplaatst kan worden om 1094
+Placement successful for plane no. 1. Assigned time: 15:49 Assigned speed: 244.0789689356443 Distance from airport: 143762.5127030945
+Placement successful for plane no. 12. Assigned time: 18:14 Assigned speed: 245.2316076294278 Distance from airport: 180000.0
+360
+Afstand van Vliegtuig 8 tot landingsbaan: 118947.36842105047
+Afstand van Vliegtuig 1 tot landingsbaan: 143518.43373415884
+Afstand van Vliegtuig 7 tot landingsbaan: 174432.98969072144
+Afstand van Vliegtuig 12 tot landingsbaan: 179754.76839237058
+Vliegtuig 36
+CheckBefore() heeft Vliegtuig 12 gevonden
+CheckBefore() heeft Vliegtuig 7 gevonden
+Abraham kan en gaat naar links zodat Vliegtuig 36 geplaatst kan worden om 1153
+Placement successful for plane no. 7. Assigned time: 17:35 Assigned speed: 251.34436554858996 Distance from airport: 174432.98969072144
+Placement successful for plane no. 36. Assigned time: 19:13 Assigned speed: 227.27272727272728 Distance from airport: 180000.0
+361
+Afstand van Vliegtuig 8 tot landingsbaan: 118684.21052631363
+Afstand van Vliegtuig 1 tot landingsbaan: 143274.3547652232
+Afstand van Vliegtuig 7 tot landingsbaan: 174181.64532517284
+Afstand van Vliegtuig 12 tot landingsbaan: 179509.53678474115
+Afstand van Vliegtuig 36 tot landingsbaan: 179772.72727272726
+362
+Afstand van Vliegtuig 8 tot landingsbaan: 118421.0526315768
+Afstand van Vliegtuig 1 tot landingsbaan: 143030.27579628755
+Afstand van Vliegtuig 7 tot landingsbaan: 173930.30095962423
+Afstand van Vliegtuig 12 tot landingsbaan: 179264.30517711173
+Afstand van Vliegtuig 36 tot landingsbaan: 179545.45454545453
+363
+Afstand van Vliegtuig 8 tot landingsbaan: 118157.89473683995
+Afstand van Vliegtuig 1 tot landingsbaan: 142786.1968273519
+Afstand van Vliegtuig 7 tot landingsbaan: 173678.95659407563
+Afstand van Vliegtuig 12 tot landingsbaan: 179019.0735694823
+Afstand van Vliegtuig 36 tot landingsbaan: 179318.1818181818
+364
+Afstand van Vliegtuig 8 tot landingsbaan: 117894.73684210311
+Afstand van Vliegtuig 1 tot landingsbaan: 142542.11785841626
+Afstand van Vliegtuig 7 tot landingsbaan: 173427.61222852702
+Afstand van Vliegtuig 12 tot landingsbaan: 178773.8419618529
+Afstand van Vliegtuig 36 tot landingsbaan: 179090.90909090906
+365
+Afstand van Vliegtuig 8 tot landingsbaan: 117631.57894736627
+Afstand van Vliegtuig 1 tot landingsbaan: 142298.0388894806
+Afstand van Vliegtuig 7 tot landingsbaan: 173176.26786297842
+Afstand van Vliegtuig 12 tot landingsbaan: 178528.61035422346
+Afstand van Vliegtuig 36 tot landingsbaan: 178863.63636363632
+366
+Afstand van Vliegtuig 8 tot landingsbaan: 117368.42105262943
+Afstand van Vliegtuig 1 tot landingsbaan: 142053.95992054496
+Afstand van Vliegtuig 7 tot landingsbaan: 172924.92349742982
+Afstand van Vliegtuig 12 tot landingsbaan: 178283.37874659404
+Afstand van Vliegtuig 36 tot landingsbaan: 178636.3636363636
+367
+Afstand van Vliegtuig 8 tot landingsbaan: 117105.2631578926
+Afstand van Vliegtuig 1 tot landingsbaan: 141809.88095160932
+Afstand van Vliegtuig 7 tot landingsbaan: 172673.5791318812
+Afstand van Vliegtuig 12 tot landingsbaan: 178038.14713896462
+Afstand van Vliegtuig 36 tot landingsbaan: 178409.09090909085
+368
+Afstand van Vliegtuig 8 tot landingsbaan: 116842.10526315575
+Afstand van Vliegtuig 1 tot landingsbaan: 141565.80198267367
+Afstand van Vliegtuig 7 tot landingsbaan: 172422.2347663326
+Afstand van Vliegtuig 12 tot landingsbaan: 177792.9155313352
+Afstand van Vliegtuig 36 tot landingsbaan: 178181.81818181812
+369
+Afstand van Vliegtuig 8 tot landingsbaan: 116578.94736841891
+Afstand van Vliegtuig 1 tot landingsbaan: 141321.72301373802
+Afstand van Vliegtuig 7 tot landingsbaan: 172170.890400784
+Afstand van Vliegtuig 12 tot landingsbaan: 177547.68392370577
+Afstand van Vliegtuig 36 tot landingsbaan: 177954.54545454538
+370
+Afstand van Vliegtuig 8 tot landingsbaan: 116315.78947368207
+Afstand van Vliegtuig 1 tot landingsbaan: 141077.64404480238
+Afstand van Vliegtuig 7 tot landingsbaan: 171919.5460352354
+Afstand van Vliegtuig 12 tot landingsbaan: 177302.45231607635
+Afstand van Vliegtuig 36 tot landingsbaan: 177727.27272727265
+371
+Afstand van Vliegtuig 8 tot landingsbaan: 116052.63157894523
+Afstand van Vliegtuig 1 tot landingsbaan: 140833.56507586673
+Afstand van Vliegtuig 7 tot landingsbaan: 171668.2016696868
+Afstand van Vliegtuig 12 tot landingsbaan: 177057.22070844693
+Afstand van Vliegtuig 36 tot landingsbaan: 177499.9999999999
+372
+Afstand van Vliegtuig 8 tot landingsbaan: 115789.4736842084
+Afstand van Vliegtuig 1 tot landingsbaan: 140589.4861069311
+Afstand van Vliegtuig 7 tot landingsbaan: 171416.8573041382
+Afstand van Vliegtuig 12 tot landingsbaan: 176811.9891008175
+Afstand van Vliegtuig 36 tot landingsbaan: 177272.72727272718
+373
+Afstand van Vliegtuig 8 tot landingsbaan: 115526.31578947156
+Afstand van Vliegtuig 1 tot landingsbaan: 140345.40713799544
+Afstand van Vliegtuig 7 tot landingsbaan: 171165.51293858959
+Afstand van Vliegtuig 12 tot landingsbaan: 176566.75749318808
+Afstand van Vliegtuig 36 tot landingsbaan: 177045.45454545444
+374
+Afstand van Vliegtuig 8 tot landingsbaan: 115263.15789473472
+Afstand van Vliegtuig 1 tot landingsbaan: 140101.3281690598
+Afstand van Vliegtuig 7 tot landingsbaan: 170914.16857304098
+Afstand van Vliegtuig 12 tot landingsbaan: 176321.52588555866
+Afstand van Vliegtuig 36 tot landingsbaan: 176818.1818181817
+375
+Afstand van Vliegtuig 8 tot landingsbaan: 114999.99999999788
+Afstand van Vliegtuig 1 tot landingsbaan: 139857.24920012415
+Afstand van Vliegtuig 7 tot landingsbaan: 170662.82420749238
+Afstand van Vliegtuig 12 tot landingsbaan: 176076.29427792924
+Afstand van Vliegtuig 36 tot landingsbaan: 176590.90909090897
+376
+Afstand van Vliegtuig 8 tot landingsbaan: 114736.84210526104
+Afstand van Vliegtuig 1 tot landingsbaan: 139613.1702311885
+Afstand van Vliegtuig 7 tot landingsbaan: 170411.47984194377
+Afstand van Vliegtuig 12 tot landingsbaan: 175831.0626702998
+Afstand van Vliegtuig 36 tot landingsbaan: 176363.63636363624
+377
+Afstand van Vliegtuig 8 tot landingsbaan: 114473.6842105242
+Afstand van Vliegtuig 1 tot landingsbaan: 139369.09126225286
+Afstand van Vliegtuig 7 tot landingsbaan: 170160.13547639517
+Afstand van Vliegtuig 12 tot landingsbaan: 175585.8310626704
+Afstand van Vliegtuig 36 tot landingsbaan: 176136.3636363635
+378
+Afstand van Vliegtuig 8 tot landingsbaan: 114210.52631578736
+Afstand van Vliegtuig 1 tot landingsbaan: 139125.0122933172
+Afstand van Vliegtuig 7 tot landingsbaan: 169908.79111084656
+Afstand van Vliegtuig 12 tot landingsbaan: 175340.59945504097
+Afstand van Vliegtuig 36 tot landingsbaan: 175909.09090909077
+379
+Afstand van Vliegtuig 8 tot landingsbaan: 113947.36842105052
+Afstand van Vliegtuig 1 tot landingsbaan: 138880.93332438156
+Afstand van Vliegtuig 7 tot landingsbaan: 169657.44674529796
+Afstand van Vliegtuig 12 tot landingsbaan: 175095.36784741154
+Afstand van Vliegtuig 36 tot landingsbaan: 175681.81818181803
+380
+Afstand van Vliegtuig 8 tot landingsbaan: 113684.21052631368
+Afstand van Vliegtuig 1 tot landingsbaan: 138636.85435544592
+Afstand van Vliegtuig 7 tot landingsbaan: 169406.10237974935
+Afstand van Vliegtuig 12 tot landingsbaan: 174850.13623978212
+Afstand van Vliegtuig 36 tot landingsbaan: 175454.5454545453
+381
+Afstand van Vliegtuig 8 tot landingsbaan: 113421.05263157684
+Afstand van Vliegtuig 1 tot landingsbaan: 138392.77538651027
+Afstand van Vliegtuig 7 tot landingsbaan: 169154.75801420075
+Afstand van Vliegtuig 12 tot landingsbaan: 174604.9046321527
+Afstand van Vliegtuig 36 tot landingsbaan: 175227.27272727256
+382
+Afstand van Vliegtuig 8 tot landingsbaan: 113157.89473684
+Afstand van Vliegtuig 1 tot landingsbaan: 138148.69641757463
+Afstand van Vliegtuig 7 tot landingsbaan: 168903.41364865215
+Afstand van Vliegtuig 12 tot landingsbaan: 174359.67302452328
+Afstand van Vliegtuig 36 tot landingsbaan: 174999.99999999983
+383
+Afstand van Vliegtuig 8 tot landingsbaan: 112894.73684210316
+Afstand van Vliegtuig 1 tot landingsbaan: 137904.61744863898
+Afstand van Vliegtuig 7 tot landingsbaan: 168652.06928310354
+Afstand van Vliegtuig 12 tot landingsbaan: 174114.44141689385
+Afstand van Vliegtuig 36 tot landingsbaan: 174772.7272727271
+384
+Afstand van Vliegtuig 8 tot landingsbaan: 112631.57894736632
+Afstand van Vliegtuig 1 tot landingsbaan: 137660.53847970333
+Afstand van Vliegtuig 7 tot landingsbaan: 168400.72491755494
+Afstand van Vliegtuig 12 tot landingsbaan: 173869.20980926443
+Afstand van Vliegtuig 36 tot landingsbaan: 174545.45454545435
+385
+Afstand van Vliegtuig 8 tot landingsbaan: 112368.42105262948
+Afstand van Vliegtuig 1 tot landingsbaan: 137416.4595107677
+Afstand van Vliegtuig 7 tot landingsbaan: 168149.38055200633
+Afstand van Vliegtuig 12 tot landingsbaan: 173623.978201635
+Afstand van Vliegtuig 36 tot landingsbaan: 174318.18181818162
+386
+Afstand van Vliegtuig 8 tot landingsbaan: 112105.26315789264
+Afstand van Vliegtuig 1 tot landingsbaan: 137172.38054183204
+Afstand van Vliegtuig 7 tot landingsbaan: 167898.03618645773
+Afstand van Vliegtuig 12 tot landingsbaan: 173378.74659400558
+Afstand van Vliegtuig 36 tot landingsbaan: 174090.90909090888
+387
+Afstand van Vliegtuig 8 tot landingsbaan: 111842.1052631558
+Afstand van Vliegtuig 1 tot landingsbaan: 136928.3015728964
+Afstand van Vliegtuig 7 tot landingsbaan: 167646.69182090912
+Afstand van Vliegtuig 12 tot landingsbaan: 173133.51498637616
+Afstand van Vliegtuig 36 tot landingsbaan: 173863.63636363615
+388
+Afstand van Vliegtuig 8 tot landingsbaan: 111578.94736841896
+Afstand van Vliegtuig 1 tot landingsbaan: 136684.22260396075
+Afstand van Vliegtuig 7 tot landingsbaan: 167395.34745536052
+Afstand van Vliegtuig 12 tot landingsbaan: 172888.28337874674
+Afstand van Vliegtuig 36 tot landingsbaan: 173636.3636363634
+389
+Afstand van Vliegtuig 8 tot landingsbaan: 111315.78947368212
+Afstand van Vliegtuig 1 tot landingsbaan: 136440.1436350251
+Afstand van Vliegtuig 7 tot landingsbaan: 167144.00308981191
+Afstand van Vliegtuig 12 tot landingsbaan: 172643.05177111732
+Afstand van Vliegtuig 36 tot landingsbaan: 173409.09090909068
+390
+Afstand van Vliegtuig 8 tot landingsbaan: 111052.63157894528
+Afstand van Vliegtuig 1 tot landingsbaan: 136196.06466608946
+Afstand van Vliegtuig 7 tot landingsbaan: 166892.6587242633
+Afstand van Vliegtuig 12 tot landingsbaan: 172397.8201634879
+Afstand van Vliegtuig 36 tot landingsbaan: 173181.81818181794
+391
+Afstand van Vliegtuig 8 tot landingsbaan: 110789.47368420844
+Afstand van Vliegtuig 1 tot landingsbaan: 135951.9856971538
+Afstand van Vliegtuig 7 tot landingsbaan: 166641.3143587147
+Afstand van Vliegtuig 12 tot landingsbaan: 172152.58855585847
+Afstand van Vliegtuig 36 tot landingsbaan: 172954.5454545452
+392
+Afstand van Vliegtuig 8 tot landingsbaan: 110526.3157894716
+Afstand van Vliegtuig 1 tot landingsbaan: 135707.90672821816
+Afstand van Vliegtuig 7 tot landingsbaan: 166389.9699931661
+Afstand van Vliegtuig 12 tot landingsbaan: 171907.35694822905
+Afstand van Vliegtuig 36 tot landingsbaan: 172727.27272727247
+393
+Afstand van Vliegtuig 8 tot landingsbaan: 110263.15789473476
+Afstand van Vliegtuig 1 tot landingsbaan: 135463.82775928252
+Afstand van Vliegtuig 7 tot landingsbaan: 166138.6256276175
+Afstand van Vliegtuig 12 tot landingsbaan: 171662.12534059962
+Afstand van Vliegtuig 36 tot landingsbaan: 172499.99999999974
+394
+Afstand van Vliegtuig 8 tot landingsbaan: 109999.99999999792
+Afstand van Vliegtuig 1 tot landingsbaan: 135219.74879034687
+Afstand van Vliegtuig 7 tot landingsbaan: 165887.2812620689
+Afstand van Vliegtuig 12 tot landingsbaan: 171416.8937329702
+Afstand van Vliegtuig 36 tot landingsbaan: 172272.727272727
+395
+Afstand van Vliegtuig 8 tot landingsbaan: 109736.84210526108
+Afstand van Vliegtuig 1 tot landingsbaan: 134975.66982141123
+Afstand van Vliegtuig 7 tot landingsbaan: 165635.9368965203
+Afstand van Vliegtuig 12 tot landingsbaan: 171171.66212534078
+Afstand van Vliegtuig 36 tot landingsbaan: 172045.45454545427
+396
+Afstand van Vliegtuig 8 tot landingsbaan: 109473.68421052424
+Afstand van Vliegtuig 1 tot landingsbaan: 134731.59085247558
+Afstand van Vliegtuig 7 tot landingsbaan: 165384.59253097168
+Afstand van Vliegtuig 12 tot landingsbaan: 170926.43051771136
+Afstand van Vliegtuig 36 tot landingsbaan: 171818.18181818153
+397
+Afstand van Vliegtuig 8 tot landingsbaan: 109210.5263157874
+Afstand van Vliegtuig 1 tot landingsbaan: 134487.51188353993
+Afstand van Vliegtuig 7 tot landingsbaan: 165133.24816542308
+Afstand van Vliegtuig 12 tot landingsbaan: 170681.19891008193
+Afstand van Vliegtuig 36 tot landingsbaan: 171590.9090909088
+398
+Afstand van Vliegtuig 8 tot landingsbaan: 108947.36842105056
+Afstand van Vliegtuig 1 tot landingsbaan: 134243.4329146043
+Afstand van Vliegtuig 7 tot landingsbaan: 164881.90379987448
+Afstand van Vliegtuig 12 tot landingsbaan: 170435.9673024525
+Afstand van Vliegtuig 36 tot landingsbaan: 171363.63636363606
+399
+Afstand van Vliegtuig 8 tot landingsbaan: 108684.21052631372
+Afstand van Vliegtuig 1 tot landingsbaan: 133999.35394566864
+Afstand van Vliegtuig 7 tot landingsbaan: 164630.55943432587
+Afstand van Vliegtuig 12 tot landingsbaan: 170190.7356948231
+Afstand van Vliegtuig 36 tot landingsbaan: 171136.36363636333
+400
+Afstand van Vliegtuig 8 tot landingsbaan: 108421.05263157688
+Afstand van Vliegtuig 1 tot landingsbaan: 133755.274976733
+Afstand van Vliegtuig 7 tot landingsbaan: 164379.21506877727
+Afstand van Vliegtuig 12 tot landingsbaan: 169945.50408719367
+Afstand van Vliegtuig 36 tot landingsbaan: 170909.0909090906
+401
+Afstand van Vliegtuig 8 tot landingsbaan: 108157.89473684004
+Afstand van Vliegtuig 1 tot landingsbaan: 133511.19600779735
+Afstand van Vliegtuig 7 tot landingsbaan: 164127.87070322866
+Afstand van Vliegtuig 12 tot landingsbaan: 169700.27247956424
+Afstand van Vliegtuig 36 tot landingsbaan: 170681.81818181786
+Vliegtuig 37
+CheckBefore() heeft Vliegtuig 36 gevonden
+CheckBefore() heeft Vliegtuig 12 gevonden
+Abraham kan en gaat naar links zodat Vliegtuig 37 geplaatst kan worden om 1181
+Placement successful for plane no. 12. Assigned time: 17:39 Assigned speed: 258.29569631592733 Distance from airport: 169700.27247956424
+Placement successful for plane no. 37. Assigned time: 19:41 Assigned speed: 231.06546854942235 Distance from airport: 180000.0
+402
+Afstand van Vliegtuig 8 tot landingsbaan: 107894.7368421032
+Afstand van Vliegtuig 1 tot landingsbaan: 133267.1170388617
+Afstand van Vliegtuig 7 tot landingsbaan: 163876.52633768006
+Afstand van Vliegtuig 12 tot landingsbaan: 169441.9767832483
+Afstand van Vliegtuig 36 tot landingsbaan: 170454.54545454512
+Afstand van Vliegtuig 37 tot landingsbaan: 179768.9345314506
+403
+Afstand van Vliegtuig 8 tot landingsbaan: 107631.57894736636
+Afstand van Vliegtuig 1 tot landingsbaan: 133023.03806992606
+Afstand van Vliegtuig 7 tot landingsbaan: 163625.18197213145
+Afstand van Vliegtuig 12 tot landingsbaan: 169183.68108693237
+Afstand van Vliegtuig 36 tot landingsbaan: 170227.2727272724
+Afstand van Vliegtuig 37 tot landingsbaan: 179537.86906290118
+404
+Afstand van Vliegtuig 8 tot landingsbaan: 107368.42105262952
+Afstand van Vliegtuig 1 tot landingsbaan: 132778.9591009904
+Afstand van Vliegtuig 7 tot landingsbaan: 163373.83760658285
+Afstand van Vliegtuig 12 tot landingsbaan: 168925.38539061643
+Afstand van Vliegtuig 36 tot landingsbaan: 169999.99999999965
+Afstand van Vliegtuig 37 tot landingsbaan: 179306.80359435178
+405
+Afstand van Vliegtuig 8 tot landingsbaan: 107105.26315789268
+Afstand van Vliegtuig 1 tot landingsbaan: 132534.88013205476
+Afstand van Vliegtuig 7 tot landingsbaan: 163122.49324103424
+Afstand van Vliegtuig 12 tot landingsbaan: 168667.0896943005
+Afstand van Vliegtuig 36 tot landingsbaan: 169772.72727272692
+Afstand van Vliegtuig 37 tot landingsbaan: 179075.73812580237
+406
+Afstand van Vliegtuig 8 tot landingsbaan: 106842.10526315584
+Afstand van Vliegtuig 1 tot landingsbaan: 132290.80116311912
+Afstand van Vliegtuig 7 tot landingsbaan: 162871.14887548564
+Afstand van Vliegtuig 12 tot landingsbaan: 168408.79399798455
+Afstand van Vliegtuig 36 tot landingsbaan: 169545.45454545418
+Afstand van Vliegtuig 37 tot landingsbaan: 178844.67265725296
+407
+Afstand van Vliegtuig 8 tot landingsbaan: 106578.947368419
+Afstand van Vliegtuig 1 tot landingsbaan: 132046.72219418347
+Afstand van Vliegtuig 7 tot landingsbaan: 162619.80450993704
+Afstand van Vliegtuig 12 tot landingsbaan: 168150.49830166862
+Afstand van Vliegtuig 36 tot landingsbaan: 169318.18181818145
+Afstand van Vliegtuig 37 tot landingsbaan: 178613.60718870355
+408
+Afstand van Vliegtuig 8 tot landingsbaan: 106315.78947368216
+Afstand van Vliegtuig 1 tot landingsbaan: 131802.64322524783
+Afstand van Vliegtuig 7 tot landingsbaan: 162368.46014438843
+Afstand van Vliegtuig 12 tot landingsbaan: 167892.20260535268
+Afstand van Vliegtuig 36 tot landingsbaan: 169090.9090909087
+Afstand van Vliegtuig 37 tot landingsbaan: 178382.54172015414
+409
+Afstand van Vliegtuig 8 tot landingsbaan: 106052.63157894532
+Afstand van Vliegtuig 1 tot landingsbaan: 131558.56425631218
+Afstand van Vliegtuig 7 tot landingsbaan: 162117.11577883983
+Afstand van Vliegtuig 12 tot landingsbaan: 167633.90690903674
+Afstand van Vliegtuig 36 tot landingsbaan: 168863.63636363597
+Afstand van Vliegtuig 37 tot landingsbaan: 178151.47625160473
+410
+Afstand van Vliegtuig 8 tot landingsbaan: 105789.47368420848
+Afstand van Vliegtuig 1 tot landingsbaan: 131314.48528737653
+Afstand van Vliegtuig 7 tot landingsbaan: 161865.77141329122
+Afstand van Vliegtuig 12 tot landingsbaan: 167375.6112127208
+Afstand van Vliegtuig 36 tot landingsbaan: 168636.36363636324
+Afstand van Vliegtuig 37 tot landingsbaan: 177920.41078305533
+411
+Afstand van Vliegtuig 8 tot landingsbaan: 105526.31578947164
+Afstand van Vliegtuig 1 tot landingsbaan: 131070.40631844089
+Afstand van Vliegtuig 7 tot landingsbaan: 161614.42704774262
+Afstand van Vliegtuig 12 tot landingsbaan: 167117.31551640487
+Afstand van Vliegtuig 36 tot landingsbaan: 168409.0909090905
+Afstand van Vliegtuig 37 tot landingsbaan: 177689.34531450592
+412
+Afstand van Vliegtuig 8 tot landingsbaan: 105263.1578947348
+Afstand van Vliegtuig 1 tot landingsbaan: 130826.32734950524
+Afstand van Vliegtuig 7 tot landingsbaan: 161363.082682194
+Afstand van Vliegtuig 12 tot landingsbaan: 166859.01982008893
+Afstand van Vliegtuig 36 tot landingsbaan: 168181.81818181777
+Afstand van Vliegtuig 37 tot landingsbaan: 177458.2798459565
+413
+Afstand van Vliegtuig 8 tot landingsbaan: 104999.99999999796
+Afstand van Vliegtuig 1 tot landingsbaan: 130582.2483805696
+Afstand van Vliegtuig 7 tot landingsbaan: 161111.7383166454
+Afstand van Vliegtuig 12 tot landingsbaan: 166600.724123773
+Afstand van Vliegtuig 36 tot landingsbaan: 167954.54545454503
+Afstand van Vliegtuig 37 tot landingsbaan: 177227.2143774071
+414
+Afstand van Vliegtuig 8 tot landingsbaan: 104736.84210526112
+Afstand van Vliegtuig 1 tot landingsbaan: 130338.16941163395
+Afstand van Vliegtuig 7 tot landingsbaan: 160860.3939510968
+Afstand van Vliegtuig 12 tot landingsbaan: 166342.42842745705
+Afstand van Vliegtuig 36 tot landingsbaan: 167727.2727272723
+Afstand van Vliegtuig 37 tot landingsbaan: 176996.1489088577
+415
+Afstand van Vliegtuig 8 tot landingsbaan: 104473.68421052428
+Afstand van Vliegtuig 1 tot landingsbaan: 130094.0904426983
+Afstand van Vliegtuig 7 tot landingsbaan: 160609.0495855482
+Afstand van Vliegtuig 12 tot landingsbaan: 166084.13273114112
+Afstand van Vliegtuig 36 tot landingsbaan: 167499.99999999956
+Afstand van Vliegtuig 37 tot landingsbaan: 176765.08344030828
+416
+Afstand van Vliegtuig 8 tot landingsbaan: 104210.52631578744
+Afstand van Vliegtuig 1 tot landingsbaan: 129850.01147376266
+Afstand van Vliegtuig 7 tot landingsbaan: 160357.7052199996
+Afstand van Vliegtuig 12 tot landingsbaan: 165825.83703482518
+Afstand van Vliegtuig 36 tot landingsbaan: 167272.72727272683
+Afstand van Vliegtuig 37 tot landingsbaan: 176534.01797175888
+417
+Afstand van Vliegtuig 8 tot landingsbaan: 103944.73684210323
+Afstand van Vliegtuig 1 tot landingsbaan: 129603.49171513766
+Afstand van Vliegtuig 7 tot landingsbaan: 160103.8474107955
+Afstand van Vliegtuig 12 tot landingsbaan: 165564.95838154608
+Afstand van Vliegtuig 36 tot landingsbaan: 167043.1818181814
+Afstand van Vliegtuig 37 tot landingsbaan: 176300.64184852396
+418
+Afstand van Vliegtuig 8 tot landingsbaan: 103681.57894736639
+Afstand van Vliegtuig 1 tot landingsbaan: 129359.41274620201
+Afstand van Vliegtuig 7 tot landingsbaan: 159852.5030452469
+Afstand van Vliegtuig 12 tot landingsbaan: 165306.66268523014
+Afstand van Vliegtuig 36 tot landingsbaan: 166815.90909090865
+Afstand van Vliegtuig 37 tot landingsbaan: 176069.57637997455
+419
+Afstand van Vliegtuig 8 tot landingsbaan: 103418.42105262955
+Afstand van Vliegtuig 1 tot landingsbaan: 129115.33377726637
+Afstand van Vliegtuig 7 tot landingsbaan: 159601.1586796983
+Afstand van Vliegtuig 12 tot landingsbaan: 165048.3669889142
+Afstand van Vliegtuig 36 tot landingsbaan: 166588.63636363592
+Afstand van Vliegtuig 37 tot landingsbaan: 175838.51091142514
+420
+Afstand van Vliegtuig 8 tot landingsbaan: 103155.26315789271
+Afstand van Vliegtuig 1 tot landingsbaan: 128871.25480833072
+Afstand van Vliegtuig 7 tot landingsbaan: 159349.8143141497
+Afstand van Vliegtuig 12 tot landingsbaan: 164790.07129259827
+Afstand van Vliegtuig 36 tot landingsbaan: 166361.36363636318
+Afstand van Vliegtuig 37 tot landingsbaan: 175607.44544287573
+421
+Afstand van Vliegtuig 8 tot landingsbaan: 102892.10526315587
+Afstand van Vliegtuig 1 tot landingsbaan: 128627.17583939507
+Afstand van Vliegtuig 7 tot landingsbaan: 159098.4699486011
+Afstand van Vliegtuig 12 tot landingsbaan: 164531.77559628233
+Afstand van Vliegtuig 36 tot landingsbaan: 166134.09090909045
+Afstand van Vliegtuig 37 tot landingsbaan: 175376.37997432632
+422
+Afstand van Vliegtuig 8 tot landingsbaan: 102628.94736841903
+Afstand van Vliegtuig 1 tot landingsbaan: 128383.09687045943
+Afstand van Vliegtuig 7 tot landingsbaan: 158847.1255830525
+Afstand van Vliegtuig 12 tot landingsbaan: 164273.4798999664
+Afstand van Vliegtuig 36 tot landingsbaan: 165906.8181818177
+Afstand van Vliegtuig 37 tot landingsbaan: 175145.3145057769
+423
+Afstand van Vliegtuig 8 tot landingsbaan: 102365.78947368219
+Afstand van Vliegtuig 1 tot landingsbaan: 128139.01790152378
+Afstand van Vliegtuig 7 tot landingsbaan: 158595.78121750389
+Afstand van Vliegtuig 12 tot landingsbaan: 164015.18420365045
+Afstand van Vliegtuig 36 tot landingsbaan: 165679.54545454498
+Afstand van Vliegtuig 37 tot landingsbaan: 174914.2490372275
+424
+Afstand van Vliegtuig 8 tot landingsbaan: 102102.63157894535
+Afstand van Vliegtuig 1 tot landingsbaan: 127894.93893258813
+Afstand van Vliegtuig 7 tot landingsbaan: 158344.43685195528
+Afstand van Vliegtuig 12 tot landingsbaan: 163756.88850733452
+Afstand van Vliegtuig 36 tot landingsbaan: 165452.27272727224
+Afstand van Vliegtuig 37 tot landingsbaan: 174683.1835686781
+425
+Afstand van Vliegtuig 8 tot landingsbaan: 101839.47368420851
+Afstand van Vliegtuig 1 tot landingsbaan: 127650.85996365249
+Afstand van Vliegtuig 7 tot landingsbaan: 158093.09248640668
+Afstand van Vliegtuig 12 tot landingsbaan: 163498.59281101858
+Afstand van Vliegtuig 36 tot landingsbaan: 165224.9999999995
+Afstand van Vliegtuig 37 tot landingsbaan: 174452.1181001287
+426
+Afstand van Vliegtuig 8 tot landingsbaan: 101576.31578947167
+Afstand van Vliegtuig 1 tot landingsbaan: 127406.78099471684
+Afstand van Vliegtuig 7 tot landingsbaan: 157841.74812085807
+Afstand van Vliegtuig 12 tot landingsbaan: 163240.29711470264
+Afstand van Vliegtuig 36 tot landingsbaan: 164997.72727272677
+Afstand van Vliegtuig 37 tot landingsbaan: 174221.05263157928
+427
+Afstand van Vliegtuig 8 tot landingsbaan: 101313.15789473483
+Afstand van Vliegtuig 1 tot landingsbaan: 127162.7020257812
+Afstand van Vliegtuig 7 tot landingsbaan: 157590.40375530947
+Afstand van Vliegtuig 12 tot landingsbaan: 162982.0014183867
+Afstand van Vliegtuig 36 tot landingsbaan: 164770.45454545403
+Afstand van Vliegtuig 37 tot landingsbaan: 173989.98716302987
+428
+Afstand van Vliegtuig 8 tot landingsbaan: 101049.99999999799
+Afstand van Vliegtuig 1 tot landingsbaan: 126918.62305684555
+Afstand van Vliegtuig 7 tot landingsbaan: 157339.05938976086
+Afstand van Vliegtuig 12 tot landingsbaan: 162723.70572207076
+Afstand van Vliegtuig 36 tot landingsbaan: 164543.1818181813
+Afstand van Vliegtuig 37 tot landingsbaan: 173758.92169448046
+429
+Afstand van Vliegtuig 8 tot landingsbaan: 100786.84210526115
+Afstand van Vliegtuig 1 tot landingsbaan: 126674.5440879099
+Afstand van Vliegtuig 7 tot landingsbaan: 157087.71502421226
+Afstand van Vliegtuig 12 tot landingsbaan: 162465.41002575483
+Afstand van Vliegtuig 36 tot landingsbaan: 164315.90909090856
+Afstand van Vliegtuig 37 tot landingsbaan: 173527.85622593106
+430
+Afstand van Vliegtuig 8 tot landingsbaan: 100523.68421052431
+Afstand van Vliegtuig 1 tot landingsbaan: 126430.46511897426
+Afstand van Vliegtuig 7 tot landingsbaan: 156836.37065866365
+Afstand van Vliegtuig 12 tot landingsbaan: 162207.1143294389
+Afstand van Vliegtuig 36 tot landingsbaan: 164088.63636363583
+Afstand van Vliegtuig 37 tot landingsbaan: 173296.79075738165
+431
+Afstand van Vliegtuig 8 tot landingsbaan: 100260.52631578747
+Afstand van Vliegtuig 1 tot landingsbaan: 126186.38615003861
+Afstand van Vliegtuig 7 tot landingsbaan: 156585.02629311505
+Afstand van Vliegtuig 12 tot landingsbaan: 161948.81863312295
+Afstand van Vliegtuig 36 tot landingsbaan: 163861.3636363631
+Afstand van Vliegtuig 37 tot landingsbaan: 173065.72528883224
+432
+Afstand van Vliegtuig 8 tot landingsbaan: 99997.36842105063
+Afstand van Vliegtuig 1 tot landingsbaan: 125942.30718110297
+Afstand van Vliegtuig 7 tot landingsbaan: 156333.68192756645
+Afstand van Vliegtuig 12 tot landingsbaan: 161690.522936807
+Afstand van Vliegtuig 36 tot landingsbaan: 163634.09090909036
+Afstand van Vliegtuig 37 tot landingsbaan: 172834.65982028283
+433
+Afstand van Vliegtuig 8 tot landingsbaan: 99734.2105263138
+Afstand van Vliegtuig 1 tot landingsbaan: 125698.22821216732
+Afstand van Vliegtuig 7 tot landingsbaan: 156082.33756201784
+Afstand van Vliegtuig 12 tot landingsbaan: 161432.22724049108
+Afstand van Vliegtuig 36 tot landingsbaan: 163406.81818181762
+Afstand van Vliegtuig 37 tot landingsbaan: 172603.59435173342
+434
+Afstand van Vliegtuig 8 tot landingsbaan: 99471.05263157695
+Afstand van Vliegtuig 1 tot landingsbaan: 125454.14924323167
+Afstand van Vliegtuig 7 tot landingsbaan: 155830.99319646924
+Afstand van Vliegtuig 12 tot landingsbaan: 161173.93154417514
+Afstand van Vliegtuig 36 tot landingsbaan: 163179.5454545449
+Afstand van Vliegtuig 37 tot landingsbaan: 172372.52888318402
+435
+Afstand van Vliegtuig 8 tot landingsbaan: 99207.89473684011
+Afstand van Vliegtuig 1 tot landingsbaan: 125210.07027429603
+Afstand van Vliegtuig 7 tot landingsbaan: 155579.64883092063
+Afstand van Vliegtuig 12 tot landingsbaan: 160915.6358478592
+Afstand van Vliegtuig 36 tot landingsbaan: 162952.27272727215
+Afstand van Vliegtuig 37 tot landingsbaan: 172141.4634146346
+436
+Afstand van Vliegtuig 8 tot landingsbaan: 98944.73684210327
+Afstand van Vliegtuig 1 tot landingsbaan: 124965.99130536038
+Afstand van Vliegtuig 7 tot landingsbaan: 155328.30446537203
+Afstand van Vliegtuig 12 tot landingsbaan: 160657.34015154326
+Afstand van Vliegtuig 36 tot landingsbaan: 162724.99999999942
+Afstand van Vliegtuig 37 tot landingsbaan: 171910.3979460852
+437
+Afstand van Vliegtuig 8 tot landingsbaan: 98681.57894736643
+Afstand van Vliegtuig 1 tot landingsbaan: 124721.91233642474
+Afstand van Vliegtuig 7 tot landingsbaan: 155076.96009982342
+Afstand van Vliegtuig 12 tot landingsbaan: 160399.04445522733
+Afstand van Vliegtuig 36 tot landingsbaan: 162497.72727272668
+Afstand van Vliegtuig 37 tot landingsbaan: 171679.3324775358
+438
+Afstand van Vliegtuig 8 tot landingsbaan: 98418.4210526296
+Afstand van Vliegtuig 1 tot landingsbaan: 124477.83336748909
+Afstand van Vliegtuig 7 tot landingsbaan: 154825.61573427482
+Afstand van Vliegtuig 12 tot landingsbaan: 160140.7487589114
+Afstand van Vliegtuig 36 tot landingsbaan: 162270.45454545395
+Afstand van Vliegtuig 37 tot landingsbaan: 171448.26700898638
+439
+Afstand van Vliegtuig 8 tot landingsbaan: 98155.26315789275
+Afstand van Vliegtuig 1 tot landingsbaan: 124233.75439855344
+Afstand van Vliegtuig 7 tot landingsbaan: 154574.27136872621
+Afstand van Vliegtuig 12 tot landingsbaan: 159882.45306259545
+Afstand van Vliegtuig 36 tot landingsbaan: 162043.1818181812
+Afstand van Vliegtuig 37 tot landingsbaan: 171217.20154043697
+440
+Afstand van Vliegtuig 8 tot landingsbaan: 97892.10526315591
+Afstand van Vliegtuig 1 tot landingsbaan: 123989.6754296178
+Afstand van Vliegtuig 7 tot landingsbaan: 154322.9270031776
+Afstand van Vliegtuig 12 tot landingsbaan: 159624.1573662795
+Afstand van Vliegtuig 36 tot landingsbaan: 161815.90909090848
+Afstand van Vliegtuig 37 tot landingsbaan: 170986.13607188757
+441
+Afstand van Vliegtuig 8 tot landingsbaan: 97628.94736841907
+Afstand van Vliegtuig 1 tot landingsbaan: 123745.59646068215
+Afstand van Vliegtuig 7 tot landingsbaan: 154071.582637629
+Afstand van Vliegtuig 12 tot landingsbaan: 159365.86166996357
+Afstand van Vliegtuig 36 tot landingsbaan: 161588.63636363574
+Afstand van Vliegtuig 37 tot landingsbaan: 170755.07060333816
+442
+Afstand van Vliegtuig 8 tot landingsbaan: 97365.78947368223
+Afstand van Vliegtuig 1 tot landingsbaan: 123501.5174917465
+Afstand van Vliegtuig 7 tot landingsbaan: 153820.2382720804
+Afstand van Vliegtuig 12 tot landingsbaan: 159107.56597364764
+Afstand van Vliegtuig 36 tot landingsbaan: 161361.363636363
+Afstand van Vliegtuig 37 tot landingsbaan: 170524.00513478875
+443
+Afstand van Vliegtuig 8 tot landingsbaan: 97102.6315789454
+Afstand van Vliegtuig 1 tot landingsbaan: 123257.43852281086
+Afstand van Vliegtuig 7 tot landingsbaan: 153568.8939065318
+Afstand van Vliegtuig 12 tot landingsbaan: 158849.2702773317
+Afstand van Vliegtuig 36 tot landingsbaan: 161134.09090909027
+Afstand van Vliegtuig 37 tot landingsbaan: 170292.93966623934
+444
+Afstand van Vliegtuig 8 tot landingsbaan: 96839.47368420855
+Afstand van Vliegtuig 1 tot landingsbaan: 123013.35955387521
+Afstand van Vliegtuig 7 tot landingsbaan: 153317.5495409832
+Afstand van Vliegtuig 12 tot landingsbaan: 158590.97458101576
+Afstand van Vliegtuig 36 tot landingsbaan: 160906.81818181754
+Afstand van Vliegtuig 37 tot landingsbaan: 170061.87419768993
+445
+Afstand van Vliegtuig 8 tot landingsbaan: 96576.31578947172
+Afstand van Vliegtuig 1 tot landingsbaan: 122769.28058493957
+Afstand van Vliegtuig 7 tot landingsbaan: 153066.2051754346
+Afstand van Vliegtuig 12 tot landingsbaan: 158332.67888469982
+Afstand van Vliegtuig 36 tot landingsbaan: 160679.5454545448
+Afstand van Vliegtuig 37 tot landingsbaan: 169830.80872914052
+446
+Afstand van Vliegtuig 8 tot landingsbaan: 96313.15789473488
+Afstand van Vliegtuig 1 tot landingsbaan: 122525.20161600392
+Afstand van Vliegtuig 7 tot landingsbaan: 152814.86080988598
+Afstand van Vliegtuig 12 tot landingsbaan: 158074.3831883839
+Afstand van Vliegtuig 36 tot landingsbaan: 160452.27272727207
+Afstand van Vliegtuig 37 tot landingsbaan: 169599.74326059112
+447
+Afstand van Vliegtuig 8 tot landingsbaan: 96049.99999999804
+Afstand van Vliegtuig 1 tot landingsbaan: 122281.12264706827
+Afstand van Vliegtuig 7 tot landingsbaan: 152563.51644433738
+Afstand van Vliegtuig 12 tot landingsbaan: 157816.08749206795
+Afstand van Vliegtuig 36 tot landingsbaan: 160224.99999999933
+Afstand van Vliegtuig 37 tot landingsbaan: 169368.6777920417
+448
+Afstand van Vliegtuig 8 tot landingsbaan: 95786.8421052612
+Afstand van Vliegtuig 1 tot landingsbaan: 122037.04367813263
+Afstand van Vliegtuig 7 tot landingsbaan: 152312.17207878878
+Afstand van Vliegtuig 12 tot landingsbaan: 157557.791795752
+Afstand van Vliegtuig 36 tot landingsbaan: 159997.7272727266
+Afstand van Vliegtuig 37 tot landingsbaan: 169137.6123234923
+449
+Afstand van Vliegtuig 8 tot landingsbaan: 95523.68421052436
+Afstand van Vliegtuig 1 tot landingsbaan: 121792.96470919698
+Afstand van Vliegtuig 7 tot landingsbaan: 152060.82771324017
+Afstand van Vliegtuig 12 tot landingsbaan: 157299.49609943607
+Afstand van Vliegtuig 36 tot landingsbaan: 159770.45454545386
+Afstand van Vliegtuig 37 tot landingsbaan: 168906.5468549429
+450
+Afstand van Vliegtuig 8 tot landingsbaan: 95260.52631578752
+Afstand van Vliegtuig 1 tot landingsbaan: 121548.88574026134
+Afstand van Vliegtuig 7 tot landingsbaan: 151809.48334769157
+Afstand van Vliegtuig 12 tot landingsbaan: 157041.20040312014
+Afstand van Vliegtuig 36 tot landingsbaan: 159543.18181818112
+Afstand van Vliegtuig 37 tot landingsbaan: 168675.48138639348
+451
+Afstand van Vliegtuig 8 tot landingsbaan: 94997.36842105068
+Afstand van Vliegtuig 1 tot landingsbaan: 121304.80677132569
+Afstand van Vliegtuig 7 tot landingsbaan: 151558.13898214296
+Afstand van Vliegtuig 12 tot landingsbaan: 156782.9047068042
+Afstand van Vliegtuig 36 tot landingsbaan: 159315.9090909084
+Afstand van Vliegtuig 37 tot landingsbaan: 168444.41591784408
+452
+Afstand van Vliegtuig 8 tot landingsbaan: 94734.21052631384
+Afstand van Vliegtuig 1 tot landingsbaan: 121060.72780239004
+Afstand van Vliegtuig 7 tot landingsbaan: 151306.79461659436
+Afstand van Vliegtuig 12 tot landingsbaan: 156524.60901048826
+Afstand van Vliegtuig 36 tot landingsbaan: 159088.63636363565
+Afstand van Vliegtuig 37 tot landingsbaan: 168213.35044929467
+453
+Afstand van Vliegtuig 8 tot landingsbaan: 94471.052631577
+Afstand van Vliegtuig 1 tot landingsbaan: 120816.6488334544
+Afstand van Vliegtuig 7 tot landingsbaan: 151055.45025104575
+Afstand van Vliegtuig 12 tot landingsbaan: 156266.31331417232
+Afstand van Vliegtuig 36 tot landingsbaan: 158861.36363636292
+Afstand van Vliegtuig 37 tot landingsbaan: 167982.28498074526
+454
+Afstand van Vliegtuig 8 tot landingsbaan: 94207.89473684016
+Afstand van Vliegtuig 1 tot landingsbaan: 120572.56986451875
+Afstand van Vliegtuig 7 tot landingsbaan: 150804.10588549715
+Afstand van Vliegtuig 12 tot landingsbaan: 156008.01761785639
+Afstand van Vliegtuig 36 tot landingsbaan: 158634.09090909018
+Afstand van Vliegtuig 37 tot landingsbaan: 167751.21951219585
+455
+Afstand van Vliegtuig 8 tot landingsbaan: 93944.73684210332
+Afstand van Vliegtuig 1 tot landingsbaan: 120328.4908955831
+Afstand van Vliegtuig 7 tot landingsbaan: 150552.76151994854
+Afstand van Vliegtuig 12 tot landingsbaan: 155749.72192154045
+Afstand van Vliegtuig 36 tot landingsbaan: 158406.81818181745
+Afstand van Vliegtuig 37 tot landingsbaan: 167520.15404364644
+456
+Afstand van Vliegtuig 8 tot landingsbaan: 93681.57894736648
+Afstand van Vliegtuig 1 tot landingsbaan: 120084.41192664746
+Afstand van Vliegtuig 7 tot landingsbaan: 150301.41715439994
+Afstand van Vliegtuig 12 tot landingsbaan: 155491.4262252245
+Afstand van Vliegtuig 36 tot landingsbaan: 158179.5454545447
+Afstand van Vliegtuig 37 tot landingsbaan: 167289.08857509703
+457
+Afstand van Vliegtuig 8 tot landingsbaan: 93418.42105262964
+Afstand van Vliegtuig 1 tot landingsbaan: 119840.33295771181
+Afstand van Vliegtuig 7 tot landingsbaan: 150050.07278885134
+Afstand van Vliegtuig 12 tot landingsbaan: 155233.13052890857
+Afstand van Vliegtuig 36 tot landingsbaan: 157952.27272727198
+Afstand van Vliegtuig 37 tot landingsbaan: 167058.02310654763
+458
+Afstand van Vliegtuig 8 tot landingsbaan: 93155.2631578928
+Afstand van Vliegtuig 1 tot landingsbaan: 119596.25398877617
+Afstand van Vliegtuig 7 tot landingsbaan: 149798.72842330273
+Afstand van Vliegtuig 12 tot landingsbaan: 154974.83483259263
+Afstand van Vliegtuig 36 tot landingsbaan: 157724.99999999924
+Afstand van Vliegtuig 37 tot landingsbaan: 166826.95763799822
+459
+Afstand van Vliegtuig 8 tot landingsbaan: 92892.10526315596
+Afstand van Vliegtuig 1 tot landingsbaan: 119352.17501984052
+Afstand van Vliegtuig 7 tot landingsbaan: 149547.38405775413
+Afstand van Vliegtuig 12 tot landingsbaan: 154716.5391362767
+Afstand van Vliegtuig 36 tot landingsbaan: 157497.7272727265
+Afstand van Vliegtuig 37 tot landingsbaan: 166595.8921694488
+460
+Afstand van Vliegtuig 8 tot landingsbaan: 92628.94736841912
+Afstand van Vliegtuig 1 tot landingsbaan: 119108.09605090487
+Afstand van Vliegtuig 7 tot landingsbaan: 149296.03969220552
+Afstand van Vliegtuig 12 tot landingsbaan: 154458.24343996076
+Afstand van Vliegtuig 36 tot landingsbaan: 157270.45454545377
+Afstand van Vliegtuig 37 tot landingsbaan: 166364.8267008994
+461
+Afstand van Vliegtuig 8 tot landingsbaan: 92365.78947368228
+Afstand van Vliegtuig 1 tot landingsbaan: 118864.01708196923
+Afstand van Vliegtuig 7 tot landingsbaan: 149044.69532665692
+Afstand van Vliegtuig 12 tot landingsbaan: 154199.94774364482
+Afstand van Vliegtuig 36 tot landingsbaan: 157043.18181818104
+Afstand van Vliegtuig 37 tot landingsbaan: 166133.76123235
+462
+Afstand van Vliegtuig 8 tot landingsbaan: 92102.63157894544
+Afstand van Vliegtuig 1 tot landingsbaan: 118619.93811303358
+Afstand van Vliegtuig 7 tot landingsbaan: 148793.3509611083
+Afstand van Vliegtuig 12 tot landingsbaan: 153941.65204732888
+Afstand van Vliegtuig 36 tot landingsbaan: 156815.9090909083
+Afstand van Vliegtuig 37 tot landingsbaan: 165902.69576380058
+463
+Afstand van Vliegtuig 8 tot landingsbaan: 91839.4736842086
+Afstand van Vliegtuig 1 tot landingsbaan: 118375.85914409794
+Afstand van Vliegtuig 7 tot landingsbaan: 148542.0065955597
+Afstand van Vliegtuig 12 tot landingsbaan: 153683.35635101295
+Afstand van Vliegtuig 36 tot landingsbaan: 156588.63636363557
+Afstand van Vliegtuig 37 tot landingsbaan: 165671.63029525118
+464
+Afstand van Vliegtuig 8 tot landingsbaan: 91576.31578947176
+Afstand van Vliegtuig 1 tot landingsbaan: 118131.78017516229
+Afstand van Vliegtuig 7 tot landingsbaan: 148290.6622300111
+Afstand van Vliegtuig 12 tot landingsbaan: 153425.060654697
+Afstand van Vliegtuig 36 tot landingsbaan: 156361.36363636283
+Afstand van Vliegtuig 37 tot landingsbaan: 165440.56482670177
+465
+Afstand van Vliegtuig 8 tot landingsbaan: 91313.15789473492
+Afstand van Vliegtuig 1 tot landingsbaan: 117887.70120622664
+Afstand van Vliegtuig 7 tot landingsbaan: 148039.3178644625
+Afstand van Vliegtuig 12 tot landingsbaan: 153166.76495838107
+Afstand van Vliegtuig 36 tot landingsbaan: 156134.0909090901
+Afstand van Vliegtuig 37 tot landingsbaan: 165209.49935815236
+466
+Afstand van Vliegtuig 8 tot landingsbaan: 91049.99999999808
+Afstand van Vliegtuig 1 tot landingsbaan: 117643.622237291
+Afstand van Vliegtuig 7 tot landingsbaan: 147787.9734989139
+Afstand van Vliegtuig 12 tot landingsbaan: 152908.46926206513
+Afstand van Vliegtuig 36 tot landingsbaan: 155906.81818181736
+Afstand van Vliegtuig 37 tot landingsbaan: 164978.43388960295
+467
+Afstand van Vliegtuig 8 tot landingsbaan: 90786.84210526124
+Afstand van Vliegtuig 1 tot landingsbaan: 117399.54326835535
+Afstand van Vliegtuig 7 tot landingsbaan: 147536.6291333653
+Afstand van Vliegtuig 12 tot landingsbaan: 152650.1735657492
+Afstand van Vliegtuig 36 tot landingsbaan: 155679.54545454463
+Afstand van Vliegtuig 37 tot landingsbaan: 164747.36842105354
+468
+Afstand van Vliegtuig 8 tot landingsbaan: 90523.6842105244
+Afstand van Vliegtuig 1 tot landingsbaan: 117155.4642994197
+Afstand van Vliegtuig 7 tot landingsbaan: 147285.2847678167
+Afstand van Vliegtuig 12 tot landingsbaan: 152391.87786943326
+Afstand van Vliegtuig 36 tot landingsbaan: 155452.2727272719
+Afstand van Vliegtuig 37 tot landingsbaan: 164516.30295250413
+469
+Afstand van Vliegtuig 8 tot landingsbaan: 90260.52631578756
+Afstand van Vliegtuig 1 tot landingsbaan: 116911.38533048406
+Afstand van Vliegtuig 7 tot landingsbaan: 147033.94040226808
+Afstand van Vliegtuig 12 tot landingsbaan: 152133.58217311732
+Afstand van Vliegtuig 36 tot landingsbaan: 155224.99999999916
+Afstand van Vliegtuig 37 tot landingsbaan: 164285.23748395473
+470
+Afstand van Vliegtuig 8 tot landingsbaan: 89997.36842105072
+Afstand van Vliegtuig 1 tot landingsbaan: 116667.30636154841
+Afstand van Vliegtuig 7 tot landingsbaan: 146782.59603671948
+Afstand van Vliegtuig 12 tot landingsbaan: 151875.28647680138
+Afstand van Vliegtuig 36 tot landingsbaan: 154997.72727272642
+Afstand van Vliegtuig 37 tot landingsbaan: 164054.17201540532
+471
+Afstand van Vliegtuig 8 tot landingsbaan: 89734.21052631388
+Afstand van Vliegtuig 1 tot landingsbaan: 116423.22739261277
+Afstand van Vliegtuig 7 tot landingsbaan: 146531.25167117087
+Afstand van Vliegtuig 12 tot landingsbaan: 151616.99078048544
+Afstand van Vliegtuig 36 tot landingsbaan: 154770.4545454537
+Afstand van Vliegtuig 37 tot landingsbaan: 163823.1065468559
+472
+Afstand van Vliegtuig 8 tot landingsbaan: 89471.05263157704
+Afstand van Vliegtuig 1 tot landingsbaan: 116179.14842367712
+Afstand van Vliegtuig 7 tot landingsbaan: 146279.90730562227
+Afstand van Vliegtuig 12 tot landingsbaan: 151358.6950841695
+Afstand van Vliegtuig 36 tot landingsbaan: 154543.18181818095
+Afstand van Vliegtuig 37 tot landingsbaan: 163592.0410783065
+473
+Afstand van Vliegtuig 8 tot landingsbaan: 89207.8947368402
+Afstand van Vliegtuig 1 tot landingsbaan: 115935.06945474148
+Afstand van Vliegtuig 7 tot landingsbaan: 146028.56294007367
+Afstand van Vliegtuig 12 tot landingsbaan: 151100.39938785357
+Afstand van Vliegtuig 36 tot landingsbaan: 154315.90909090822
+Afstand van Vliegtuig 37 tot landingsbaan: 163360.9756097571
+474
+Afstand van Vliegtuig 8 tot landingsbaan: 88944.73684210336
+Afstand van Vliegtuig 1 tot landingsbaan: 115690.99048580583
+Afstand van Vliegtuig 7 tot landingsbaan: 145777.21857452506
+Afstand van Vliegtuig 12 tot landingsbaan: 150842.10369153763
+Afstand van Vliegtuig 36 tot landingsbaan: 154088.63636363548
+Afstand van Vliegtuig 37 tot landingsbaan: 163129.91014120769
+475
+Afstand van Vliegtuig 8 tot landingsbaan: 88681.57894736652
+Afstand van Vliegtuig 1 tot landingsbaan: 115446.91151687018
+Afstand van Vliegtuig 7 tot landingsbaan: 145525.87420897646
+Afstand van Vliegtuig 12 tot landingsbaan: 150583.8079952217
+Afstand van Vliegtuig 36 tot landingsbaan: 153861.36363636274
+Afstand van Vliegtuig 37 tot landingsbaan: 162898.84467265828
+476
+Afstand van Vliegtuig 8 tot landingsbaan: 88418.42105262968
+Afstand van Vliegtuig 1 tot landingsbaan: 115202.83254793454
+Afstand van Vliegtuig 7 tot landingsbaan: 145274.52984342785
+Afstand van Vliegtuig 12 tot landingsbaan: 150325.51229890576
+Afstand van Vliegtuig 36 tot landingsbaan: 153634.09090909
+Afstand van Vliegtuig 37 tot landingsbaan: 162667.77920410887
+477
+Afstand van Vliegtuig 8 tot landingsbaan: 88155.26315789284
+Afstand van Vliegtuig 1 tot landingsbaan: 114958.75357899889
+Afstand van Vliegtuig 7 tot landingsbaan: 145023.18547787925
+Afstand van Vliegtuig 12 tot landingsbaan: 150067.21660258982
+Afstand van Vliegtuig 36 tot landingsbaan: 153406.81818181727
+Afstand van Vliegtuig 37 tot landingsbaan: 162436.71373555946
+478
+Afstand van Vliegtuig 8 tot landingsbaan: 87892.105263156
+Afstand van Vliegtuig 1 tot landingsbaan: 114714.67461006324
+Afstand van Vliegtuig 7 tot landingsbaan: 144771.84111233064
+Afstand van Vliegtuig 12 tot landingsbaan: 149808.92090627388
+Afstand van Vliegtuig 36 tot landingsbaan: 153179.54545454454
+Afstand van Vliegtuig 37 tot landingsbaan: 162205.64826701005
+479
+Afstand van Vliegtuig 8 tot landingsbaan: 87628.94736841916
+Afstand van Vliegtuig 1 tot landingsbaan: 114470.5956411276
+Afstand van Vliegtuig 7 tot landingsbaan: 144520.49674678204
+Afstand van Vliegtuig 12 tot landingsbaan: 149550.62520995794
+Afstand van Vliegtuig 36 tot landingsbaan: 152952.2727272718
+Afstand van Vliegtuig 37 tot landingsbaan: 161974.58279846064
+480
+Afstand van Vliegtuig 8 tot landingsbaan: 87365.78947368232
+Afstand van Vliegtuig 1 tot landingsbaan: 114226.51667219195
+Afstand van Vliegtuig 7 tot landingsbaan: 144269.15238123343
+Afstand van Vliegtuig 12 tot landingsbaan: 149292.329513642
+Afstand van Vliegtuig 36 tot landingsbaan: 152724.99999999907
+Afstand van Vliegtuig 37 tot landingsbaan: 161743.51732991124
+481
+Afstand van Vliegtuig 8 tot landingsbaan: 87102.63157894548
+Afstand van Vliegtuig 1 tot landingsbaan: 113982.4377032563
+Afstand van Vliegtuig 7 tot landingsbaan: 144017.80801568483
+Afstand van Vliegtuig 12 tot landingsbaan: 149034.03381732607
+Afstand van Vliegtuig 36 tot landingsbaan: 152497.72727272633
+Afstand van Vliegtuig 37 tot landingsbaan: 161512.45186136183
+482
+Afstand van Vliegtuig 8 tot landingsbaan: 86839.47368420864
+Afstand van Vliegtuig 1 tot landingsbaan: 113738.35873432066
+Afstand van Vliegtuig 7 tot landingsbaan: 143766.46365013623
+Afstand van Vliegtuig 12 tot landingsbaan: 148775.73812101013
+Afstand van Vliegtuig 36 tot landingsbaan: 152270.4545454536
+Afstand van Vliegtuig 37 tot landingsbaan: 161281.38639281242
+483
+Afstand van Vliegtuig 8 tot landingsbaan: 86576.3157894718
+Afstand van Vliegtuig 1 tot landingsbaan: 113494.27976538501
+Afstand van Vliegtuig 7 tot landingsbaan: 143515.11928458762
+Afstand van Vliegtuig 12 tot landingsbaan: 148517.4424246942
+Afstand van Vliegtuig 36 tot landingsbaan: 152043.18181818086
+Afstand van Vliegtuig 37 tot landingsbaan: 161050.320924263
+484
+Afstand van Vliegtuig 8 tot landingsbaan: 86313.15789473496
+Afstand van Vliegtuig 1 tot landingsbaan: 113250.20079644937
+Afstand van Vliegtuig 7 tot landingsbaan: 143263.77491903902
+Afstand van Vliegtuig 12 tot landingsbaan: 148259.14672837825
+Afstand van Vliegtuig 36 tot landingsbaan: 151815.90909090813
+Afstand van Vliegtuig 37 tot landingsbaan: 160819.2554557136
+485
+Afstand van Vliegtuig 8 tot landingsbaan: 86049.99999999812
+Afstand van Vliegtuig 1 tot landingsbaan: 113006.12182751372
+Afstand van Vliegtuig 7 tot landingsbaan: 143012.4305534904
+Afstand van Vliegtuig 12 tot landingsbaan: 148000.85103206232
+Afstand van Vliegtuig 36 tot landingsbaan: 151588.6363636354
+Afstand van Vliegtuig 37 tot landingsbaan: 160588.1899871642
+486
+Afstand van Vliegtuig 8 tot landingsbaan: 85786.84210526128
+Afstand van Vliegtuig 1 tot landingsbaan: 112762.04285857808
+Afstand van Vliegtuig 7 tot landingsbaan: 142761.0861879418
+Afstand van Vliegtuig 12 tot landingsbaan: 147742.55533574638
+Afstand van Vliegtuig 36 tot landingsbaan: 151361.36363636266
+Afstand van Vliegtuig 37 tot landingsbaan: 160357.1245186148
+487
+Afstand van Vliegtuig 8 tot landingsbaan: 85523.68421052444
+Afstand van Vliegtuig 1 tot landingsbaan: 112517.96388964243
+Afstand van Vliegtuig 7 tot landingsbaan: 142509.7418223932
+Afstand van Vliegtuig 12 tot landingsbaan: 147484.25963943044
+Afstand van Vliegtuig 36 tot landingsbaan: 151134.09090908992
+Afstand van Vliegtuig 37 tot landingsbaan: 160126.05905006538
+488
+Afstand van Vliegtuig 8 tot landingsbaan: 85260.5263157876
+Afstand van Vliegtuig 1 tot landingsbaan: 112273.88492070678
+Afstand van Vliegtuig 7 tot landingsbaan: 142258.3974568446
+Afstand van Vliegtuig 12 tot landingsbaan: 147225.9639431145
+Afstand van Vliegtuig 36 tot landingsbaan: 150906.8181818172
+Afstand van Vliegtuig 37 tot landingsbaan: 159894.99358151597
+489
+Afstand van Vliegtuig 8 tot landingsbaan: 84997.36842105076
+Afstand van Vliegtuig 1 tot landingsbaan: 112029.80595177114
+Afstand van Vliegtuig 7 tot landingsbaan: 142007.053091296
+Afstand van Vliegtuig 12 tot landingsbaan: 146967.66824679857
+Afstand van Vliegtuig 36 tot landingsbaan: 150679.54545454445
+Afstand van Vliegtuig 37 tot landingsbaan: 159663.92811296656
+490
+Afstand van Vliegtuig 8 tot landingsbaan: 84734.21052631392
+Afstand van Vliegtuig 1 tot landingsbaan: 111785.72698283549
+Afstand van Vliegtuig 7 tot landingsbaan: 141755.7087257474
+Afstand van Vliegtuig 12 tot landingsbaan: 146709.37255048263
+Afstand van Vliegtuig 36 tot landingsbaan: 150452.27272727172
+Afstand van Vliegtuig 37 tot landingsbaan: 159432.86264441715
+491
+Afstand van Vliegtuig 8 tot landingsbaan: 84471.05263157708
+Afstand van Vliegtuig 1 tot landingsbaan: 111541.64801389984
+Afstand van Vliegtuig 7 tot landingsbaan: 141504.3643601988
+Afstand van Vliegtuig 12 tot landingsbaan: 146451.0768541667
+Afstand van Vliegtuig 36 tot landingsbaan: 150224.99999999898
+Afstand van Vliegtuig 37 tot landingsbaan: 159201.79717586774
+492
+Afstand van Vliegtuig 8 tot landingsbaan: 84207.89473684024
+Afstand van Vliegtuig 1 tot landingsbaan: 111297.5690449642
+Afstand van Vliegtuig 7 tot landingsbaan: 141253.01999465018
+Afstand van Vliegtuig 12 tot landingsbaan: 146192.78115785075
+Afstand van Vliegtuig 36 tot landingsbaan: 149997.72727272625
+Afstand van Vliegtuig 37 tot landingsbaan: 158970.73170731834
+493
+Afstand van Vliegtuig 8 tot landingsbaan: 83944.7368421034
+Afstand van Vliegtuig 1 tot landingsbaan: 111053.49007602855
+Afstand van Vliegtuig 7 tot landingsbaan: 141001.67562910158
+Afstand van Vliegtuig 12 tot landingsbaan: 145934.48546153482
+Afstand van Vliegtuig 36 tot landingsbaan: 149770.4545454535
+Afstand van Vliegtuig 37 tot landingsbaan: 158739.66623876893
+494
+Afstand van Vliegtuig 8 tot landingsbaan: 83681.57894736656
+Afstand van Vliegtuig 1 tot landingsbaan: 110809.4111070929
+Afstand van Vliegtuig 7 tot landingsbaan: 140750.33126355297
+Afstand van Vliegtuig 12 tot landingsbaan: 145676.18976521888
+Afstand van Vliegtuig 36 tot landingsbaan: 149543.18181818078
+Afstand van Vliegtuig 37 tot landingsbaan: 158508.60077021952
+495
+Afstand van Vliegtuig 8 tot landingsbaan: 83418.42105262972
+Afstand van Vliegtuig 1 tot landingsbaan: 110565.33213815726
+Afstand van Vliegtuig 7 tot landingsbaan: 140498.98689800437
+Afstand van Vliegtuig 12 tot landingsbaan: 145417.89406890294
+Afstand van Vliegtuig 36 tot landingsbaan: 149315.90909090804
+Afstand van Vliegtuig 37 tot landingsbaan: 158277.5353016701
+496
+Afstand van Vliegtuig 8 tot landingsbaan: 83155.26315789288
+Afstand van Vliegtuig 1 tot landingsbaan: 110321.25316922161
+Afstand van Vliegtuig 7 tot landingsbaan: 140247.64253245576
+Afstand van Vliegtuig 12 tot landingsbaan: 145159.598372587
+Afstand van Vliegtuig 36 tot landingsbaan: 149088.6363636353
+Afstand van Vliegtuig 37 tot landingsbaan: 158046.4698331207
+497
+Afstand van Vliegtuig 8 tot landingsbaan: 82892.10526315605
+Afstand van Vliegtuig 1 tot landingsbaan: 110077.17420028597
+Afstand van Vliegtuig 7 tot landingsbaan: 139996.29816690716
+Afstand van Vliegtuig 12 tot landingsbaan: 144901.30267627107
+Afstand van Vliegtuig 36 tot landingsbaan: 148861.36363636257
+Afstand van Vliegtuig 37 tot landingsbaan: 157815.4043645713
+498
+Afstand van Vliegtuig 8 tot landingsbaan: 82628.9473684192
+Afstand van Vliegtuig 1 tot landingsbaan: 109833.09523135032
+Afstand van Vliegtuig 7 tot landingsbaan: 139744.95380135856
+Afstand van Vliegtuig 12 tot landingsbaan: 144643.00697995513
+Afstand van Vliegtuig 36 tot landingsbaan: 148634.09090908983
+Afstand van Vliegtuig 37 tot landingsbaan: 157584.3388960219
+499
+Afstand van Vliegtuig 8 tot landingsbaan: 82365.78947368237
+Afstand van Vliegtuig 1 tot landingsbaan: 109589.01626241468
+Afstand van Vliegtuig 7 tot landingsbaan: 139493.60943580995
+Afstand van Vliegtuig 12 tot landingsbaan: 144384.7112836392
+Afstand van Vliegtuig 36 tot landingsbaan: 148406.8181818171
+Afstand van Vliegtuig 37 tot landingsbaan: 157353.27342747248
+500
+Afstand van Vliegtuig 8 tot landingsbaan: 82102.63157894553
+Afstand van Vliegtuig 1 tot landingsbaan: 109344.93729347903
+Afstand van Vliegtuig 7 tot landingsbaan: 139242.26507026135
+Afstand van Vliegtuig 12 tot landingsbaan: 144126.41558732325
+Afstand van Vliegtuig 36 tot landingsbaan: 148179.54545454436
+Afstand van Vliegtuig 37 tot landingsbaan: 157122.20795892307
+501
+Afstand van Vliegtuig 8 tot landingsbaan: 81839.47368420869
+Afstand van Vliegtuig 1 tot landingsbaan: 109100.85832454338
+Afstand van Vliegtuig 7 tot landingsbaan: 138990.92070471274
+Afstand van Vliegtuig 12 tot landingsbaan: 143868.1198910073
+Afstand van Vliegtuig 36 tot landingsbaan: 147952.27272727163
+Afstand van Vliegtuig 37 tot landingsbaan: 156891.14249037366
+502
+Afstand van Vliegtuig 8 tot landingsbaan: 81576.31578947185
+Afstand van Vliegtuig 1 tot landingsbaan: 108856.77935560774
+Afstand van Vliegtuig 7 tot landingsbaan: 138739.57633916414
+Afstand van Vliegtuig 12 tot landingsbaan: 143609.82419469138
+Afstand van Vliegtuig 36 tot landingsbaan: 147724.9999999989
+Afstand van Vliegtuig 37 tot landingsbaan: 156660.07702182425
+503
+Afstand van Vliegtuig 8 tot landingsbaan: 81313.157894735
+Afstand van Vliegtuig 1 tot landingsbaan: 108612.70038667209
+Afstand van Vliegtuig 7 tot landingsbaan: 138488.23197361553
+Afstand van Vliegtuig 12 tot landingsbaan: 143351.52849837544
+Afstand van Vliegtuig 36 tot landingsbaan: 147497.72727272616
+Afstand van Vliegtuig 37 tot landingsbaan: 156429.01155327485
+504
+Afstand van Vliegtuig 8 tot landingsbaan: 81049.99999999817
+Afstand van Vliegtuig 1 tot landingsbaan: 108368.62141773645
+Afstand van Vliegtuig 7 tot landingsbaan: 138236.88760806693
+Afstand van Vliegtuig 12 tot landingsbaan: 143093.2328020595
+Afstand van Vliegtuig 36 tot landingsbaan: 147270.45454545342
+Afstand van Vliegtuig 37 tot landingsbaan: 156197.94608472544
+505
+Afstand van Vliegtuig 8 tot landingsbaan: 80786.84210526133
+Afstand van Vliegtuig 1 tot landingsbaan: 108124.5424488008
+Afstand van Vliegtuig 7 tot landingsbaan: 137985.54324251832
+Afstand van Vliegtuig 12 tot landingsbaan: 142834.93710574356
+Afstand van Vliegtuig 36 tot landingsbaan: 147043.1818181807
+Afstand van Vliegtuig 37 tot landingsbaan: 155966.88061617603
+506
+Afstand van Vliegtuig 8 tot landingsbaan: 80523.68421052449
+Afstand van Vliegtuig 1 tot landingsbaan: 107880.46347986515
+Afstand van Vliegtuig 7 tot landingsbaan: 137734.19887696972
+Afstand van Vliegtuig 12 tot landingsbaan: 142576.64140942763
+Afstand van Vliegtuig 36 tot landingsbaan: 146815.90909090795
+Afstand van Vliegtuig 37 tot landingsbaan: 155735.81514762662
+507
+Afstand van Vliegtuig 8 tot landingsbaan: 80260.52631578765
+Afstand van Vliegtuig 1 tot landingsbaan: 107636.3845109295
+Afstand van Vliegtuig 7 tot landingsbaan: 137482.85451142112
+Afstand van Vliegtuig 12 tot landingsbaan: 142318.3457131117
+Afstand van Vliegtuig 36 tot landingsbaan: 146588.63636363522
+Afstand van Vliegtuig 37 tot landingsbaan: 155504.7496790772
+508
+Afstand van Vliegtuig 8 tot landingsbaan: 79997.3684210508
+Afstand van Vliegtuig 1 tot landingsbaan: 107392.30554199386
+Afstand van Vliegtuig 7 tot landingsbaan: 137231.5101458725
+Afstand van Vliegtuig 12 tot landingsbaan: 142060.05001679575
+Afstand van Vliegtuig 36 tot landingsbaan: 146361.36363636248
+Afstand van Vliegtuig 37 tot landingsbaan: 155273.6842105278
+509
+Afstand van Vliegtuig 8 tot landingsbaan: 79734.21052631397
+Afstand van Vliegtuig 1 tot landingsbaan: 107148.22657305821
+Afstand van Vliegtuig 7 tot landingsbaan: 136980.1657803239
+Afstand van Vliegtuig 12 tot landingsbaan: 141801.7543204798
+Afstand van Vliegtuig 36 tot landingsbaan: 146134.09090908975
+Afstand van Vliegtuig 37 tot landingsbaan: 155042.6187419784
+510
+Afstand van Vliegtuig 8 tot landingsbaan: 79471.05263157713
+Afstand van Vliegtuig 1 tot landingsbaan: 106904.14760412257
+Afstand van Vliegtuig 7 tot landingsbaan: 136728.8214147753
+Afstand van Vliegtuig 12 tot landingsbaan: 141543.45862416388
+Afstand van Vliegtuig 36 tot landingsbaan: 145906.818181817
+Afstand van Vliegtuig 37 tot landingsbaan: 154811.553273429
+511
+Afstand van Vliegtuig 8 tot landingsbaan: 79207.89473684029
+Afstand van Vliegtuig 1 tot landingsbaan: 106660.06863518692
+Afstand van Vliegtuig 7 tot landingsbaan: 136477.4770492267
+Afstand van Vliegtuig 12 tot landingsbaan: 141285.16292784794
+Afstand van Vliegtuig 36 tot landingsbaan: 145679.54545454428
+Afstand van Vliegtuig 37 tot landingsbaan: 154580.48780487958
+512
+Afstand van Vliegtuig 8 tot landingsbaan: 78944.73684210345
+Afstand van Vliegtuig 1 tot landingsbaan: 106415.98966625128
+Afstand van Vliegtuig 7 tot landingsbaan: 136226.1326836781
+Afstand van Vliegtuig 12 tot landingsbaan: 141026.867231532
+Afstand van Vliegtuig 36 tot landingsbaan: 145452.27272727154
+Afstand van Vliegtuig 37 tot landingsbaan: 154349.42233633017
+513
+Afstand van Vliegtuig 8 tot landingsbaan: 78681.57894736661
+Afstand van Vliegtuig 1 tot landingsbaan: 106171.91069731563
+Afstand van Vliegtuig 7 tot landingsbaan: 135974.7883181295
+Afstand van Vliegtuig 12 tot landingsbaan: 140768.57153521606
+Afstand van Vliegtuig 36 tot landingsbaan: 145224.9999999988
+Afstand van Vliegtuig 37 tot landingsbaan: 154118.35686778076
+514
+Afstand van Vliegtuig 8 tot landingsbaan: 78418.42105262977
+Afstand van Vliegtuig 1 tot landingsbaan: 105927.83172837998
+Afstand van Vliegtuig 7 tot landingsbaan: 135723.44395258088
+Afstand van Vliegtuig 12 tot landingsbaan: 140510.27583890012
+Afstand van Vliegtuig 36 tot landingsbaan: 144997.72727272607
+Afstand van Vliegtuig 37 tot landingsbaan: 153887.29139923136
+515
+Afstand van Vliegtuig 8 tot landingsbaan: 78155.26315789293
+Afstand van Vliegtuig 1 tot landingsbaan: 105683.75275944434
+Afstand van Vliegtuig 7 tot landingsbaan: 135472.09958703228
+Afstand van Vliegtuig 12 tot landingsbaan: 140251.9801425842
+Afstand van Vliegtuig 36 tot landingsbaan: 144770.45454545334
+Afstand van Vliegtuig 37 tot landingsbaan: 153656.22593068195
+516
+Afstand van Vliegtuig 8 tot landingsbaan: 77892.10526315609
+Afstand van Vliegtuig 1 tot landingsbaan: 105439.67379050869
+Afstand van Vliegtuig 7 tot landingsbaan: 135220.75522148368
+Afstand van Vliegtuig 12 tot landingsbaan: 139993.68444626825
+Afstand van Vliegtuig 36 tot landingsbaan: 144543.1818181806
+Afstand van Vliegtuig 37 tot landingsbaan: 153425.16046213254
+517
+Afstand van Vliegtuig 8 tot landingsbaan: 77628.94736841925
+Afstand van Vliegtuig 1 tot landingsbaan: 105195.59482157305
+Afstand van Vliegtuig 7 tot landingsbaan: 134969.41085593507
+Afstand van Vliegtuig 12 tot landingsbaan: 139735.3887499523
+Afstand van Vliegtuig 36 tot landingsbaan: 144315.90909090787
+Afstand van Vliegtuig 37 tot landingsbaan: 153194.09499358313
+518
+Afstand van Vliegtuig 8 tot landingsbaan: 77365.78947368241
+Afstand van Vliegtuig 1 tot landingsbaan: 104951.5158526374
+Afstand van Vliegtuig 7 tot landingsbaan: 134718.06649038647
+Afstand van Vliegtuig 12 tot landingsbaan: 139477.09305363637
+Afstand van Vliegtuig 36 tot landingsbaan: 144088.63636363513
+Afstand van Vliegtuig 37 tot landingsbaan: 152963.02952503372
+519
+Afstand van Vliegtuig 8 tot landingsbaan: 77102.63157894557
+Afstand van Vliegtuig 1 tot landingsbaan: 104707.43688370175
+Afstand van Vliegtuig 7 tot landingsbaan: 134466.72212483786
+Afstand van Vliegtuig 12 tot landingsbaan: 139218.79735732044
+Afstand van Vliegtuig 36 tot landingsbaan: 143861.3636363624
+Afstand van Vliegtuig 37 tot landingsbaan: 152731.9640564843
+520
+Afstand van Vliegtuig 8 tot landingsbaan: 76839.47368420873
+Afstand van Vliegtuig 1 tot landingsbaan: 104463.35791476611
+Afstand van Vliegtuig 7 tot landingsbaan: 134215.37775928926
+Afstand van Vliegtuig 12 tot landingsbaan: 138960.5016610045
+Afstand van Vliegtuig 36 tot landingsbaan: 143634.09090908966
+Afstand van Vliegtuig 37 tot landingsbaan: 152500.8985879349
+521
+Afstand van Vliegtuig 8 tot landingsbaan: 76576.31578947189
+Afstand van Vliegtuig 1 tot landingsbaan: 104219.27894583046
+Afstand van Vliegtuig 7 tot landingsbaan: 133964.03339374065
+Afstand van Vliegtuig 12 tot landingsbaan: 138702.20596468856
+Afstand van Vliegtuig 36 tot landingsbaan: 143406.81818181693
+Afstand van Vliegtuig 37 tot landingsbaan: 152269.8331193855
+522
+Afstand van Vliegtuig 8 tot landingsbaan: 76313.15789473505
+Afstand van Vliegtuig 1 tot landingsbaan: 103975.19997689482
+Afstand van Vliegtuig 7 tot landingsbaan: 133712.68902819205
+Afstand van Vliegtuig 12 tot landingsbaan: 138443.91026837262
+Afstand van Vliegtuig 36 tot landingsbaan: 143179.5454545442
+Afstand van Vliegtuig 37 tot landingsbaan: 152038.7676508361
+523
+Afstand van Vliegtuig 8 tot landingsbaan: 76049.99999999821
+Afstand van Vliegtuig 1 tot landingsbaan: 103731.12100795917
+Afstand van Vliegtuig 7 tot landingsbaan: 133461.34466264345
+Afstand van Vliegtuig 12 tot landingsbaan: 138185.6145720567
+Afstand van Vliegtuig 36 tot landingsbaan: 142952.27272727145
+Afstand van Vliegtuig 37 tot landingsbaan: 151807.70218228668
+524
+Afstand van Vliegtuig 8 tot landingsbaan: 75786.84210526137
+Afstand van Vliegtuig 1 tot landingsbaan: 103487.04203902352
+Afstand van Vliegtuig 7 tot landingsbaan: 133210.00029709484
+Afstand van Vliegtuig 12 tot landingsbaan: 137927.31887574075
+Afstand van Vliegtuig 36 tot landingsbaan: 142724.99999999872
+Afstand van Vliegtuig 37 tot landingsbaan: 151576.63671373727
+525
+Afstand van Vliegtuig 8 tot landingsbaan: 75523.68421052453
+Afstand van Vliegtuig 1 tot landingsbaan: 103242.96307008788
+Afstand van Vliegtuig 7 tot landingsbaan: 132958.65593154624
+Afstand van Vliegtuig 12 tot landingsbaan: 137669.0231794248
+Afstand van Vliegtuig 36 tot landingsbaan: 142497.72727272598
+Afstand van Vliegtuig 37 tot landingsbaan: 151345.57124518786
+526
+Afstand van Vliegtuig 8 tot landingsbaan: 75260.52631578769
+Afstand van Vliegtuig 1 tot landingsbaan: 102998.88410115223
+Afstand van Vliegtuig 7 tot landingsbaan: 132707.31156599763
+Afstand van Vliegtuig 12 tot landingsbaan: 137410.72748310887
+Afstand van Vliegtuig 36 tot landingsbaan: 142270.45454545325
+Afstand van Vliegtuig 37 tot landingsbaan: 151114.50577663846
+527
+Afstand van Vliegtuig 8 tot landingsbaan: 74997.36842105085
+Afstand van Vliegtuig 1 tot landingsbaan: 102754.80513221658
+Afstand van Vliegtuig 7 tot landingsbaan: 132455.96720044903
+Afstand van Vliegtuig 12 tot landingsbaan: 137152.43178679293
+Afstand van Vliegtuig 36 tot landingsbaan: 142043.1818181805
+Afstand van Vliegtuig 37 tot landingsbaan: 150883.44030808905
+528
+Afstand van Vliegtuig 8 tot landingsbaan: 74734.21052631401
+Afstand van Vliegtuig 1 tot landingsbaan: 102510.72616328094
+Afstand van Vliegtuig 7 tot landingsbaan: 132204.62283490042
+Afstand van Vliegtuig 12 tot landingsbaan: 136894.136090477
+Afstand van Vliegtuig 36 tot landingsbaan: 141815.90909090778
+Afstand van Vliegtuig 37 tot landingsbaan: 150652.37483953964
+529
+Afstand van Vliegtuig 8 tot landingsbaan: 74471.05263157717
+Afstand van Vliegtuig 1 tot landingsbaan: 102266.64719434529
+Afstand van Vliegtuig 7 tot landingsbaan: 131953.27846935182
+Afstand van Vliegtuig 12 tot landingsbaan: 136635.84039416106
+Afstand van Vliegtuig 36 tot landingsbaan: 141588.63636363504
+Afstand van Vliegtuig 37 tot landingsbaan: 150421.30937099023
+530
+Afstand van Vliegtuig 8 tot landingsbaan: 74207.89473684033
+Afstand van Vliegtuig 1 tot landingsbaan: 102022.56822540965
+Afstand van Vliegtuig 7 tot landingsbaan: 131701.9341038032
+Afstand van Vliegtuig 12 tot landingsbaan: 136377.54469784512
+Afstand van Vliegtuig 36 tot landingsbaan: 141361.3636363623
+Afstand van Vliegtuig 37 tot landingsbaan: 150190.24390244082
+531
+Afstand van Vliegtuig 8 tot landingsbaan: 73944.73684210349
+Afstand van Vliegtuig 1 tot landingsbaan: 101778.489256474
+Afstand van Vliegtuig 7 tot landingsbaan: 131450.5897382546
+Afstand van Vliegtuig 12 tot landingsbaan: 136119.24900152918
+Afstand van Vliegtuig 36 tot landingsbaan: 141134.09090908957
+Afstand van Vliegtuig 37 tot landingsbaan: 149959.17843389141
+532
+Afstand van Vliegtuig 8 tot landingsbaan: 73681.57894736665
+Afstand van Vliegtuig 1 tot landingsbaan: 101534.41028753835
+Afstand van Vliegtuig 7 tot landingsbaan: 131199.245372706
+Afstand van Vliegtuig 12 tot landingsbaan: 135860.95330521325
+Afstand van Vliegtuig 36 tot landingsbaan: 140906.81818181684
+Afstand van Vliegtuig 37 tot landingsbaan: 149728.112965342
+533
+Afstand van Vliegtuig 8 tot landingsbaan: 73418.42105262981
+Afstand van Vliegtuig 1 tot landingsbaan: 101290.33131860271
+Afstand van Vliegtuig 7 tot landingsbaan: 130947.90100715742
+Afstand van Vliegtuig 12 tot landingsbaan: 135602.6576088973
+Afstand van Vliegtuig 36 tot landingsbaan: 140679.5454545441
+Afstand van Vliegtuig 37 tot landingsbaan: 149497.0474967926
+534
+Afstand van Vliegtuig 8 tot landingsbaan: 73155.26315789297
+Afstand van Vliegtuig 1 tot landingsbaan: 101046.25234966706
+Afstand van Vliegtuig 7 tot landingsbaan: 130696.55664160883
+Afstand van Vliegtuig 12 tot landingsbaan: 135344.36191258137
+Afstand van Vliegtuig 36 tot landingsbaan: 140452.27272727137
+Afstand van Vliegtuig 37 tot landingsbaan: 149265.9820282432
+535
+Afstand van Vliegtuig 8 tot landingsbaan: 72892.10526315613
+Afstand van Vliegtuig 1 tot landingsbaan: 100802.17338073142
+Afstand van Vliegtuig 7 tot landingsbaan: 130445.21227606024
+Afstand van Vliegtuig 12 tot landingsbaan: 135086.06621626543
+Afstand van Vliegtuig 36 tot landingsbaan: 140224.99999999863
+Afstand van Vliegtuig 37 tot landingsbaan: 149034.91655969378
+536
+Afstand van Vliegtuig 8 tot landingsbaan: 72628.94736841929
+Afstand van Vliegtuig 1 tot landingsbaan: 100558.09441179577
+Afstand van Vliegtuig 7 tot landingsbaan: 130193.86791051165
+Afstand van Vliegtuig 12 tot landingsbaan: 134827.7705199495
+Afstand van Vliegtuig 36 tot landingsbaan: 139997.7272727259
+Afstand van Vliegtuig 37 tot landingsbaan: 148803.85109114437
+537
+Afstand van Vliegtuig 8 tot landingsbaan: 72365.78947368245
+Afstand van Vliegtuig 1 tot landingsbaan: 100314.01544286012
+Afstand van Vliegtuig 7 tot landingsbaan: 129942.52354496306
+Afstand van Vliegtuig 12 tot landingsbaan: 134569.47482363356
+Afstand van Vliegtuig 36 tot landingsbaan: 139770.45454545316
+Afstand van Vliegtuig 37 tot landingsbaan: 148572.78562259497
+538
+Afstand van Vliegtuig 8 tot landingsbaan: 72102.63157894561
+Afstand van Vliegtuig 1 tot landingsbaan: 100069.93647392448
+Afstand van Vliegtuig 7 tot landingsbaan: 129691.17917941447
+Afstand van Vliegtuig 12 tot landingsbaan: 134311.17912731762
+Afstand van Vliegtuig 36 tot landingsbaan: 139543.18181818043
+Afstand van Vliegtuig 37 tot landingsbaan: 148341.72015404556
+539
+Afstand van Vliegtuig 8 tot landingsbaan: 71839.47368420877
+Afstand van Vliegtuig 1 tot landingsbaan: 99825.85750498883
+Afstand van Vliegtuig 7 tot landingsbaan: 129439.83481386588
+Afstand van Vliegtuig 12 tot landingsbaan: 134052.88343100168
+Afstand van Vliegtuig 36 tot landingsbaan: 139315.9090909077
+Afstand van Vliegtuig 37 tot landingsbaan: 148110.65468549615
+540
+Afstand van Vliegtuig 8 tot landingsbaan: 71576.31578947193
+Afstand van Vliegtuig 1 tot landingsbaan: 99581.77853605319
+Afstand van Vliegtuig 7 tot landingsbaan: 129188.49044831729
+Afstand van Vliegtuig 12 tot landingsbaan: 133794.58773468575
+Afstand van Vliegtuig 36 tot landingsbaan: 139088.63636363496
+Afstand van Vliegtuig 37 tot landingsbaan: 147879.58921694674
+541
+Afstand van Vliegtuig 8 tot landingsbaan: 71313.1578947351
+Afstand van Vliegtuig 1 tot landingsbaan: 99337.69956711754
+Afstand van Vliegtuig 7 tot landingsbaan: 128937.1460827687
+Afstand van Vliegtuig 12 tot landingsbaan: 133536.2920383698
+Afstand van Vliegtuig 36 tot landingsbaan: 138861.36363636222
+Afstand van Vliegtuig 37 tot landingsbaan: 147648.52374839733
+542
+Afstand van Vliegtuig 8 tot landingsbaan: 71049.99999999825
+Afstand van Vliegtuig 1 tot landingsbaan: 99093.6205981819
+Afstand van Vliegtuig 7 tot landingsbaan: 128685.8017172201
+Afstand van Vliegtuig 12 tot landingsbaan: 133277.99634205387
+Afstand van Vliegtuig 36 tot landingsbaan: 138634.0909090895
+Afstand van Vliegtuig 37 tot landingsbaan: 147417.45827984792
+543
+Afstand van Vliegtuig 8 tot landingsbaan: 70786.84210526141
+Afstand van Vliegtuig 1 tot landingsbaan: 98849.54162924625
+Afstand van Vliegtuig 7 tot landingsbaan: 128434.45735167152
+Afstand van Vliegtuig 12 tot landingsbaan: 133019.70064573793
+Afstand van Vliegtuig 36 tot landingsbaan: 138406.81818181675
+Afstand van Vliegtuig 37 tot landingsbaan: 147186.39281129852
+544
+Afstand van Vliegtuig 8 tot landingsbaan: 70523.68421052457
+Afstand van Vliegtuig 1 tot landingsbaan: 98605.4626603106
+Afstand van Vliegtuig 7 tot landingsbaan: 128183.11298612293
+Afstand van Vliegtuig 12 tot landingsbaan: 132761.404949422
+Afstand van Vliegtuig 36 tot landingsbaan: 138179.54545454402
+Afstand van Vliegtuig 37 tot landingsbaan: 146955.3273427491
+Vliegtuig 15
+CheckBefore() heeft Vliegtuig 37 gevonden
+CheckBefore() heeft Vliegtuig 12 gevonden
+Abraham kan en gaat naar links zodat Vliegtuig 15 geplaatst kan worden om 1187
+Placement successful for plane no. 12. Assigned time: 17:45 Assigned speed: 255.31039413350385 Distance from airport: 132761.404949422
+Placement successful for plane no. 15. Assigned time: 19:47 Assigned speed: 280.3738317757009 Distance from airport: 180000.0
+545
+Afstand van Vliegtuig 8 tot landingsbaan: 70260.52631578773
+Afstand van Vliegtuig 1 tot landingsbaan: 98361.38369137495
+Afstand van Vliegtuig 7 tot landingsbaan: 127931.76862057434
+Afstand van Vliegtuig 12 tot landingsbaan: 132506.0945552885
+Afstand van Vliegtuig 36 tot landingsbaan: 137952.27272727128
+Afstand van Vliegtuig 37 tot landingsbaan: 146724.2618741997
+Afstand van Vliegtuig 15 tot landingsbaan: 179719.6261682243
+546
+Afstand van Vliegtuig 8 tot landingsbaan: 69997.3684210509
+Afstand van Vliegtuig 1 tot landingsbaan: 98117.30472243931
+Afstand van Vliegtuig 7 tot landingsbaan: 127680.42425502575
+Afstand van Vliegtuig 12 tot landingsbaan: 132250.784161155
+Afstand van Vliegtuig 36 tot landingsbaan: 137724.99999999854
+Afstand van Vliegtuig 37 tot landingsbaan: 146493.1964056503
+Afstand van Vliegtuig 15 tot landingsbaan: 179439.25233644858
+547
+Afstand van Vliegtuig 8 tot landingsbaan: 69734.21052631405
+Afstand van Vliegtuig 1 tot landingsbaan: 97873.22575350366
+Afstand van Vliegtuig 7 tot landingsbaan: 127429.07988947716
+Afstand van Vliegtuig 12 tot landingsbaan: 131995.4737670215
+Afstand van Vliegtuig 36 tot landingsbaan: 137497.7272727258
+Afstand van Vliegtuig 37 tot landingsbaan: 146262.13093710088
+Afstand van Vliegtuig 15 tot landingsbaan: 179158.87850467287
+548
+Afstand van Vliegtuig 8 tot landingsbaan: 69471.05263157721
+Afstand van Vliegtuig 1 tot landingsbaan: 97629.14678456802
+Afstand van Vliegtuig 7 tot landingsbaan: 127177.73552392857
+Afstand van Vliegtuig 12 tot landingsbaan: 131740.163372888
+Afstand van Vliegtuig 36 tot landingsbaan: 137270.45454545307
+Afstand van Vliegtuig 37 tot landingsbaan: 146031.06546855147
+Afstand van Vliegtuig 15 tot landingsbaan: 178878.50467289716
+549
+Afstand van Vliegtuig 8 tot landingsbaan: 69207.89473684038
+Afstand van Vliegtuig 1 tot landingsbaan: 97385.06781563237
+Afstand van Vliegtuig 7 tot landingsbaan: 126926.39115837998
+Afstand van Vliegtuig 12 tot landingsbaan: 131484.8529787545
+Afstand van Vliegtuig 36 tot landingsbaan: 137043.18181818034
+Afstand van Vliegtuig 37 tot landingsbaan: 145800.00000000207
+Afstand van Vliegtuig 15 tot landingsbaan: 178598.13084112146
+550
+Afstand van Vliegtuig 8 tot landingsbaan: 68944.73684210354
+Afstand van Vliegtuig 1 tot landingsbaan: 97140.98884669672
+Afstand van Vliegtuig 7 tot landingsbaan: 126675.04679283139
+Afstand van Vliegtuig 12 tot landingsbaan: 131229.542584621
+Afstand van Vliegtuig 36 tot landingsbaan: 136815.9090909076
+Afstand van Vliegtuig 37 tot landingsbaan: 145568.93453145266
+Afstand van Vliegtuig 15 tot landingsbaan: 178317.75700934575
+551
+Afstand van Vliegtuig 8 tot landingsbaan: 68681.5789473667
+Afstand van Vliegtuig 1 tot landingsbaan: 96896.90987776108
+Afstand van Vliegtuig 7 tot landingsbaan: 126423.7024272828
+Afstand van Vliegtuig 12 tot landingsbaan: 130974.2321904875
+Afstand van Vliegtuig 36 tot landingsbaan: 136588.63636363487
+Afstand van Vliegtuig 37 tot landingsbaan: 145337.86906290325
+Afstand van Vliegtuig 15 tot landingsbaan: 178037.38317757004
+552
+Afstand van Vliegtuig 8 tot landingsbaan: 68418.42105262986
+Afstand van Vliegtuig 1 tot landingsbaan: 96652.83090882543
+Afstand van Vliegtuig 7 tot landingsbaan: 126172.35806173421
+Afstand van Vliegtuig 12 tot landingsbaan: 130718.921796354
+Afstand van Vliegtuig 36 tot landingsbaan: 136361.36363636213
+Afstand van Vliegtuig 37 tot landingsbaan: 145106.80359435384
+Afstand van Vliegtuig 15 tot landingsbaan: 177757.00934579433
+553
+Afstand van Vliegtuig 8 tot landingsbaan: 68155.26315789302
+Afstand van Vliegtuig 1 tot landingsbaan: 96408.75193988979
+Afstand van Vliegtuig 7 tot landingsbaan: 125921.01369618562
+Afstand van Vliegtuig 12 tot landingsbaan: 130463.6114022205
+Afstand van Vliegtuig 36 tot landingsbaan: 136134.0909090894
+Afstand van Vliegtuig 37 tot landingsbaan: 144875.73812580443
+Afstand van Vliegtuig 15 tot landingsbaan: 177476.63551401862
+554
+Afstand van Vliegtuig 8 tot landingsbaan: 67892.10526315618
+Afstand van Vliegtuig 1 tot landingsbaan: 96164.67297095414
+Afstand van Vliegtuig 7 tot landingsbaan: 125669.66933063703
+Afstand van Vliegtuig 12 tot landingsbaan: 130208.301008087
+Afstand van Vliegtuig 36 tot landingsbaan: 135906.81818181666
+Afstand van Vliegtuig 37 tot landingsbaan: 144644.67265725503
+Afstand van Vliegtuig 15 tot landingsbaan: 177196.2616822429
+555
+Afstand van Vliegtuig 8 tot landingsbaan: 67628.94736841934
+Afstand van Vliegtuig 1 tot landingsbaan: 95920.5940020185
+Afstand van Vliegtuig 7 tot landingsbaan: 125418.32496508844
+Afstand van Vliegtuig 12 tot landingsbaan: 129952.9906139535
+Afstand van Vliegtuig 36 tot landingsbaan: 135679.54545454393
+Afstand van Vliegtuig 37 tot landingsbaan: 144413.60718870562
+Afstand van Vliegtuig 15 tot landingsbaan: 176915.8878504672
+556
+Afstand van Vliegtuig 8 tot landingsbaan: 67365.7894736825
+Afstand van Vliegtuig 1 tot landingsbaan: 95676.51503308285
+Afstand van Vliegtuig 7 tot landingsbaan: 125166.98059953985
+Afstand van Vliegtuig 12 tot landingsbaan: 129697.68021982
+Afstand van Vliegtuig 36 tot landingsbaan: 135452.2727272712
+Afstand van Vliegtuig 37 tot landingsbaan: 144182.5417201562
+Afstand van Vliegtuig 15 tot landingsbaan: 176635.5140186915
+557
+Afstand van Vliegtuig 8 tot landingsbaan: 67102.63157894566
+Afstand van Vliegtuig 1 tot landingsbaan: 95432.4360641472
+Afstand van Vliegtuig 7 tot landingsbaan: 124915.63623399126
+Afstand van Vliegtuig 12 tot landingsbaan: 129442.3698256865
+Afstand van Vliegtuig 36 tot landingsbaan: 135224.99999999846
+Afstand van Vliegtuig 37 tot landingsbaan: 143951.4762516068
+Afstand van Vliegtuig 15 tot landingsbaan: 176355.14018691579
+558
+Afstand van Vliegtuig 8 tot landingsbaan: 66839.47368420882
+Afstand van Vliegtuig 1 tot landingsbaan: 95188.35709521156
+Afstand van Vliegtuig 7 tot landingsbaan: 124664.29186844267
+Afstand van Vliegtuig 12 tot landingsbaan: 129187.059431553
+Afstand van Vliegtuig 36 tot landingsbaan: 134997.72727272572
+Afstand van Vliegtuig 37 tot landingsbaan: 143720.4107830574
+Afstand van Vliegtuig 15 tot landingsbaan: 176074.76635514008
+559
+Afstand van Vliegtuig 8 tot landingsbaan: 66576.31578947198
+Afstand van Vliegtuig 1 tot landingsbaan: 94944.27812627591
+Afstand van Vliegtuig 7 tot landingsbaan: 124412.94750289408
+Afstand van Vliegtuig 12 tot landingsbaan: 128931.7490374195
+Afstand van Vliegtuig 36 tot landingsbaan: 134770.454545453
+Afstand van Vliegtuig 37 tot landingsbaan: 143489.34531450798
+Afstand van Vliegtuig 15 tot landingsbaan: 175794.39252336437
+560
+Afstand van Vliegtuig 8 tot landingsbaan: 66313.15789473514
+Afstand van Vliegtuig 1 tot landingsbaan: 94700.19915734026
+Afstand van Vliegtuig 7 tot landingsbaan: 124161.60313734549
+Afstand van Vliegtuig 12 tot landingsbaan: 128676.438643286
+Afstand van Vliegtuig 36 tot landingsbaan: 134543.18181818025
+Afstand van Vliegtuig 37 tot landingsbaan: 143258.27984595858
+Afstand van Vliegtuig 15 tot landingsbaan: 175514.01869158866
+Vliegtuig 31
+CheckBefore() heeft Vliegtuig 15 gevonden
+CheckBefore() heeft Vliegtuig 12 gevonden
+Abraham kan en gaat naar links zodat Vliegtuig 31 geplaatst kan worden om 1197
+Placement successful for plane no. 12. Assigned time: 18:19 Assigned speed: 239.17553651168402 Distance from airport: 128676.438643286
+Placement successful for plane no. 31. Assigned time: 19:57 Assigned speed: 283.0188679245283 Distance from airport: 180000.0
+561
+Afstand van Vliegtuig 8 tot landingsbaan: 66049.9999999983
+Afstand van Vliegtuig 1 tot landingsbaan: 94456.12018840462
+Afstand van Vliegtuig 7 tot landingsbaan: 123910.2587717969
+Afstand van Vliegtuig 12 tot landingsbaan: 128437.26310677432
+Afstand van Vliegtuig 36 tot landingsbaan: 134315.90909090752
+Afstand van Vliegtuig 37 tot landingsbaan: 143027.21437740917
+Afstand van Vliegtuig 15 tot landingsbaan: 175233.64485981295
+Afstand van Vliegtuig 31 tot landingsbaan: 179716.98113207548
+Vliegtuig 28
+CheckBefore() heeft Vliegtuig 31 gevonden
+CheckBefore() heeft Vliegtuig 37 gevonden
+Abraham kan en gaat naar links zodat Vliegtuig 28 geplaatst kan worden om 1305
+Placement successful for plane no. 37. Assigned time: 20:45 Assigned speed: 209.41026995228282 Distance from airport: 143027.21437740917
+Placement successful for plane no. 28. Assigned time: 21:45 Assigned speed: 242.26110363391655 Distance from airport: 180000.0
+562
+Afstand van Vliegtuig 8 tot landingsbaan: 65786.84210526146
+Afstand van Vliegtuig 1 tot landingsbaan: 94212.04121946897
+Afstand van Vliegtuig 7 tot landingsbaan: 123658.91440624831
+Afstand van Vliegtuig 12 tot landingsbaan: 128198.08757026264
+Afstand van Vliegtuig 36 tot landingsbaan: 134088.63636363478
+Afstand van Vliegtuig 15 tot landingsbaan: 174953.27102803724
+Afstand van Vliegtuig 31 tot landingsbaan: 179433.96226415096
+Afstand van Vliegtuig 37 tot landingsbaan: 142817.80410745688
+Afstand van Vliegtuig 28 tot landingsbaan: 179757.7388963661
+563
+Afstand van Vliegtuig 8 tot landingsbaan: 65523.68421052462
+Afstand van Vliegtuig 1 tot landingsbaan: 93967.96225053332
+Afstand van Vliegtuig 7 tot landingsbaan: 123407.57004069972
+Afstand van Vliegtuig 12 tot landingsbaan: 127958.91203375095
+Afstand van Vliegtuig 36 tot landingsbaan: 133861.36363636205
+Afstand van Vliegtuig 15 tot landingsbaan: 174672.89719626153
+Afstand van Vliegtuig 31 tot landingsbaan: 179150.94339622644
+Afstand van Vliegtuig 37 tot landingsbaan: 142608.39383750458
+Afstand van Vliegtuig 28 tot landingsbaan: 179515.47779273218
+564
+Afstand van Vliegtuig 8 tot landingsbaan: 65260.52631578778
+Afstand van Vliegtuig 1 tot landingsbaan: 93723.88328159768
+Afstand van Vliegtuig 7 tot landingsbaan: 123156.22567515113
+Afstand van Vliegtuig 12 tot landingsbaan: 127719.73649723927
+Afstand van Vliegtuig 36 tot landingsbaan: 133634.0909090893
+Afstand van Vliegtuig 15 tot landingsbaan: 174392.52336448582
+Afstand van Vliegtuig 31 tot landingsbaan: 178867.92452830193
+Afstand van Vliegtuig 37 tot landingsbaan: 142398.9835675523
+Afstand van Vliegtuig 28 tot landingsbaan: 179273.21668909828
+565
+Afstand van Vliegtuig 8 tot landingsbaan: 64997.36842105094
+Afstand van Vliegtuig 1 tot landingsbaan: 93479.80431266203
+Afstand van Vliegtuig 7 tot landingsbaan: 122904.88130960254
+Afstand van Vliegtuig 12 tot landingsbaan: 127480.56096072758
+Afstand van Vliegtuig 36 tot landingsbaan: 133406.81818181658
+Afstand van Vliegtuig 15 tot landingsbaan: 174112.14953271011
+Afstand van Vliegtuig 31 tot landingsbaan: 178584.9056603774
+Afstand van Vliegtuig 37 tot landingsbaan: 142189.5732976
+Afstand van Vliegtuig 28 tot landingsbaan: 179030.95558546437
+566
+Afstand van Vliegtuig 8 tot landingsbaan: 64734.2105263141
+Afstand van Vliegtuig 1 tot landingsbaan: 93235.72534372639
+Afstand van Vliegtuig 7 tot landingsbaan: 122653.53694405395
+Afstand van Vliegtuig 12 tot landingsbaan: 127241.3854242159
+Afstand van Vliegtuig 36 tot landingsbaan: 133179.54545454384
+Afstand van Vliegtuig 15 tot landingsbaan: 173831.7757009344
+Afstand van Vliegtuig 31 tot landingsbaan: 178301.8867924529
+Afstand van Vliegtuig 37 tot landingsbaan: 141980.1630276477
+Afstand van Vliegtuig 28 tot landingsbaan: 178788.69448183046
+567
+Afstand van Vliegtuig 8 tot landingsbaan: 64471.05263157726
+Afstand van Vliegtuig 1 tot landingsbaan: 92991.64637479074
+Afstand van Vliegtuig 7 tot landingsbaan: 122402.19257850536
+Afstand van Vliegtuig 12 tot landingsbaan: 127002.20988770422
+Afstand van Vliegtuig 36 tot landingsbaan: 132952.2727272711
+Afstand van Vliegtuig 15 tot landingsbaan: 173551.4018691587
+Afstand van Vliegtuig 31 tot landingsbaan: 178018.86792452837
+Afstand van Vliegtuig 37 tot landingsbaan: 141770.75275769542
+Afstand van Vliegtuig 28 tot landingsbaan: 178546.43337819655
+568
+Afstand van Vliegtuig 8 tot landingsbaan: 64207.89473684042
+Afstand van Vliegtuig 1 tot landingsbaan: 92747.5674058551
+Afstand van Vliegtuig 7 tot landingsbaan: 122150.84821295677
+Afstand van Vliegtuig 12 tot landingsbaan: 126763.03435119253
+Afstand van Vliegtuig 36 tot landingsbaan: 132724.99999999837
+Afstand van Vliegtuig 15 tot landingsbaan: 173271.028037383
+Afstand van Vliegtuig 31 tot landingsbaan: 177735.84905660385
+Afstand van Vliegtuig 37 tot landingsbaan: 141561.34248774312
+Afstand van Vliegtuig 28 tot landingsbaan: 178304.17227456265
+569
+Afstand van Vliegtuig 8 tot landingsbaan: 63944.73684210358
+Afstand van Vliegtuig 1 tot landingsbaan: 92503.48843691945
+Afstand van Vliegtuig 7 tot landingsbaan: 121899.50384740818
+Afstand van Vliegtuig 12 tot landingsbaan: 126523.85881468085
+Afstand van Vliegtuig 36 tot landingsbaan: 132497.72727272563
+Afstand van Vliegtuig 15 tot landingsbaan: 172990.65420560728
+Afstand van Vliegtuig 31 tot landingsbaan: 177452.83018867933
+Afstand van Vliegtuig 37 tot landingsbaan: 141351.93221779083
+Afstand van Vliegtuig 28 tot landingsbaan: 178061.91117092874
+570
+Afstand van Vliegtuig 8 tot landingsbaan: 63681.57894736674
+Afstand van Vliegtuig 1 tot landingsbaan: 92259.4094679838
+Afstand van Vliegtuig 7 tot landingsbaan: 121648.15948185959
+Afstand van Vliegtuig 12 tot landingsbaan: 126284.68327816916
+Afstand van Vliegtuig 36 tot landingsbaan: 132270.4545454529
+Afstand van Vliegtuig 15 tot landingsbaan: 172710.28037383157
+Afstand van Vliegtuig 31 tot landingsbaan: 177169.81132075482
+Afstand van Vliegtuig 37 tot landingsbaan: 141142.52194783854
+Afstand van Vliegtuig 28 tot landingsbaan: 177819.65006729483
+571
+Afstand van Vliegtuig 8 tot landingsbaan: 63418.4210526299
+Afstand van Vliegtuig 1 tot landingsbaan: 92015.33049904816
+Afstand van Vliegtuig 7 tot landingsbaan: 121396.815116311
+Afstand van Vliegtuig 12 tot landingsbaan: 126045.50774165748
+Afstand van Vliegtuig 36 tot landingsbaan: 132043.18181818016
+Afstand van Vliegtuig 15 tot landingsbaan: 172429.90654205586
+Afstand van Vliegtuig 31 tot landingsbaan: 176886.7924528303
+Afstand van Vliegtuig 37 tot landingsbaan: 140933.11167788625
+Afstand van Vliegtuig 28 tot landingsbaan: 177577.38896366092
+572
+Afstand van Vliegtuig 8 tot landingsbaan: 63155.26315789306
+Afstand van Vliegtuig 1 tot landingsbaan: 91771.25153011251
+Afstand van Vliegtuig 7 tot landingsbaan: 121145.47075076241
+Afstand van Vliegtuig 12 tot landingsbaan: 125806.3322051458
+Afstand van Vliegtuig 36 tot landingsbaan: 131815.90909090743
+Afstand van Vliegtuig 15 tot landingsbaan: 172149.53271028015
+Afstand van Vliegtuig 31 tot landingsbaan: 176603.77358490578
+Afstand van Vliegtuig 37 tot landingsbaan: 140723.70140793396
+Afstand van Vliegtuig 28 tot landingsbaan: 177335.12786002702
+573
+Afstand van Vliegtuig 8 tot landingsbaan: 62892.10526315622
+Afstand van Vliegtuig 1 tot landingsbaan: 91527.17256117686
+Afstand van Vliegtuig 7 tot landingsbaan: 120894.12638521382
+Afstand van Vliegtuig 12 tot landingsbaan: 125567.15666863411
+Afstand van Vliegtuig 36 tot landingsbaan: 131588.6363636347
+Afstand van Vliegtuig 15 tot landingsbaan: 171869.15887850444
+Afstand van Vliegtuig 31 tot landingsbaan: 176320.75471698126
+Afstand van Vliegtuig 37 tot landingsbaan: 140514.29113798167
+Afstand van Vliegtuig 28 tot landingsbaan: 177092.8667563931
+574
+Afstand van Vliegtuig 8 tot landingsbaan: 62628.94736841938
+Afstand van Vliegtuig 1 tot landingsbaan: 91283.09359224122
+Afstand van Vliegtuig 7 tot landingsbaan: 120642.78201966523
+Afstand van Vliegtuig 12 tot landingsbaan: 125327.98113212243
+Afstand van Vliegtuig 36 tot landingsbaan: 131361.36363636196
+Afstand van Vliegtuig 15 tot landingsbaan: 171588.78504672874
+Afstand van Vliegtuig 31 tot landingsbaan: 176037.73584905674
+Afstand van Vliegtuig 37 tot landingsbaan: 140304.88086802937
+Afstand van Vliegtuig 28 tot landingsbaan: 176850.6056527592
+575
+Afstand van Vliegtuig 8 tot landingsbaan: 62365.78947368254
+Afstand van Vliegtuig 1 tot landingsbaan: 91039.01462330557
+Afstand van Vliegtuig 7 tot landingsbaan: 120391.43765411664
+Afstand van Vliegtuig 12 tot landingsbaan: 125088.80559561074
+Afstand van Vliegtuig 36 tot landingsbaan: 131134.09090908922
+Afstand van Vliegtuig 15 tot landingsbaan: 171308.41121495303
+Afstand van Vliegtuig 31 tot landingsbaan: 175754.71698113222
+Afstand van Vliegtuig 37 tot landingsbaan: 140095.47059807708
+Afstand van Vliegtuig 28 tot landingsbaan: 176608.3445491253
+576
+Afstand van Vliegtuig 8 tot landingsbaan: 62102.6315789457
+Afstand van Vliegtuig 1 tot landingsbaan: 90794.93565436993
+Afstand van Vliegtuig 7 tot landingsbaan: 120140.09328856805
+Afstand van Vliegtuig 12 tot landingsbaan: 124849.63005909906
+Afstand van Vliegtuig 36 tot landingsbaan: 130906.8181818165
+Afstand van Vliegtuig 15 tot landingsbaan: 171028.03738317732
+Afstand van Vliegtuig 31 tot landingsbaan: 175471.6981132077
+Afstand van Vliegtuig 37 tot landingsbaan: 139886.0603281248
+Afstand van Vliegtuig 28 tot landingsbaan: 176366.0834454914
+577
+Afstand van Vliegtuig 8 tot landingsbaan: 61839.47368420886
+Afstand van Vliegtuig 1 tot landingsbaan: 90550.85668543428
+Afstand van Vliegtuig 7 tot landingsbaan: 119888.74892301946
+Afstand van Vliegtuig 12 tot landingsbaan: 124610.45452258737
+Afstand van Vliegtuig 36 tot landingsbaan: 130679.54545454378
+Afstand van Vliegtuig 15 tot landingsbaan: 170747.6635514016
+Afstand van Vliegtuig 31 tot landingsbaan: 175188.6792452832
+Afstand van Vliegtuig 37 tot landingsbaan: 139676.6500581725
+Afstand van Vliegtuig 28 tot landingsbaan: 176123.82234185748
+578
+Afstand van Vliegtuig 8 tot landingsbaan: 61576.31578947202
+Afstand van Vliegtuig 1 tot landingsbaan: 90306.77771649863
+Afstand van Vliegtuig 7 tot landingsbaan: 119637.40455747087
+Afstand van Vliegtuig 12 tot landingsbaan: 124371.27898607569
+Afstand van Vliegtuig 36 tot landingsbaan: 130452.27272727106
+Afstand van Vliegtuig 15 tot landingsbaan: 170467.2897196259
+Afstand van Vliegtuig 31 tot landingsbaan: 174905.66037735867
+Afstand van Vliegtuig 37 tot landingsbaan: 139467.2397882202
+Afstand van Vliegtuig 28 tot landingsbaan: 175881.56123822357
+579
+Afstand van Vliegtuig 8 tot landingsbaan: 61313.15789473518
+Afstand van Vliegtuig 1 tot landingsbaan: 90062.69874756299
+Afstand van Vliegtuig 7 tot landingsbaan: 119386.06019192228
+Afstand van Vliegtuig 12 tot landingsbaan: 124132.103449564
+Afstand van Vliegtuig 36 tot landingsbaan: 130224.99999999834
+Afstand van Vliegtuig 15 tot landingsbaan: 170186.9158878502
+Afstand van Vliegtuig 31 tot landingsbaan: 174622.64150943415
+Afstand van Vliegtuig 37 tot landingsbaan: 139257.8295182679
+Afstand van Vliegtuig 28 tot landingsbaan: 175639.30013458966
+580
+Afstand van Vliegtuig 8 tot landingsbaan: 61049.99999999834
+Afstand van Vliegtuig 1 tot landingsbaan: 89818.61977862734
+Afstand van Vliegtuig 7 tot landingsbaan: 119134.7158263737
+Afstand van Vliegtuig 12 tot landingsbaan: 123892.92791305232
+Afstand van Vliegtuig 36 tot landingsbaan: 129997.72727272562
+Afstand van Vliegtuig 15 tot landingsbaan: 169906.54205607448
+Afstand van Vliegtuig 31 tot landingsbaan: 174339.62264150963
+Afstand van Vliegtuig 37 tot landingsbaan: 139048.41924831562
+Afstand van Vliegtuig 28 tot landingsbaan: 175397.03903095576
+581
+Afstand van Vliegtuig 8 tot landingsbaan: 60786.8421052615
+Afstand van Vliegtuig 1 tot landingsbaan: 89574.5408096917
+Afstand van Vliegtuig 7 tot landingsbaan: 118883.3714608251
+Afstand van Vliegtuig 12 tot landingsbaan: 123653.75237654064
+Afstand van Vliegtuig 36 tot landingsbaan: 129770.4545454529
+Afstand van Vliegtuig 15 tot landingsbaan: 169626.16822429877
+Afstand van Vliegtuig 31 tot landingsbaan: 174056.6037735851
+Afstand van Vliegtuig 37 tot landingsbaan: 138839.00897836333
+Afstand van Vliegtuig 28 tot landingsbaan: 175154.77792732185
+582
+Afstand van Vliegtuig 8 tot landingsbaan: 60523.68421052466
+Afstand van Vliegtuig 1 tot landingsbaan: 89330.46184075605
+Afstand van Vliegtuig 7 tot landingsbaan: 118632.02709527651
+Afstand van Vliegtuig 12 tot landingsbaan: 123414.57684002895
+Afstand van Vliegtuig 36 tot landingsbaan: 129543.18181818018
+Afstand van Vliegtuig 15 tot landingsbaan: 169345.79439252306
+Afstand van Vliegtuig 31 tot landingsbaan: 173773.5849056606
+Afstand van Vliegtuig 37 tot landingsbaan: 138629.59870841104
+Afstand van Vliegtuig 28 tot landingsbaan: 174912.51682368794
+583
+Afstand van Vliegtuig 8 tot landingsbaan: 60260.52631578782
+Afstand van Vliegtuig 1 tot landingsbaan: 89086.3828718204
+Afstand van Vliegtuig 7 tot landingsbaan: 118380.68272972792
+Afstand van Vliegtuig 12 tot landingsbaan: 123175.40130351727
+Afstand van Vliegtuig 36 tot landingsbaan: 129315.90909090746
+Afstand van Vliegtuig 15 tot landingsbaan: 169065.42056074736
+Afstand van Vliegtuig 31 tot landingsbaan: 173490.56603773608
+Afstand van Vliegtuig 37 tot landingsbaan: 138420.18843845875
+Afstand van Vliegtuig 28 tot landingsbaan: 174670.25572005403
+584
+Afstand van Vliegtuig 8 tot landingsbaan: 59997.36842105098
+Afstand van Vliegtuig 1 tot landingsbaan: 88842.30390288476
+Afstand van Vliegtuig 7 tot landingsbaan: 118129.33836417933
+Afstand van Vliegtuig 12 tot landingsbaan: 122936.22576700558
+Afstand van Vliegtuig 36 tot landingsbaan: 129088.63636363474
+Afstand van Vliegtuig 15 tot landingsbaan: 168785.04672897165
+Afstand van Vliegtuig 31 tot landingsbaan: 173207.54716981156
+Afstand van Vliegtuig 37 tot landingsbaan: 138210.77816850645
+Afstand van Vliegtuig 28 tot landingsbaan: 174427.99461642012
+585
+Afstand van Vliegtuig 8 tot landingsbaan: 59734.21052631414
+Afstand van Vliegtuig 1 tot landingsbaan: 88598.22493394911
+Afstand van Vliegtuig 7 tot landingsbaan: 117877.99399863074
+Afstand van Vliegtuig 12 tot landingsbaan: 122697.0502304939
+Afstand van Vliegtuig 36 tot landingsbaan: 128861.36363636202
+Afstand van Vliegtuig 15 tot landingsbaan: 168504.67289719594
+Afstand van Vliegtuig 31 tot landingsbaan: 172924.52830188704
+Afstand van Vliegtuig 37 tot landingsbaan: 138001.36789855416
+Afstand van Vliegtuig 28 tot landingsbaan: 174185.73351278622
+586
+Afstand van Vliegtuig 8 tot landingsbaan: 59471.0526315773
+Afstand van Vliegtuig 1 tot landingsbaan: 88354.14596501346
+Afstand van Vliegtuig 7 tot landingsbaan: 117626.64963308215
+Afstand van Vliegtuig 12 tot landingsbaan: 122457.87469398222
+Afstand van Vliegtuig 36 tot landingsbaan: 128634.0909090893
+Afstand van Vliegtuig 15 tot landingsbaan: 168224.29906542023
+Afstand van Vliegtuig 31 tot landingsbaan: 172641.50943396252
+Afstand van Vliegtuig 37 tot landingsbaan: 137791.95762860187
+Afstand van Vliegtuig 28 tot landingsbaan: 173943.4724091523
+587
+Afstand van Vliegtuig 8 tot landingsbaan: 59207.89473684046
+Afstand van Vliegtuig 1 tot landingsbaan: 88110.06699607782
+Afstand van Vliegtuig 7 tot landingsbaan: 117375.30526753356
+Afstand van Vliegtuig 12 tot landingsbaan: 122218.69915747053
+Afstand van Vliegtuig 36 tot landingsbaan: 128406.81818181658
+Afstand van Vliegtuig 15 tot landingsbaan: 167943.92523364452
+Afstand van Vliegtuig 31 tot landingsbaan: 172358.490566038
+Afstand van Vliegtuig 37 tot landingsbaan: 137582.54735864958
+Afstand van Vliegtuig 28 tot landingsbaan: 173701.2113055184
+588
+Afstand van Vliegtuig 8 tot landingsbaan: 58944.73684210362
+Afstand van Vliegtuig 1 tot landingsbaan: 87865.98802714217
+Afstand van Vliegtuig 7 tot landingsbaan: 117123.96090198497
+Afstand van Vliegtuig 12 tot landingsbaan: 121979.52362095885
+Afstand van Vliegtuig 36 tot landingsbaan: 128179.54545454386
+Afstand van Vliegtuig 15 tot landingsbaan: 167663.5514018688
+Afstand van Vliegtuig 31 tot landingsbaan: 172075.47169811348
+Afstand van Vliegtuig 37 tot landingsbaan: 137373.1370886973
+Afstand van Vliegtuig 28 tot landingsbaan: 173458.9502018845
+589
+Afstand van Vliegtuig 8 tot landingsbaan: 58681.57894736678
+Afstand van Vliegtuig 1 tot landingsbaan: 87621.90905820653
+Afstand van Vliegtuig 7 tot landingsbaan: 116872.61653643638
+Afstand van Vliegtuig 12 tot landingsbaan: 121740.34808444716
+Afstand van Vliegtuig 36 tot landingsbaan: 127952.27272727113
+Afstand van Vliegtuig 15 tot landingsbaan: 167383.1775700931
+Afstand van Vliegtuig 31 tot landingsbaan: 171792.45283018897
+Afstand van Vliegtuig 37 tot landingsbaan: 137163.726818745
+Afstand van Vliegtuig 28 tot landingsbaan: 173216.6890982506
+590
+Afstand van Vliegtuig 8 tot landingsbaan: 58418.42105262994
+Afstand van Vliegtuig 1 tot landingsbaan: 87377.83008927088
+Afstand van Vliegtuig 7 tot landingsbaan: 116621.2721708878
+Afstand van Vliegtuig 12 tot landingsbaan: 121501.17254793548
+Afstand van Vliegtuig 36 tot landingsbaan: 127724.99999999841
+Afstand van Vliegtuig 15 tot landingsbaan: 167102.8037383174
+Afstand van Vliegtuig 31 tot landingsbaan: 171509.43396226445
+Afstand van Vliegtuig 37 tot landingsbaan: 136954.3165487927
+Afstand van Vliegtuig 28 tot landingsbaan: 172974.42799461668
+591
+Afstand van Vliegtuig 8 tot landingsbaan: 58155.2631578931
+Afstand van Vliegtuig 1 tot landingsbaan: 87133.75112033523
+Afstand van Vliegtuig 7 tot landingsbaan: 116369.9278053392
+Afstand van Vliegtuig 12 tot landingsbaan: 121261.9970114238
+Afstand van Vliegtuig 36 tot landingsbaan: 127497.7272727257
+Afstand van Vliegtuig 15 tot landingsbaan: 166822.42990654169
+Afstand van Vliegtuig 31 tot landingsbaan: 171226.41509433993
+Afstand van Vliegtuig 37 tot landingsbaan: 136744.9062788404
+Afstand van Vliegtuig 28 tot landingsbaan: 172732.16689098277
+592
+Afstand van Vliegtuig 8 tot landingsbaan: 57892.10526315626
+Afstand van Vliegtuig 1 tot landingsbaan: 86889.67215139959
+Afstand van Vliegtuig 7 tot landingsbaan: 116118.58343979061
+Afstand van Vliegtuig 12 tot landingsbaan: 121022.82147491211
+Afstand van Vliegtuig 36 tot landingsbaan: 127270.45454545297
+Afstand van Vliegtuig 15 tot landingsbaan: 166542.05607476598
+Afstand van Vliegtuig 31 tot landingsbaan: 170943.3962264154
+Afstand van Vliegtuig 37 tot landingsbaan: 136535.49600888812
+Afstand van Vliegtuig 28 tot landingsbaan: 172489.90578734886
+593
+Afstand van Vliegtuig 8 tot landingsbaan: 57626.31578947205
+Afstand van Vliegtuig 1 tot landingsbaan: 86643.15239277459
+Afstand van Vliegtuig 7 tot landingsbaan: 115864.72563058654
+Afstand van Vliegtuig 12 tot landingsbaan: 120781.25418303531
+Afstand van Vliegtuig 36 tot landingsbaan: 127040.90909090752
+Afstand van Vliegtuig 15 tot landingsbaan: 166258.87850467252
+Afstand van Vliegtuig 31 tot landingsbaan: 170657.54716981165
+Afstand van Vliegtuig 37 tot landingsbaan: 136323.99163623631
+Afstand van Vliegtuig 28 tot landingsbaan: 172245.22207267862
+594
+Afstand van Vliegtuig 8 tot landingsbaan: 57363.15789473521
+Afstand van Vliegtuig 1 tot landingsbaan: 86399.07342383894
+Afstand van Vliegtuig 7 tot landingsbaan: 115613.38126503796
+Afstand van Vliegtuig 12 tot landingsbaan: 120542.07864652363
+Afstand van Vliegtuig 36 tot landingsbaan: 126813.6363636348
+Afstand van Vliegtuig 15 tot landingsbaan: 165978.50467289682
+Afstand van Vliegtuig 31 tot landingsbaan: 170374.52830188713
+Afstand van Vliegtuig 37 tot landingsbaan: 136114.58136628402
+Afstand van Vliegtuig 28 tot landingsbaan: 172002.9609690447
+595
+Afstand van Vliegtuig 8 tot landingsbaan: 57099.99999999837
+Afstand van Vliegtuig 1 tot landingsbaan: 86154.9944549033
+Afstand van Vliegtuig 7 tot landingsbaan: 115362.03689948937
+Afstand van Vliegtuig 12 tot landingsbaan: 120302.90311001195
+Afstand van Vliegtuig 36 tot landingsbaan: 126586.36363636208
+Afstand van Vliegtuig 15 tot landingsbaan: 165698.1308411211
+Afstand van Vliegtuig 31 tot landingsbaan: 170091.5094339626
+Afstand van Vliegtuig 37 tot landingsbaan: 135905.17109633173
+Afstand van Vliegtuig 28 tot landingsbaan: 171760.6998654108
+596
+Afstand van Vliegtuig 8 tot landingsbaan: 56836.84210526153
+Afstand van Vliegtuig 1 tot landingsbaan: 85910.91548596765
+Afstand van Vliegtuig 7 tot landingsbaan: 115110.69253394078
+Afstand van Vliegtuig 12 tot landingsbaan: 120063.72757350026
+Afstand van Vliegtuig 36 tot landingsbaan: 126359.09090908935
+Afstand van Vliegtuig 15 tot landingsbaan: 165417.7570093454
+Afstand van Vliegtuig 31 tot landingsbaan: 169808.4905660381
+Afstand van Vliegtuig 37 tot landingsbaan: 135695.76082637944
+Afstand van Vliegtuig 28 tot landingsbaan: 171518.4387617769
+597
+Afstand van Vliegtuig 8 tot landingsbaan: 56573.68421052469
+Afstand van Vliegtuig 1 tot landingsbaan: 85666.836517032
+Afstand van Vliegtuig 7 tot landingsbaan: 114859.34816839219
+Afstand van Vliegtuig 12 tot landingsbaan: 119824.55203698858
+Afstand van Vliegtuig 36 tot landingsbaan: 126131.81818181663
+Afstand van Vliegtuig 15 tot landingsbaan: 165137.3831775697
+Afstand van Vliegtuig 31 tot landingsbaan: 169525.47169811357
+Afstand van Vliegtuig 37 tot landingsbaan: 135486.35055642715
+Afstand van Vliegtuig 28 tot landingsbaan: 171276.177658143
+598
+Afstand van Vliegtuig 8 tot landingsbaan: 56310.52631578785
+Afstand van Vliegtuig 1 tot landingsbaan: 85422.75754809636
+Afstand van Vliegtuig 7 tot landingsbaan: 114608.0038028436
+Afstand van Vliegtuig 12 tot landingsbaan: 119585.3765004769
+Afstand van Vliegtuig 36 tot landingsbaan: 125904.54545454391
+Afstand van Vliegtuig 15 tot landingsbaan: 164857.00934579398
+Afstand van Vliegtuig 31 tot landingsbaan: 169242.45283018905
+Afstand van Vliegtuig 37 tot landingsbaan: 135276.94028647486
+Afstand van Vliegtuig 28 tot landingsbaan: 171033.91655450908
+599
+Afstand van Vliegtuig 8 tot landingsbaan: 56047.36842105101
+Afstand van Vliegtuig 1 tot landingsbaan: 85178.67857916071
+Afstand van Vliegtuig 7 tot landingsbaan: 114356.659437295
+Afstand van Vliegtuig 12 tot landingsbaan: 119346.20096396521
+Afstand van Vliegtuig 36 tot landingsbaan: 125677.27272727119
+Afstand van Vliegtuig 15 tot landingsbaan: 164576.63551401827
+Afstand van Vliegtuig 31 tot landingsbaan: 168959.43396226453
+Afstand van Vliegtuig 37 tot landingsbaan: 135067.53001652256
+Afstand van Vliegtuig 28 tot landingsbaan: 170791.65545087517
+600
+Afstand van Vliegtuig 8 tot landingsbaan: 55784.21052631417
+Afstand van Vliegtuig 1 tot landingsbaan: 84934.59961022506
+Afstand van Vliegtuig 7 tot landingsbaan: 114105.31507174642
+Afstand van Vliegtuig 12 tot landingsbaan: 119107.02542745353
+Afstand van Vliegtuig 36 tot landingsbaan: 125449.99999999847
+Afstand van Vliegtuig 15 tot landingsbaan: 164296.26168224256
+Afstand van Vliegtuig 31 tot landingsbaan: 168676.41509434002
+Afstand van Vliegtuig 37 tot landingsbaan: 134858.11974657027
+Afstand van Vliegtuig 28 tot landingsbaan: 170549.39434724126
+Vliegtuig 11

@@ -1,0 +1,56 @@
+bug 1
+
+95
+96
+97
+Vliegtuig 4
+CheckBefore() heeft geen vliegtuigen voor Vliegtuig 4 gevonden
+Placement successful for plane no. 4. Assigned time: 13:46 Assigned speed: 247.25274725274724 Distance from airport: 180000.0
+98
+Afstand van Vliegtuig 4 tot landingsbaan: 179752.74725274724
+99
+Afstand van Vliegtuig 4 tot landingsbaan: 179505.49450549448
+Vliegtuig 32
+CheckBefore() heeft Vliegtuig 4 gevonden
+CheckBefore() heeft geen vliegtuigen voor Vliegtuig 4 gevonden
+CheckBefore() heeft geen vliegtuigen voor Vliegtuig 32 gevonden
+Placement successful for plane no. 32. Assigned time: 15:49 Assigned speed: 212.01413427561837 Distance from airport: 180000.0
+CheckBefore() heeft Vliegtuig 4 gevonden
+CheckAfter() heeft geen vliegtuigen gevonden rechts van 32
+CheckBefore() heeft geen vliegtuigen voor Vliegtuig 32 gevonden
+CheckBefore() heeft Vliegtuig 32 gevonden
+CheckBefore() heeft Vliegtuig 4 gevonden
+Abraham kan en gaat naar links zodat Vliegtuig 32 geplaatst kan worden om 1010
+Placement successful for plane no. 4. Assigned time: 15:12 Assigned speed: 221.065879932875 Distance from airport: 179505.49450549448
+Placement successful for plane no. 32. Assigned time: 16:50 Assigned speed: 197.8021978021978 Distance from airport: 180000.0
+CheckBefore() heeft geen vliegtuigen voor Vliegtuig 32 gevonden
+CheckAfter() heeft 4 gevonden
+CheckBefore() heeft geen vliegtuigen voor Vliegtuig 32 gevonden
+CheckBefore() heeft geen vliegtuigen voor Vliegtuig 32 gevonden
+CheckBefore() heeft geen vliegtuigen voor Vliegtuig 32 gevonden
+CheckAfter() heeft 4 gevonden
+CheckBefore() heeft geen vliegtuigen voor Vliegtuig 32 gevonden
+CheckBefore() heeft geen vliegtuigen voor Vliegtuig 32 gevonden
+CheckBefore() heeft geen vliegtuigen voor Vliegtuig 32 gevonden
+CheckAfter() heeft 4 gevonden
+CheckBefore() heeft geen vliegtuigen voor Vliegtuig 32 gevonden
+CheckBefore() heeft geen vliegtuigen voor Vliegtuig 32 gevonden
+CheckBefore() heeft geen vliegtuigen voor Vliegtuig 32 gevonden
+CheckAfter() heeft 4 gevonden
+CheckBefore() heeft geen vliegtuigen voor Vliegtuig 32 gevonden
+CheckBefore() heeft geen vliegtuigen voor Vliegtuig 32 gevonden
+CheckBefore() heeft geen vliegtuigen voor Vliegtuig 32 gevonden
+CheckAfter() heeft 4 gevonden
+CheckBefore() heeft geen vliegtuigen voor Vliegtuig 32 gevonden
+CheckBefore() heeft geen vliegtuigen voor Vliegtuig 32 gevonden
+CheckBefore() heeft geen vliegtuigen voor Vliegtuig 32 gevonden
+CheckAfter() heeft 4 gevonden
+CheckBefore() heeft geen vliegtuigen voor Vliegtuig 32 gevonden
+CheckBefore() heeft geen vliegtuigen voor Vliegtuig 32 gevonden
+CheckBefore() heeft geen vliegtuigen voor Vliegtuig 32 gevonden
+CheckAfter() heeft 4 gevonden
+CheckBefore() heeft geen vliegtuigen voor Vliegtuig 32 gevonden
+CheckBefore() heeft geen vliegtuigen voor Vliegtuig 32 gevonden
+CheckBefore() heeft geen vliegtuigen voor Vliegtuig 32 gevonden
+CheckAfter() heeft 4 gevonden
+etc......
