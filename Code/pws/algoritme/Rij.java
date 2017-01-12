@@ -16,7 +16,15 @@ public class Rij {
 	private final double costlate = 1.39;																	//tijdelijk in komt voor berekeningen enzo.
 	private double totalcost;
 	private double totalcostL1;
+	private double totalcostL11;
+	private double totalcostL12;
+	private double totalcostL13;
+	private double totalcostL14;
 	private double totalcostL2;
+	private double totalcostL21;
+	private double totalcostL22;
+	private double totalcostL23;
+	private double totalcostL24;
 	public boolean landingsbaanok;
 	private int landingsbaan;
 	/*---------------
@@ -37,28 +45,54 @@ public class Rij {
 	/*------------------------
 	|    CHECKING METHODS    |
 	------------------------*/
-	void Kosttotal(int dtime){
+	double KosttotalL1(int dtime, long wt, Vliegtuig org){
 		int x = 1;
 		int y = 1;
-		float kostendan = 0;
+		double kostendan = 0;
 		while(dtime > 0){
 			if(x<(y*costlate)){
-				kostendan = gekkeFunctievroeg()[x];
+				kostendan = gekkeFunctieVroeg(wt,dtime,org)[x];
 				dtime -= kostendan;
 				x++;
-				totalcostL1 += kostendan;
+				totalcostL11 += kostendan;
 			}
 			else{
-				kostendan = gekkeFunctielaat()[y];
+				kostendan = gekkeFunctieLaat(wt,dtime,org)[y];
 				dtime -= (kostendan/costlate);
 				y++;
-				totalcostL1 += kostendan;
+				totalcostL11 += kostendan;
 			}
 				
 			
 		}
+		return totalcostL11;
 	}
-
+	
+	double KosttotalL2(int dtime, long wt, Vliegtuig org){
+		int x = 1;
+		int y = 1;
+		double kostendan = 0;
+		while(dtime > 0){
+			if(x<(y*costlate)){
+				kostendan = gekkeFunctieVroeg(wt,dtime,org)[x]; // zorgen dat kan kijken in verschillende banen
+				dtime -= kostendan;
+				x++;
+				totalcostL21 += kostendan;
+			}
+			else{
+				kostendan = gekkeFunctieLaat(wt,dtime,org)[y]; // zorgen dat kan kijken in verschillende banen
+				dtime -= (kostendan/costlate);
+				y++;
+				totalcostL21 += kostendan;
+			}
+				
+			
+		}
+		return totalcostL21;
+	}
+	
+	
+    // hoofdfunctie moet nog een keer want anders kunnen we niet voor twee banenchecken. Dit kunnen we ook later doen, eerst zien of dit lukt
 
 	void checknPlace(int wt, Vliegtuig vt){												//Hoofd controle functie; wt is Wanted Time
 			//---------------------------------------------------------------------------------------------------
@@ -90,7 +124,7 @@ public class Rij {
 					abraham.setV_current(abraham.getAfstand()/(abraham.getAt()-ct));
 					printShit(abraham);
 					//Extra kosten van deze stap = (abraham.getAt()+sep-wt)*kosten van te vroeg;
-					//totalkostL1 = (abraham.getAt() + SepTime.getSepTime(abraham.getKlasse(), vt.getKlasse()) - wt)*costearly;
+					totalcostL12 = (abraham.getAt() + SepTime.getSepTime(abraham.getKlasse(), vt.getKlasse()) - wt)*costearly;
 					vtl[wt] = vt;
 					vt.assignTime(wt);
 					vt.setV_current(vt.getAfstand()/(vt.getAt()-ct));
@@ -102,7 +136,7 @@ public class Rij {
 						vt.setV_current(vt.getAfstand() / (vt.getAt() - ct));
 						printShit(vt);
 								//extra kosten deze stap = (wt-abraham.getAt()+sep)*Kosten van te laat;\
-						//totalkostL1 = ((wt + SepTime.getSepTime(vt.getKlasse(), abraham.getKlasse()) - abraham.getAt())*costlate;
+						totalcostL12 = ((wt + SepTime.getSepTime(vt.getKlasse(), abraham.getKlasse()) - abraham.getAt())*costlate);
 					} else {
 						checknPlace(abraham.getAt() + sep + 1, vt);
 						checknPlace(wt,vt);
@@ -125,7 +159,7 @@ public class Rij {
 					vt.setV_current(vt.getAfstand() / (vt.getAt() - ct));
 					printShit(vt);
 									//extra kosten deze stap = ((abraham.getAt()-sep)-wt)*Kosten van te vroeg;
-					//totalkostL1 = (wt - SepTime.getSepTime(vt.getKlasse(), abraham.getKlasse()))*costearly;
+					totalcostL13 = (wt - SepTime.getSepTime(vt.getKlasse(), abraham.getKlasse()))*costearly;
 				} else {
 					checknPlace(abraham.getAt() - sep + 1, vt);
 					//chenknPlace(abraham.getAt()-sep +1, vt);
@@ -148,13 +182,14 @@ public class Rij {
 					vt.setV_current(vt.getAfstand()/(vt.getAt()-ct));
 					printShit(vt);
 					//extra kosten = 0
-					//totalkostL1 = 0;
+					totalcostL14 = 0;
 			}
 		}
 		//-------------------------------------------------------------------------------------------------------
 
 	}
-
+   
+			//belangrijk
 	private boolean checkBefore(long wt, Vliegtuig vt){		//Is er al een vliegtuig gepland op het gewenste tijdstip?
 
 		for(int i = 0; i <= maxsep; i++) {
@@ -174,9 +209,11 @@ public class Rij {
 		System.out.println("CheckBefore() heeft geen vliegtuigen voor " + vt + " gevonden");
 		return false;
 	}
-
+		
 	private int checkLowestCost(){
-		if(totalcostL1 < totalcostL2){
+		totalcostL1 = totalcostL11 + totalcostL12 + totalcostL13 + totalcostL14;
+		totalcostL2 = totalcostL21 + totalcostL22 + totalcostL23 + totalcostL24;
+		if(totalcostL1 < totalcostL2){ // pakt hij zo alle totalcost dingen. Want als het goed is, is er maar 1 die een waarde van niet 0 heeft. 
 			landingsbaan = 1;
 		}
 		if(totalcostL2 < totalcostL1){
@@ -208,8 +245,9 @@ public class Rij {
 		}
 		return false;
 	}
+			//belangrijk
 
-	private int moveLeftCost(long wt, int dtime, Vliegtuig vtg, Vliegtuig org){
+	/*private int moveLeftCost(long wt, int dtime, Vliegtuig vtg, Vliegtuig org){
 		int movabletime = 0, n = 0;
 		int lastnumber = vtg.getAt();
 		Vliegtuig[] lijstje1 = new Vliegtuig[0];
@@ -243,7 +281,7 @@ public class Rij {
 		return movabletime;
 	}
 
-	private int moveLeft(long wt, int dtime, Vliegtuig vtg, Vliegtuig org, boolean forced){
+	/*private int moveLeft(long wt, int dtime, Vliegtuig vtg, Vliegtuig org, boolean forced){
 		Vliegtuig vt;
 		int movedtimeleft = 0;
 
@@ -271,7 +309,7 @@ public class Rij {
 		return movedtimeleft;
 	}
 
-	private int moveRight(long wt, int dtime, Vliegtuig org){
+	/*private int moveRight(long wt, int dtime, Vliegtuig org){
 		checkAfter(wt,org);
 		Vliegtuig vtg = abraham;
 		if(vtg.getAt()+300-wt  >= dtime){
