@@ -34,8 +34,6 @@ public class MainAlgoritme implements Runnable{
 	public void start(){
 		System.out.println("Alg start");
 		run();
-		System.out.println("Passed first run()");
-		//try{run();}catch (Exception e){System.out.println(e);}
 	}
 
 	public void run(){

@@ -80,10 +80,12 @@ public class Rij {
 			if(checkAfter(wt,vt)) {
 				//Links is ruimte dus op naar links met Vx.
 				//Zo verder kijken
+				checkBefore(wt,vt); //abraham en sep naar juiste variabelen zetten
 				if (checkBefore(abraham.getAt() - sep, vt)) {
 					vtl[abraham.getAt() - sep] = vt;
 					vt.assignTime(abraham.getAt() - sep);
 					vt.setV_current(vt.getAfstand() / (vt.getAt() - ct));
+					printShit(vt);
 					//extra kosten deze stap = ((abraham.getAt()-sep)-wt)*Kosten van te vroeg;
 				} else {
 					checknPlace(abraham.getAt() - sep + 1, vt);
@@ -93,6 +95,7 @@ public class Rij {
 					//We moeten er dus voor zorgen dat we de wt niet veranderen in precies sep er vanaf maar iets minder dat hij bij false.false komt zodat we het kunnen oplossen.
 
 					if(checkBefore(wt,vt)){
+
 						moveLeft(wt,4,abraham,vt,false);
 					}
 				}
@@ -115,7 +118,7 @@ public class Rij {
 	private boolean checkBefore(long wt, Vliegtuig vt){		//Is er al een vliegtuig gepland op het gewenste tijdstip?
 
 		for(int i = 0; i <= maxsep; i++) {
-			if(wt-i >= 0 && wt < 2100) {
+			if(wt-i >= 0 && wt < 2800) {
 				if (vtl[(int) wt - i] != null) {
 					abraham = vtl[(int) wt - i];
 					sep = SepTime.getSepTime(abraham.getKlasse(), vt.getKlasse());
@@ -133,15 +136,17 @@ public class Rij {
 
 	private boolean checkAfter(long wt, Vliegtuig vt){							//Nog verbeteren
 		for(int i = 0; i <= maxsep; i++) {										//hier moeten we zorgen dat als abraham te dicht bij is dat hij dan aan geeft dat hij niet de ruimte heeft om te verplaatsen anders moeten we kijken waar we het anders doen.
-			if(wt+i < 2100) {													//Dit hier boven geld ook voor het checken van er na. Maar de kans dat het vliegtuig dan niet meer kan verplaatsen is zeer klein. Maar moeten het voor de zekerheid maar wel checken anders gaan we problemen krijgen
+			if(wt+i < 2800) {													//Dit hier boven geld ook voor het checken van er na. Maar de kans dat het vliegtuig dan niet meer kan verplaatsen is zeer klein. Maar moeten het voor de zekerheid maar wel checken anders gaan we problemen krijgen
 				if (vtl[(int) wt + i] != null) {
 					abraham = vtl[(int) wt + i];
 					sep = SepTime.getSepTime(abraham.getKlasse(), vt.getKlasse());
 					for (int j = 0; j <= sep; j++) {
 						if (vtl[(int) wt + j] != null) {
+							System.out.println("CheckAfter() found plane no. "+abraham.getName());
 							return true;
 						}
 					}
+					System.out.println("CheckAfter() found no planes right to plane no. "+vt.getName());
 					return false;
 				}
 			}
@@ -166,10 +171,11 @@ public class Rij {
 					moveRight(vtg.getAt() + SepTime.getSepTime(vtg.getKlasse(), org.getKlasse()), vp_right, org);
 				}
 			}else{
-				//Shit
+				System.out.println("MoveLeft eerste else");
 			}
 
 		}else{
+			System.out.println("MoveLeft tweede else");
 			//Check twee of meer vliegtuigen naar links.
 		}
 		return movedtimeleft;
@@ -182,11 +188,13 @@ public class Rij {
 			if(!checkAfter(wt+SepTime.getSepTime(org.getKlasse(),vtg.getKlasse()),vtg)){
 				vtg.assignTime(vtg.getAt()+dtime);								//abraham.getAt()-vtg.getAt()
 				org.assignTime((int)wt);
+				System.out.println("MoveRight(): org planned at "+wt+"; vtg planned at "+vtg.getAt());
 			}else{
 				int vp_max = abraham.getAt()-vtg.getAt();
 				int vp_left = dtime - vp_max;
 				vtg.assignTime(vtg.getAt()+vp_max);
 				checkBefore(wt-vp_left,org);
+				System.out.println("MoveRight(): Kan ook niet genoeg naar recht schuiven. Nu links proberen.");
 				moveLeft(wt-vp_left,vp_left,abraham,org, true);
 			}
 		}else{
@@ -207,7 +215,4 @@ public class Rij {
 		System.out.println("Placement successful for plane \""+vt.getName()+"\". Assigned time: "+zl + ":" + al+" Assigned speed: "+vt.getV_current()+" Distance from airport: "+vt.getAfstand());
 	}
 
-	void timeLoop(){													//Tijdbijhouding om benodigde snelheid te kunnen berekenen
-		ct = (int) System.currentTimeMillis()/1000 - bt;
-	}
-}
+	void timeLoop(){													//Tijdbijhouding om benodigde snelheid te kunnen bere
