@@ -47,10 +47,11 @@ public class MainAlgoritme implements Runnable{
 
 		while(true) {	//Main loop
 			if(running) {
-				rij.timeLoop();
 				now = System.currentTimeMillis();
-				if(now-lasttime >= 10) {
-					update(now - lasttime, tg);
+				if(now-lasttime >= 1000/cycles_per_second) {
+					rij.timeLoop();
+					update((now - lasttime)*cycles_per_second, tg);
+					System.out.println(rij.getCt());
 					lasttime = now;
 				}
 			}

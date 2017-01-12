@@ -242,6 +242,6 @@ public class Rij {
 	}
 
 	void timeLoop(){													//Tijdbijhouding om benodigde snelheid te kunnen berekenen
-		ct = (int) System.currentTimeMillis()/(1000/MainAlgoritme.cycles_per_second) - bt;
+		ct = (int) (System.currentTimeMillis()/1000 - bt)*MainAlgoritme.cycles_per_second;
 	}
 }
