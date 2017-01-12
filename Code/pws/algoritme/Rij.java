@@ -222,20 +222,22 @@ public class Rij {
 	}
 
 	private int moveLeft(long wt, int dtime, Vliegtuig vtg, Vliegtuig org, boolean forced){
+		Vliegtuig vt;
 		int movedtimeleft = 0;
-		checkBefore(wt, vtg);
-		if(!forced) {
-			if (vtg.getAt() - vtg.getFirsttime(vtg.getAfstand()) >= dtime) {
-				if (!checkBefore(vtg.getAt() - dtime, vtg)) {
-					vtg.assignTime(vtg.getAt() - dtime);
+
+		checkBefore(wt, org);
+		if(true) {
+			if (org.getAt() - vt.getFirsttime(vt.getAfstand()) >= dtime) {
+				if (!checkBefore(vt.getAt() - dtime, vt)) {
+					vt.assignTime(vt.getAt() - dtime);
 					System.out.println("Abraham wordt " + dtime + " naar links verplaatst");
-					checknPlace(vtg.getAt() + SepTime.getSepTime(vtg.getKlasse(), org.getKlasse()), org);
+					checknPlace(vt.getAt() + SepTime.getSepTime(vt.getKlasse(), org.getKlasse()), org);
 				} else {
-					int vp_max = vtg.getAt() - abraham.getAt() - SepTime.getSepTime(abraham.getKlasse(), vtg.getKlasse());
+					int vp_max = vt.getAt() - abraham.getAt() - SepTime.getSepTime(abraham.getKlasse(), vt.getKlasse());
 					int vp_right = dtime - vp_max;
-					vtg.assignTime(vtg.getAt() - vp_max);
-					System.out.println("VTG wordt " + vp_max + " naar links verplaatst. " + dtime + " nog naar rechts te verplaatsen.");
-					moveRight(vtg.getAt() + SepTime.getSepTime(vtg.getKlasse(), org.getKlasse()), vp_right, org);
+					vt.assignTime(vt.getAt() - vp_max);
+					System.out.println("vt wordt " + vp_max + " naar links verplaatst. " + dtime + " nog naar rechts te verplaatsen.");
+					moveRight(vt.getAt() + SepTime.getSepTime(vt.getKlasse(), org.getKlasse()), vp_right, org);
 				}
 			}else{
 				System.out.println("MoveLeft eerste else");
@@ -283,5 +285,48 @@ public class Rij {
 
 	void timeLoop(){							//Tijdbijhouding om benodigde snelheid te kunnen berekenen
 		ct = (int) (((System.currentTimeMillis()/1000.0) - bt)*(double)MainAlgoritme.cycles_per_second);
+	}
+
+	void gekkeFunctie(long wt, int dtime, Vliegtuig org){
+		Vliegtuig vtg = getLeftVliegtuig(wt);
+		int movabletime = 0, n = 0;
+		int lastnumber = vtg.getAt();
+		Vliegtuig[] lijstje1 = new Vliegtuig[0];
+		Vliegtuig[] lijstje2 = new Vliegtuig[0];
+
+		while (movabletime < dtime){
+			for(int i = lastnumber; lastnumber > 0; lastnumber--){
+				if(vtl[i] != null){
+					n++;
+					lijstje2 = new Vliegtuig[n];
+					for(int j = 0; j < lijstje1.length;j++){
+						lijstje2[j] = lijstje1[j];
+					}
+					lijstje2[n-1] = vtl[i];
+					lijstje1 = lijstje2;
+					//Moet nog een if inplementeren met controle of het vliegtuig wel zo ver naar links kan als gewenst.
+					if(lijstje1.length < 2){
+						movabletime += (vtg.getAt()-lijstje1[0].getAt()-SepTime.getSepTime(lijstje1[0].getKlasse(),vtg.getKlasse()));
+					}else{
+						movabletime += ((lijstje1[n-1].getAt()-lijstje1[n].getAt()-SepTime.getSepTime(lijstje1[n].getKlasse(),lijstje1[n-1].getKlasse())));
+					}
+
+				}
+			}
+			if(movabletime < dtime){
+				//Kan niet ver genoeg naar links schuiven
+			}
+		}
+		//Het is gelukt!! De lijst met alle naar links te verplaatsen vliegtuigen staat in lijstje2!!
+
+		return movabletime;
+	}
+
+	Vliegtuig getLeftVliegtuig(long wt){
+		for(int i = 0; i > 0; i++){
+			if(vtl[(int)wt-i] != null){
+				return vtl[(int)wt-i];
+			}
+		}
 	}
 }
