@@ -12,7 +12,11 @@ public class Rij {
 	private Vliegtuig[] vtl = new Vliegtuig[2800];						//Vliegtuig timeline
 	private int sep, maxsep = 189;										//Seperation
 	private Vliegtuig abraham;											//Willekeurige naam want ik had daar zin in. Dit is de
-																		//variabele waar het gevonden al ingeplande vliegtuig																	//tijdelijk in komt voor berekeningen enzo.
+	private final double costearly = 1.00;										//variabele waar het gevonden al ingeplande vliegtuig	
+	private final double costlate = 1.43;																	//tijdelijk in komt voor berekeningen enzo.
+	private double totalcost;
+	private double totalcostL1;
+	private double totalcostL2;
 	public boolean landingsbaanok;
 	/*---------------
 	|    GETTERS    |
@@ -58,6 +62,7 @@ public class Rij {
 					System.out.println("Abraham kan en gaat naar links zodat "+vt+" geplaatst kan worden om "+wt);
 					abraham.assignTime(abraham.getAt() - ((abraham.getAt() + sep) - wt));
 					//Extra kosten van deze stap = (abraham.getAt()+sep-wt)*kosten van te vroeg;
+					//totalkostL1 = (abraham.getAt() + SepTime.getSepTime(abraham.getKlasse(), vt.getKlasse()) - wt)*costearly;
 					vtl[wt] = vt;
 					vt.assignTime(wt);
 					vt.setV_current(vt.getAfstand()/(vt.getAt()-ct));
@@ -88,7 +93,8 @@ public class Rij {
 					vt.assignTime(abraham.getAt() - sep);
 					vt.setV_current(vt.getAfstand() / (vt.getAt() - ct));
 					printShit(vt);
-					//extra kosten deze stap = ((abraham.getAt()-sep)-wt)*Kosten van te vroeg;
+									//extra kosten deze stap = ((abraham.getAt()-sep)-wt)*Kosten van te vroeg;
+					//totalkostL1 = (wt - SepTime.getSepTime(vt.getKlasse(), abraham.getKlasse()))*costearly;
 				} else {
 					checknPlace(abraham.getAt() - sep + 1, vt);
 					//chenknPlace(abraham.getAt()-sep +1, vt);
@@ -110,7 +116,8 @@ public class Rij {
 					vt.assignTime(diff);
 					vt.setV_current(vt.getAfstand()/(vt.getAt()-ct));
 					printShit(vt);
-					//extra kosten = 0
+									//extra kosten = 0
+					//totalkostL1 = 0;
 			}
 		}
 		//-------------------------------------------------------------------------------------------------------
