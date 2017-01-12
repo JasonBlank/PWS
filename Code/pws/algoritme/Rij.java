@@ -13,11 +13,12 @@ public class Rij {
 	private int sep, maxsep = 189;										//Seperation
 	private Vliegtuig abraham;											//Willekeurige naam want ik had daar zin in. Dit is de
 	private final double costearly = 1.00;										//variabele waar het gevonden al ingeplande vliegtuig	
-	private final double costlate = 1.43;																	//tijdelijk in komt voor berekeningen enzo.
+	private final double costlate = 1.39;																	//tijdelijk in komt voor berekeningen enzo.
 	private double totalcost;
 	private double totalcostL1;
 	private double totalcostL2;
 	public boolean landingsbaanok;
+	private int landingsbaan;
 	/*---------------
 	|    GETTERS    |
 	---------------*/
@@ -47,7 +48,7 @@ public class Rij {
 				int neededspaceLeft = -(wt- abraham.getAt() - SepTime.getSepTime(abraham.getKlasse(),vt.getKlasse()));
 				int neededspaceTotal = neededspaceLeft + neededspaceRight;
 
-				if(neededspaceLeft > neededspaceRight * 1.4){
+				if(neededspaceLeft > neededspaceRight * costlate){
 					checkAfter(wt,vt);
 					System.out.println("Plaats "+vt+" naar rechts vanwege kosten");
 					checknPlace(abraham.getAt() + neededspaceTotal - 1,abraham);
@@ -73,9 +74,11 @@ public class Rij {
 						vt.assignTime(abraham.getAt() + sep);
 						vt.setV_current(vt.getAfstand() / (vt.getAt() - ct));
 						printShit(vt);
-						//extra kosten deze stap = ((wt-abraham.getAt()+sep)*Kosten van te laat;
+								//extra kosten deze stap = (wt-abraham.getAt()+sep)*Kosten van te laat;\
+						//totalkostL1 = ((wt + SepTime.getSepTime(vt.getKlasse(), abraham.getKlasse()) - abraham.getAt())*costlate;
 					} else {
 						checknPlace(abraham.getAt() + sep + 1, vt);
+						//geen kosten functie wat wordt doorgestuurd
 						//we willen dus dat we hier sws naar case false-false gaan. Zie voor uitleg true.true
 						//dit kunnen we doen zoals bij true.true uitgelegd. Maar ook mis door ze ze meteen door te sturen naar false.false
 						//maar ik denk dat het makkelijkst is om manier te doen zoals bij true.true omdat het anders wel erg moeilijk wordt om het te programmeren in false.false
@@ -101,7 +104,7 @@ public class Rij {
 					//hier gaat het fout nu. Want als je hem nu op nieuw laat lopen komt hij als het goed is uit bij false.true omdat er precies genoeg ruimte zou zijn om geen last te hebben van die van rechts.
 					//In de true.false als hij niet naar links kan schuiven gaat hij weer terug naar wanneer hij precies geen lans meer heeft van links. En op die manier blijft hij dan bounchen tussen die twee.
 					//We moeten er dus voor zorgen dat we de wt niet veranderen in precies sep er vanaf maar iets minder dat hij bij false.false komt zodat we het kunnen oplossen.
-
+					//geenkosten functie want wordt door verwezen naar true true
 					if(checkBefore(wt,vt)){
 
 						moveLeft(wt,4,abraham,vt,false);
@@ -143,6 +146,20 @@ public class Rij {
 		return false;
 	}
 
+	private int checkLowestCost(){
+		if(totalcostL1 < totalcostL2){
+			landingsbaan = 1;
+		}
+		if(totalcostL2 < totalcostL1){
+			landingsbaan = 2;
+		}
+		if(totalcostL1 < totalcostL2){
+			landingsbaan = 1;         //hier moeten we nog even kijken wat we hier mee doen
+		}
+		return landingsbaan;
+		
+	}
+	
 	private boolean checkAfter(long wt, Vliegtuig vt){							//Nog verbeteren
 		for(int i = 0; i <= maxsep; i++) {										//hier moeten we zorgen dat als abraham te dicht bij is dat hij dan aan geeft dat hij niet de ruimte heeft om te verplaatsen anders moeten we kijken waar we het anders doen.
 			if(wt+i < 2800) {													//Dit hier boven geld ook voor het checken van er na. Maar de kans dat het vliegtuig dan niet meer kan verplaatsen is zeer klein. Maar moeten het voor de zekerheid maar wel checken anders gaan we problemen krijgen
