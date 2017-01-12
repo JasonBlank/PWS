@@ -16,6 +16,7 @@ public class MainAlgoritme implements Runnable{
 	private Vliegtuig vt;
 	boolean running = true;
 	private Rij rij;
+	static int cycles_per_second = 1;
 
 
 	/*-------------------

@@ -11,8 +11,6 @@ public class Rij {
 	static int ct, wt;													//Current time en Wanted time:		I N D E X T I M E
 	private Vliegtuig[] vtl = new Vliegtuig[2800];						//Vliegtuig timeline
 	private int sep, maxsep = 189;										//Seperation
-	//private int[] maxsepn = {0, 189, 145, 122, 60};					//Ik stel voor om het zo te doen omdat er anders is een gebied gezocht wordt dat niet nodig is.
-	//private int[] maxsepv = {0, 60, 145, 167, 189}; 					//De 0 is om te zorgen dat je bij klasse 1 plek 1 kan opvragen
 	private Vliegtuig abraham;											//Willekeurige naam want ik had daar zin in. Dit is de
 																		//variabele waar het gevonden al ingeplande vliegtuig																	//tijdelijk in komt voor berekeningen enzo.
 	public boolean landingsbaanok;
@@ -39,6 +37,7 @@ public class Rij {
 			//---------------------------------------------------------------------------------------------------
 		if (checkBefore(wt, vt)) {                                    					//true is problematisch; false is ruimte
 			if (checkAfter(wt, vt)) {
+				System.out.println("Found planes left and right of no. "+vt.getAfstand());
 				int neededspaceRight = -(abraham.getAt()-wt-SepTime.getSepTime(vt.getKlasse(),abraham.getKlasse()));
 				checkBefore(wt,vt);
 				int neededspaceLeft = -(wt- abraham.getAt() - SepTime.getSepTime(abraham.getKlasse(),vt.getKlasse()));
@@ -46,14 +45,17 @@ public class Rij {
 
 				if(neededspaceLeft > neededspaceRight * 1.4){
 					checkAfter(wt,vt);
+					System.out.println("Plaats "+vt+" naar rechts vanwege kosten");
 					checknPlace(abraham.getAt() + neededspaceTotal - 1,abraham);
 				}else{
+					System.out.println("Plaats "+vt+" naar links vanwege kosten");
 					checknPlace(abraham.getAt() - neededspaceTotal + 1,abraham);
 				}
 			}
 			//---------------------------------------------------------------------------------------------------
 			else {//Rechts is ruimte, links niet.
 				if (checkBefore(wt - SepTime.getSepTime(abraham.getKlasse(), vt.getKlasse()), abraham)) {            //hier kijken of er ruimte is is voor abraham om naar links te gaan
+					System.out.println("Abraham kan en gaat naar links zodat "+vt+" geplaatst kan worden om "+wt);
 					abraham.assignTime(abraham.getAt() - ((abraham.getAt() + sep) - wt));
 					//Extra kosten van deze stap = (abraham.getAt()+sep-wt)*kosten van te vroeg;
 					vtl[wt] = vt;
@@ -216,6 +218,6 @@ public class Rij {
 	}
 
 	void timeLoop(){													//Tijdbijhouding om benodigde snelheid te kunnen berekenen
-		ct = (int) System.currentTimeMillis()/1000 - bt;
+		ct = (int) System.currentTimeMillis()/(1000/MainAlgoritme.cycles_per_second) - bt;
 	}
 }
