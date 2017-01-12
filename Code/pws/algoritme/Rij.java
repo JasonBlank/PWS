@@ -215,4 +215,7 @@ public class Rij {
 		System.out.println("Placement successful for plane \""+vt.getName()+"\". Assigned time: "+zl + ":" + al+" Assigned speed: "+vt.getV_current()+" Distance from airport: "+vt.getAfstand());
 	}
 
-	void timeLoop(){													//Tijdbijhouding om benodigde snelheid te kunnen bere
+	void timeLoop(){													//Tijdbijhouding om benodigde snelheid te kunnen berekenen
+		ct = (int) System.currentTimeMillis()/1000 - bt;
+	}
+}
