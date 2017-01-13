@@ -12,8 +12,8 @@ public class Rij {
 	private Vliegtuig[] vtl = new Vliegtuig[2800];						//Vliegtuig timeline
 	private int sep, maxsep = 189;										//Seperation
 	private Vliegtuig abraham;											//Willekeurige naam want ik had daar zin in. Dit is de
-	private final int costearly = 1.00;										//variabele waar het gevonden al ingeplande vliegtuig	
-	private final int costlate = 1.39;																	//tijdelijk in komt voor berekeningen enzo.
+	private final int costearly = 100;										//variabele waar het gevonden al ingeplande vliegtuig	
+	private final int costlate = 139;																	//tijdelijk in komt voor berekeningen enzo.
 	private int totalcost;
 	private int totalcostL1;
 	private int totalcostL11 = 0;
@@ -50,14 +50,14 @@ public class Rij {
 		int y = 1;
 		double kostendan = 0;
 		while(dtime > 0){
-			if(x<(y*costlate)){
+			if((costearly*x)<(y*costlate)){
 				kostendan = gekkeFunctieVroeg(wt,org)[x];
 				dtime -= kostendan;
 				x++;
 				totalcostL11 += kostendan;
 			}
 			else{
-				kostendan = gekkeFunctieLaat(wt,dtime,org)[y];
+				kostendan = gekkeFunctieLaat(wt,org)[y];
 				dtime -= (kostendan/costlate);
 				y++;
 				totalcostL11 += kostendan;
@@ -73,14 +73,14 @@ public class Rij {
 		int y = 1;
 		double kostendan = 0;
 		while(dtime > 0){
-			if(x<(y*costlate)){
+			if((costearly*x)<(y*costlate)){
 				kostendan = gekkeFunctieVroeg(wt,org)[x]; // zorgen dat kan kijken in verschillende banen
 				dtime -= kostendan;
 				x++;
 				totalcostL21 += kostendan;
 			}
 			else{
-				kostendan = gekkeFunctieLaat(wt,dtime,org)[y]; // zorgen dat kan kijken in verschillende banen
+				kostendan = gekkeFunctieLaat(wt,org)[y]; // zorgen dat kan kijken in verschillende banen
 				dtime -= (kostendan/costlate);
 				y++;
 				totalcostL21 += kostendan;
