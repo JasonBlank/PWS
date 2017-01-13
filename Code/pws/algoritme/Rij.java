@@ -233,11 +233,10 @@ public class Rij {
 							return true;
 						}
 					}
-					System.out.println("CheckAfter() heeft geen vliegtuigen gevonden rechts van "+vt.getName());
-					return false;
 				}
 			}
 		}
+		System.out.println("CheckAfter() heeft geen vliegtuigen gevonden rechts van "+vt.getName());
 		return false;
 	}
 			//belangrijk
