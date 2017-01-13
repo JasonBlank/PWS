@@ -49,29 +49,51 @@ public class Rij {
 	/*------------------------
 	|    CHECKING METHODS    |
 	------------------------*/
-	int[] CosttotalL1(int dtime, long wt, Vliegtuig org){
-		int x = 1;
-		int y = 1;
+	private int[] CosttotalL1(int dtime, long wt, Vliegtuig org){
+		int x = 0;
+		int xn = 1;
+		int y = 0;
+		int yn = 1;
 		int tijddan = 0;
+		int totaltimeleft = 0;
+		int totaltimeright = 0;
 		while(dtime > 0){
-			if((costearly*x)<(y*costlate)){
-				tijddan = gekkeFunctieVroeg(wt,org)[x];
-				dtime -= tijddan;
-				x++;
-				totalcostL11 += tijddan*costearly;
+			if((costearly*xn)<(yn*costlate)){
+				int[] var = gekkeFunctieVroeg(wt,org);
+				if(var != null) {
+					tijddan = var[x];
+					dtime -= tijddan;
+					xn++;
+					x++;
+					totaltimeleft += tijddan;
+					totalcostL11 += tijddan * costearly;
+				}else{
+					totaltimeleft += dtime;
+					break;
+				}
 			}
 			else{
-				tijddan = gekkeFunctieLaat(wt,org)[y];
-				dtime -= tijddan;
-				y++;
-				totalcostL11 += tijddan*costlate;
+				int[] var = gekkeFunctieLaat(wt,org);
+				if(var != null){
+					tijddan = gekkeFunctieLaat(wt,org)[y];
+					dtime -= tijddan;
+					yn++;
+					y++;
+					totaltimeright += tijddan;
+					totalcostL11 += tijddan*costlate;
+				}
+				else{
+					totaltimeright += dtime;
+					break;
+				}
+
 			}
 				
 			
 		}
 		KostL1waardes[0] = totalcostL11;
-		KostL1waardes[1] = x;
-		KostL1waardes[2] = y;
+		KostL1waardes[1] = totaltimeleft;
+		KostL1waardes[2] = totaltimeright;
 		return KostL1waardes;
 	}
 	
@@ -114,10 +136,14 @@ public class Rij {
 				int[] mooiedingen = CosttotalL1(neededspaceTotal, wt, vt);
 				int x = mooiedingen[1];
 				int y = mooiedingen[2];
-				
-				int left[] = gekkeFunctieVroeg(wt,vt);
-				int right[] = gekkeFunctieLaat(wt,vt);
-				
+
+				plaatsLinks(wt, x, vt);
+				System.out.println("Alles naar links verplaatst speciaal voor "+vt);
+
+				vtl[wt] = vt;
+				vt.assignTime(wt);
+				vt.setV_current(vt.getAfstand()/(wt-ct));
+				printShit(vt);
 				
 				
 				
@@ -371,7 +397,7 @@ public class Rij {
 		int n = 0;
 		int[] list1 = new int[n];
 		int[] list2;
-
+		if(wyd == null) return list1;
 		for(int i = 0; i < wt; i++){
 			int sep = vtg.getAt()-wyd.getAt()-SepTime.getSepTime(wyd.getKlasse(),vtg.getKlasse());
 			list2 = new int[n + 1];
@@ -379,14 +405,16 @@ public class Rij {
 				list2[j] = list1[j];
 			}
 			if(sep > 0){
-				list2[n + 1] = sep;
+				list2[n] = sep;
 			}else{
-				list2[n + 1] = 0;
+				list2[n] = 0;
 			}
 			vtg = wyd;
 			wyd = getLeftVliegtuig(vtg.getAt());
 			list1 = list2;
-			if(wyd == null){break;}
+			if(wyd == null){
+				break;
+			}
 		}
 		return list1;
 	}
@@ -397,22 +425,29 @@ public class Rij {
 		int n = 0;
 		int[] list1 = new int[n];
 		int[] list2;
-
-		for(int i = 3100; i > wt; i--){
+		if(wyd == null)return list1;
+		for(int i = 2800; i > wt; i--){
 			int sep = wyd.getAt()-vtg.getAt()-SepTime.getSepTime(vtg.getKlasse(),wyd.getKlasse());
 			list2 = new int[n + 1];
 			for(int j = 0; j < list1.length; j++){
 				list2[j] = list1[j];
 			}
 			if(sep > 0){
-				list2[n + 1] = sep;
+				list2[n] = sep;
 			}else{
-				list2[n + 1] = 0;
+				list2[n] = 0;
 			}
 			vtg = wyd;
 			wyd = getRightVliegtuig(vtg.getAt());
 			list1 = list2;
-			if(wyd == null){break;}
+			if(wyd == null){
+				list2 = new int[n++];
+				for(int k = 0; k < list1.length; k++){
+					list2[k] = list1[k];
+				}
+				System.arraycopy(list2, 0, list1, 0,n+1);
+				break;
+			}
 		}
 		return list1;
 	}
@@ -429,11 +464,69 @@ public class Rij {
 	}
 
 	Vliegtuig getRightVliegtuig(long wt){ //Geeft het dichstbijzijnde geplande vliegtuig rechts van wt
-		for(int i = 0; i < 3100-wt; i++){
+		for(int i = 0; i < 2800-wt; i++){
 			if(vtl[(int)wt+i] != null){
 				return vtl[(int)wt+i];
 			}
 		}
 		return null;
+	}
+
+	void plaatsLinks(long wt, int dtime, Vliegtuig vt){
+		boolean notenough = true;
+		int movedTime = 0, n = 0;
+		Vliegtuig vtR = vt, vtL;
+		Vliegtuig[] lijst1 = new Vliegtuig[0],lijst2 = new Vliegtuig[0];
+		int[] dtime_list1 = new int[n], dtime_list2 = new int[n];
+
+		for(int i = 0; notenough; i++){
+			if(!(wt - i >= 0))break;
+			else {
+				if (vtl[(int) wt - i] != null) {
+					vtL = vtl[(int) wt - i];
+					movedTime += vtR.getAt() - vtL.getAt();
+					if (movedTime >= dtime) {
+						notenough = false;
+						break;
+					}
+
+					n++;
+					dtime_list2 = new int[n];
+					lijst2 = new Vliegtuig[n];
+					for (int j = 0; j < lijst1.length; j++) {
+						lijst2[j] = lijst1[j];
+						dtime_list2[j] = dtime_list1[j];
+					}
+					lijst2[n - 1] = vtL;
+					if (n > 1)
+						dtime_list2[n - 2] = (vtR.getAt() - vtL.getAt() - SepTime.getSepTime(vtL.getKlasse(), vtR.getKlasse()));
+					System.out.println("plaatsLinks(): " + vtL + " gevonden");
+					lijst1 = lijst2;
+					dtime_list1 = dtime_list2;
+
+					vtR = vtL;
+
+				}
+			}
+		}
+		System.out.println("\nplaatsLinks(): " + lijst1.length +" vliegtuigen gevonden");
+		//Je hebt nu een lijst genaamd lijst1 met alle te verplaatsen vliegtuigen, en een lijst genaamd dtime_list1 met alle tijden tussen die vliegtuigen.
+		int no = 0;
+		int dt = 0;
+		for(int i = 0; i < lijst1.length; i++){
+			Vliegtuig temp = lijst1[i];
+			System.out.println("Start of dt opstapeling no " + i);
+			for(int j = 0; j <= no; j++) {
+				dt += dtime_list1[j];
+				System.out.println(dt);
+			}
+			System.out.println("Einde van dt opstapeling");
+			vtl[temp.getAt()] = null;
+			vtl[temp.getAt()-dt] = temp;
+			temp.assignTime(temp.getAt()+dt);
+
+			dt = 0;
+			no++;
+		}
 	}
 }

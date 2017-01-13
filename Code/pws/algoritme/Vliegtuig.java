@@ -36,7 +36,7 @@ public class Vliegtuig {
 		v_current = Timegeneration.getV_cruise(name); 
 		this.rij = rij;
 		this.name = name;
-		System.out.println(toString());
+		System.out.println(toString() + " reporting for duty");
 		rij.checknPlace((int)(this.getAfstand()/Timegeneration.getV_cruise(name))+rij.getCt(),this);  
 	}
 
@@ -47,8 +47,9 @@ public class Vliegtuig {
 
 	void assignTime(int newat){at = newat;}
 
-	private void setAfstand(double afstand) {afstand_tot_landingsbaan = afstand;System.out.println("Afstand van "+toString()+" tot landingsbaan: "+afstand);}
-
+	private void setAfstand(double afstand) {
+		afstand_tot_landingsbaan = afstand;//System.out.println("Afstand van "+toString()+" tot landingsbaan: "+afstand);
+	}
 
 	/*---------------
 	|    GETTERS    |

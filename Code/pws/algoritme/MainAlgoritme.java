@@ -17,7 +17,7 @@ public class MainAlgoritme implements Runnable{
 	boolean running = true;
 	private Rij rij;
 	private Timegeneration tg;
-	static int cycles_per_second = 10;
+	static int cycles_per_second = 100;
 
 
 	/*-------------------
@@ -52,7 +52,7 @@ public class MainAlgoritme implements Runnable{
 				if(now-lasttime >= 1000/cycles_per_second) {
 					rij.timeLoop();
 					update((now - lasttime)/1000*cycles_per_second, tg);
-					System.out.println(rij.getCt());
+					//System.out.println(rij.getCt());
 					lasttime = now;
 				}
 			}
