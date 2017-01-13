@@ -27,6 +27,10 @@ public class Rij {
 	private int totalcostL24 = 0;
 	public boolean landingsbaanok;
 	private int landingsbaan;
+	private int KostL1waardes[] = new int[3];
+	private int KostL2waardes[] = new int[3];
+	
+	
 	/*---------------
 	|    GETTERS    |
 	---------------*/
@@ -45,33 +49,36 @@ public class Rij {
 	/*------------------------
 	|    CHECKING METHODS    |
 	------------------------*/
-	double KosttotalL1(int dtime, long wt, Vliegtuig org){
+	int[] CosttotalL1(int dtime, long wt, Vliegtuig org){
 		int x = 1;
 		int y = 1;
-		double kostendan = 0;
+		int tijddan = 0;
 		while(dtime > 0){
 			if((costearly*x)<(y*costlate)){
-				kostendan = gekkeFunctieVroeg(wt,org)[x];
-				dtime -= kostendan;
+				tijddan = gekkeFunctieVroeg(wt,org)[x];
+				dtime -= tijddan;
 				x++;
-				totalcostL11 += kostendan;
+				totalcostL11 += tijddan*costearly;
 			}
 			else{
-				kostendan = gekkeFunctieLaat(wt,org)[y];
-				dtime -= (kostendan/costlate);
+				tijddan = gekkeFunctieLaat(wt,org)[y];
+				dtime -= tijddan;
 				y++;
-				totalcostL11 += kostendan;
+				totalcostL11 += tijddan*costlate;
 			}
 				
 			
 		}
-		return totalcostL11;
+		KostL1waardes[0] = totalcostL11;
+		KostL1waardes[1] = x;
+		KostL1waardes[2] = y;
+		return KostL1waardes;
 	}
 	
-	double KosttotalL2(int dtime, long wt, Vliegtuig org){
+	int CosttotalL2(int dtime, long wt, Vliegtuig org){
 		int x = 1;
 		int y = 1;
-		double kostendan = 0;
+		int kostendan = 0;
 		while(dtime > 0){
 			if((costearly*x)<(y*costlate)){
 				kostendan = gekkeFunctieVroeg(wt,org)[x]; // zorgen dat kan kijken in verschillende banen
@@ -99,7 +106,22 @@ public class Rij {
 		if (checkBefore(wt, vt)) {                                    					//true is problematisch; false is ruimte
 			if (checkAfter(wt, vt)) {
 				System.out.println("Vliegtuigen links en rechts gevonden van "+vt);
+				
 				int neededspaceRight = -(abraham.getAt()-wt-SepTime.getSepTime(vt.getKlasse(),abraham.getKlasse()));
+				checkBefore(wt,vt);
+				int neededspaceLeft = -(wt- abraham.getAt() - SepTime.getSepTime(abraham.getKlasse(),vt.getKlasse()));
+				int neededspaceTotal = -(neededspaceLeft + neededspaceRight);
+				int[] mooiedingen = CosttotalL1(neededspaceTotal, wt, vt);
+				int x = mooiedingen[1];
+				int y = mooiedingen[2];
+				
+				int left[] = gekkeFunctieVroeg(wt,vt);
+				int right[] = gekkeFunctieLaat(wt,vt);
+				
+				
+				
+				
+				/* int neededspaceRight = -(abraham.getAt()-wt-SepTime.getSepTime(vt.getKlasse(),abraham.getKlasse()));
 				checkBefore(wt,vt);
 				int neededspaceLeft = -(wt- abraham.getAt() - SepTime.getSepTime(abraham.getKlasse(),vt.getKlasse()));
 				int neededspaceTotal = -(neededspaceLeft + neededspaceRight);
@@ -112,7 +134,7 @@ public class Rij {
 					System.out.println("Plaats "+vt+" naar links vanwege kosten");
 					checknPlace(abraham.getAt() - neededspaceTotal + 1,abraham);
 					checknPlace(wt,vt);
-				}
+				}*/
 			}
 			//---------------------------------------------------------------------------------------------------
 			else {//Rechts is ruimte, links niet.
