@@ -12,19 +12,19 @@ public class Rij {
 	private Vliegtuig[] vtl = new Vliegtuig[2800];						//Vliegtuig timeline
 	private int sep, maxsep = 189;										//Seperation
 	private Vliegtuig abraham;											//Willekeurige naam want ik had daar zin in. Dit is de
-	private final double costearly = 1.00;										//variabele waar het gevonden al ingeplande vliegtuig	
-	private final double costlate = 1.39;																	//tijdelijk in komt voor berekeningen enzo.
-	private double totalcost;
-	private double totalcostL1;
-	private double totalcostL11;
-	private double totalcostL12;
-	private double totalcostL13;
-	private double totalcostL14;
-	private double totalcostL2;
-	private double totalcostL21;
-	private double totalcostL22;
-	private double totalcostL23;
-	private double totalcostL24;
+	private final int costearly = 1.00;										//variabele waar het gevonden al ingeplande vliegtuig	
+	private final int costlate = 1.39;																	//tijdelijk in komt voor berekeningen enzo.
+	private int totalcost;
+	private int totalcostL1;
+	private int totalcostL11 = 0;
+	private int totalcostL12 = 0;
+	private int totalcostL13 = 0;
+	private int totalcostL14 = 0;
+	private int totalcostL2;
+	private int totalcostL21 = 0;
+	private int totalcostL22 = 0;
+	private int totalcostL23 = 0;
+	private int totalcostL24 = 0;
 	public boolean landingsbaanok;
 	private int landingsbaan;
 	/*---------------
