@@ -12,13 +12,8 @@ public class Rij {
 	private Vliegtuig[] vtl = new Vliegtuig[2800];						//Vliegtuig timeline
 	private int sep, maxsep = 189;										//Seperation
 	private Vliegtuig abraham;											//Willekeurige naam want ik had daar zin in. Dit is de
-<<<<<<< HEAD
 	private final int costearly = 100;										//variabele waar het gevonden al ingeplande vliegtuig	
 	private final int costlate = 139;																	//tijdelijk in komt voor berekeningen enzo.
-=======
-	private final int costearly = 1.00;										//variabele waar het gevonden al ingeplande vliegtuig
-	private final int costlate = 1.39;																	//tijdelijk in komt voor berekeningen enzo.
->>>>>>> origin/master
 	private int totalcost;
 	private int totalcostL1;
 	private int totalcostL11 = 0;
