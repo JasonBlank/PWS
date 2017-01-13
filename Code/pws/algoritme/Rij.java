@@ -51,7 +51,7 @@ public class Rij {
 		double kostendan = 0;
 		while(dtime > 0){
 			if(x<(y*costlate)){
-				kostendan = gekkeFunctieVroeg(wt,dtime,org)[x];
+				kostendan = gekkeFunctieVroeg(wt,org)[x];
 				dtime -= kostendan;
 				x++;
 				totalcostL11 += kostendan;
@@ -74,7 +74,7 @@ public class Rij {
 		double kostendan = 0;
 		while(dtime > 0){
 			if(x<(y*costlate)){
-				kostendan = gekkeFunctieVroeg(wt,dtime,org)[x]; // zorgen dat kan kijken in verschillende banen
+				kostendan = gekkeFunctieVroeg(wt,org)[x]; // zorgen dat kan kijken in verschillende banen
 				dtime -= kostendan;
 				x++;
 				totalcostL21 += kostendan;
@@ -347,46 +347,75 @@ public class Rij {
 		ct = (int) (((System.currentTimeMillis()/1000.0) - bt)*(double)MainAlgoritme.cycles_per_second);
 	}
 
-	void gekkeFunctie(long wt, int dtime, Vliegtuig org){
-		Vliegtuig vtg = getLeftVliegtuig(wt);
-		int movabletime = 0, n = 0;
-		int lastnumber = vtg.getAt();
-		Vliegtuig[] lijstje1 = new Vliegtuig[0];
-		Vliegtuig[] lijstje2 = new Vliegtuig[0];
+	int[] gekkeFunctieVroeg(long wt, Vliegtuig org){
+		Vliegtuig vtg = org;
+		Vliegtuig wyd = getLeftVliegtuig(wt);
+		int n = 0;
+		int[] list1 = new int[n];
+		int[] list2;
 
-		while (movabletime < dtime){
-			for(int i = lastnumber; lastnumber > 0; lastnumber--){
-				if(vtl[i] != null){
-					n++;
-					lijstje2 = new Vliegtuig[n];
-					for(int j = 0; j < lijstje1.length;j++){
-						lijstje2[j] = lijstje1[j];
-					}
-					lijstje2[n-1] = vtl[i];
-					lijstje1 = lijstje2;
-					//Moet nog een if inplementeren met controle of het vliegtuig wel zo ver naar links kan als gewenst.
-					if(lijstje1.length < 2){
-						movabletime += (vtg.getAt()-lijstje1[0].getAt()-SepTime.getSepTime(lijstje1[0].getKlasse(),vtg.getKlasse()));
-					}else{
-						movabletime += ((lijstje1[n-1].getAt()-lijstje1[n].getAt()-SepTime.getSepTime(lijstje1[n].getKlasse(),lijstje1[n-1].getKlasse())));
-					}
-
-				}
+		for(int i = 0; i < wt; i++){
+			int sep = vtg.getAt()-wyd.getAt()-SepTime.getSepTime(wyd.getKlasse(),vtg.getKlasse());
+			list2 = new int[n + 1];
+			for(int j = 0; j < list1.length; j++){
+				list2[j] = list1[j];
 			}
-			if(movabletime < dtime){
-				//Kan niet ver genoeg naar links schuiven
+			if(sep > 0){
+				list2[n + 1] = sep;
+			}else{
+				list2[n + 1] = 0;
 			}
+			vtg = wyd;
+			wyd = getLeftVliegtuig(vtg.getAt());
+			list1 = list2;
+			if(wyd == null){break;}
 		}
-		//Het is gelukt!! De lijst met alle naar links te verplaatsen vliegtuigen staat in lijstje2!!
-
-		return movabletime;
+		return list1;
 	}
 
+	int[] gekkeFunctieLaat(long wt, Vliegtuig org){
+		Vliegtuig vtg = org;
+		Vliegtuig wyd = getRightVliegtuig(wt);
+		int n = 0;
+		int[] list1 = new int[n];
+		int[] list2;
+
+		for(int i = 3100; i > wt; i--){
+			int sep = wyd.getAt()-vtg.getAt()-SepTime.getSepTime(vtg.getKlasse(),wyd.getKlasse());
+			list2 = new int[n + 1];
+			for(int j = 0; j < list1.length; j++){
+				list2[j] = list1[j];
+			}
+			if(sep > 0){
+				list2[n + 1] = sep;
+			}else{
+				list2[n + 1] = 0;
+			}
+			vtg = wyd;
+			wyd = getRightVliegtuig(vtg.getAt());
+			list1 = list2;
+			if(wyd == null){break;}
+		}
+		return list1;
+	}
+
+
+
 	Vliegtuig getLeftVliegtuig(long wt){
-		for(int i = 0; i > 0; i++){
+		for(int i = (int)wt; i < 0; i --){
 			if(vtl[(int)wt-i] != null){
 				return vtl[(int)wt-i];
 			}
 		}
+		return null;
+	}
+
+	Vliegtuig getRightVliegtuig(long wt){
+		for(int i = 0; i < 3100-wt; i++){
+			if(vtl[(int)wt+i] != null){
+				return vtl[(int)wt+i];
+			}
+		}
+		return null;
 	}
 }
