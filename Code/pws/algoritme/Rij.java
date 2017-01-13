@@ -116,7 +116,7 @@ public class Rij {
 			}
 			//---------------------------------------------------------------------------------------------------
 			else {//Rechts is ruimte, links niet.
-				if (checkBefore(wt - SepTime.getSepTime(abraham.getKlasse(), vt.getKlasse()), abraham)) {            //hier kijken of er ruimte is is voor abraham om naar links te gaan
+				if (!checkBefore(wt - SepTime.getSepTime(abraham.getKlasse(), vt.getKlasse()), abraham)) {            //hier kijken of er ruimte is is voor abraham om naar links te gaan
 					System.out.println("Abraham kan en gaat naar links zodat "+vt+" geplaatst kan worden om "+wt);
 					vtl[abraham.getAt()] = null;
 					abraham.assignTime(abraham.getAt() - ((abraham.getAt() + sep) - wt));
@@ -130,7 +130,8 @@ public class Rij {
 					vt.setV_current(vt.getAfstand()/(vt.getAt()-ct));
 					printShit(vt);
 				} else {
-					if (checkAfter(abraham.getAt() + sep, vt)) {
+					checkBefore(wt,vt);
+					if (!checkAfter(abraham.getAt() + sep, vt)) {
 						vtl[abraham.getAt() + sep] = vt;
 						vt.assignTime(abraham.getAt() + sep);
 						vt.setV_current(vt.getAfstand() / (vt.getAt() - ct));
@@ -138,8 +139,8 @@ public class Rij {
 								//extra kosten deze stap = (wt-abraham.getAt()+sep)*Kosten van te laat;\
 						totalcostL12 = ((wt + SepTime.getSepTime(vt.getKlasse(), abraham.getKlasse()) - abraham.getAt())*costlate);
 					} else {
+						checkBefore(wt,vt);
 						checknPlace(abraham.getAt() + sep + 1, vt);
-						checknPlace(wt,vt);
 						//geen kosten functie wat wordt doorgestuurd
 						//we willen dus dat we hier sws naar case false-false gaan. Zie voor uitleg true.true
 						//dit kunnen we doen zoals bij true.true uitgelegd. Maar ook mis door ze ze meteen door te sturen naar false.false
