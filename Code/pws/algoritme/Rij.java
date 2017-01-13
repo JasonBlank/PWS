@@ -12,8 +12,13 @@ public class Rij {
 	private Vliegtuig[] vtl = new Vliegtuig[2800];						//Vliegtuig timeline
 	private int sep, maxsep = 189;										//Seperation
 	private Vliegtuig abraham;											//Willekeurige naam want ik had daar zin in. Dit is de
+<<<<<<< HEAD
 	private final int costearly = 100;										//variabele waar het gevonden al ingeplande vliegtuig	
 	private final int costlate = 139;																	//tijdelijk in komt voor berekeningen enzo.
+=======
+	private final int costearly = 1.00;										//variabele waar het gevonden al ingeplande vliegtuig
+	private final int costlate = 1.39;																	//tijdelijk in komt voor berekeningen enzo.
+>>>>>>> origin/master
 	private int totalcost;
 	private int totalcostL1;
 	private int totalcostL11 = 0;
@@ -162,14 +167,9 @@ public class Rij {
 					totalcostL13 = (wt - SepTime.getSepTime(vt.getKlasse(), abraham.getKlasse()))*costearly;
 				} else {
 					checknPlace(abraham.getAt() - sep + 1, vt);
-					//chenknPlace(abraham.getAt()-sep +1, vt);
-					//hier gaat het fout nu. Want als je hem nu op nieuw laat lopen komt hij als het goed is uit bij false.true omdat er precies genoeg ruimte zou zijn om geen last te hebben van die van rechts.
-					//In de true.false als hij niet naar links kan schuiven gaat hij weer terug naar wanneer hij precies geen lans meer heeft van links. En op die manier blijft hij dan bounchen tussen die twee.
-					//We moeten er dus voor zorgen dat we de wt niet veranderen in precies sep er vanaf maar iets minder dat hij bij false.false komt zodat we het kunnen oplossen.
-					//geenkosten functie want wordt door verwezen naar true true
-					if(checkBefore(wt,vt)){
 
-						moveLeft(wt,4,abraham,vt,false);
+					if(checkBefore(wt,vt)){
+						//HIER MOET NOG IETS; ER STOND MOVELEFT DUS ZOIETS WSS
 					}
 				}
 				//-----------------------------------------------------------------------------------------------
@@ -280,6 +280,7 @@ public class Rij {
 
 		return movabletime;
 	}
+	*/
 
 	/*private int moveLeft(long wt, int dtime, Vliegtuig vtg, Vliegtuig org, boolean forced){
 		Vliegtuig vt;
@@ -308,6 +309,7 @@ public class Rij {
 		}
 		return movedtimeleft;
 	}
+	*/
 
 	/*private int moveRight(long wt, int dtime, Vliegtuig org){
 		checkAfter(wt,org);
@@ -331,7 +333,7 @@ public class Rij {
 
 		return 0;
 	}
-
+	*/
 
 	/*---------------------
 	|    MISCELLANEOUS    |
@@ -401,7 +403,7 @@ public class Rij {
 
 
 
-	Vliegtuig getLeftVliegtuig(long wt){
+	Vliegtuig getLeftVliegtuig(long wt){ //Geeft het dichstbijzijnde geplande vliegtuig links van wt
 		for(int i = (int)wt; i < 0; i --){
 			if(vtl[(int)wt-i] != null){
 				return vtl[(int)wt-i];
@@ -410,7 +412,7 @@ public class Rij {
 		return null;
 	}
 
-	Vliegtuig getRightVliegtuig(long wt){
+	Vliegtuig getRightVliegtuig(long wt){ //Geeft het dichstbijzijnde geplande vliegtuig rechts van wt
 		for(int i = 0; i < 3100-wt; i++){
 			if(vtl[(int)wt+i] != null){
 				return vtl[(int)wt+i];
