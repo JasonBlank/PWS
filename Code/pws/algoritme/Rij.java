@@ -152,8 +152,7 @@ public class Rij {
 			if(checkAfter(wt,vt)) {
 				//Links is ruimte dus op naar links met Vx.
 				//Zo verder kijken
-				checkBefore(wt,vt); //abraham en sep naar juiste variabelen zetten
-				if (checkBefore(abraham.getAt() - sep, vt)) {
+				if (!checkBefore(abraham.getAt() - sep, vt)){
 					vtl[abraham.getAt() - sep] = vt;
 					vt.assignTime(abraham.getAt() - sep);
 					vt.setV_current(vt.getAfstand() / (vt.getAt() - ct));
@@ -194,7 +193,7 @@ public class Rij {
 					sep = SepTime.getSepTime(abraham.getKlasse(), vt.getKlasse());
 					for(int j = 0; j<= sep; j++) {
 						if (vtl[(int) wt - j] != null) {
-							System.out.println("CheckBefore() heeft " + vtl[(int)wt-j] + " gevonden");
+							System.out.println("CheckBefore() heeft " + vtl[(int)wt-j] + " voor " + vt +" gevonden");
 							return true;
 						}
 					}
@@ -229,11 +228,11 @@ public class Rij {
 					sep = SepTime.getSepTime(abraham.getKlasse(), vt.getKlasse());
 					for (int j = 0; j <= sep; j++) {
 						if (vtl[(int) wt + j] != null) {
-							System.out.println("CheckAfter() heeft "+abraham.getName()+" gevonden");
+							System.out.println("CheckAfter() heeft "+abraham+" na "+vt+" gevonden");
 							return true;
 						}
 					}
-					System.out.println("CheckAfter() heeft geen vliegtuigen gevonden rechts van "+vt.getName());
+					System.out.println("CheckAfter() heeft geen vliegtuigen gevonden na "+vt + " gevonden");
 					return false;
 				}
 			}
