@@ -165,8 +165,10 @@ public class Rij {
 
 				System.out.println("\nSituatie 2");
 				sep = SepTime.getSepTime(getLeftVliegtuig(wt).getKlasse(), vt.getKlasse());
+				System.out.println(getLeftVliegtuig(wt) + " gevonden in situatie 2");
+
 				if (!checkBefore(wt - sep, getLeftVliegtuig(wt))) {                                                            //hier kijken of er ruimte is is voor abraham om naar links te gaan
-					System.out.println("Abraham kan en gaat naar links zodat " + vt + " geplaatst kan worden om " + wt);
+					System.out.println(abraham + " kan en gaat naar links zodat " + vt + " geplaatst kan worden om " + wt);
 					vtl[abraham.getAt()] = null;
 					abraham.assignTime(wt - sep);
 					vtl[abraham.getAt()] = abraham;
@@ -178,18 +180,20 @@ public class Rij {
 					vt.assignTime(wt);
 					vt.setV_current(vt.getAfstand() / (wt - ct));
 					printShit(vt);
-				} else {
-					checkBefore(wt, vt);
-					if (!checkAfter(abraham.getAt() + sep, vt)) {
-						vtl[abraham.getAt() + sep] = vt;
-						vt.assignTime(abraham.getAt() + sep);
+				}
+
+				else {
+					if (!checkAfter(getLeftVliegtuig(wt).getAt() + sep, vt)) {
+						vtl[getRightVliegtuig(wt).getAt() + sep] = vt;
+						vt.assignTime(getRightVliegtuig(wt).getAt() + sep);
 						vt.setV_current(vt.getAfstand() / (wt - ct));
 						printShit(vt);
 						//extra kosten deze stap = (wt-abraham.getAt()+sep)*Kosten van te laat;\
-						totalcostL12 = ((wt + SepTime.getSepTime(vt.getKlasse(), abraham.getKlasse()) - abraham.getAt()) * costlate);
+						totalcostL12 = ((wt + SepTime.getSepTime(vt.getKlasse(), getRightVliegtuig(wt).getKlasse()) - getRightVliegtuig(wt).getAt()) * costlate);
 					} else {
 						checkBefore(wt, vt);
 						checknPlace(abraham.getAt() + sep + 1, vt);
+
 						//geen kosten functie wat wordt doorgestuurd
 						//we willen dus dat we hier sws naar case false-false gaan. Zie voor uitleg true.true
 						//dit kunnen we doen zoals bij true.true uitgelegd. Maar ook mis door ze ze meteen door te sturen naar false.false
@@ -478,7 +482,6 @@ public class Rij {
 
 	//------------------------------------------------------------------------------------------------
 	private void plaatsLinks(long wt, int dtime) {
-		boolean notenough = true;
 		int movedTime = 0, n = 0;
 		Vliegtuig vtR = getLeftVliegtuig(wt), vtL;
 		Vliegtuig[] lijst1 = new Vliegtuig[1], lijst2 = new Vliegtuig[1];
@@ -500,19 +503,20 @@ public class Rij {
 
 					n++;
 					System.out.println(n);
-					dtime_list2 = new int[n + 1];
+					dtime_list2 = new int[n];
 					dtime_cum2 = new int[n + 1];
 					lijst2 = new Vliegtuig[n + 1];
-					for (int j = 0; j < lijst1.length; j++) {
+					for (int j = 0; j < dtime_list1.length; j++) {
 						lijst2[j] = lijst1[j];
 						dtime_list2[j] = dtime_list1[j];
 						dtime_cum2[j] = dtime_cum1[j];
 					}
+					lijst2[n-1] = lijst1[n-1];
 					lijst2[n] = vtL;
 					dtime_list2[n - 1] = (vtR.getAt() - vtL.getAt() - SepTime.getSepTime(vtL.getKlasse(), vtR.getKlasse()));
 					int var = 0;
-					for(int k = 0; k < n; k++){
-						var += dtime_list1[k];
+					for(int k = 1; k < n; k++){
+						var += dtime_list1[k - 1];
 					}
 					dtime_cum2[n] = var;
 					dtime_cum1 = dtime_cum2;
@@ -546,6 +550,7 @@ public class Rij {
 				dt += dtime_list1[j-1];
 				System.out.println(dtime_list1[j-1]);
 			}
+			dt += dtime_list1[dtime_list1.length-1];
 			System.out.println("Einde van dt opstapeling: "+dt);
 			vtl[temp.getAt()] = null;
 			vtl[temp.getAt() - dt] = temp;
