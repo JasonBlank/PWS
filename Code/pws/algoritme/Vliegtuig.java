@@ -36,7 +36,7 @@ public class Vliegtuig {
 		v_current = Timegeneration.getV_cruise(name); 
 		this.rij = rij;
 		this.name = name;
-		System.out.println(toString() + " reporting for duty");
+		System.out.println("\n-----------------------------------------------------------------------------\n\n"+toString() + " reporting for duty");
 		rij.checknPlace((int)(this.getAfstand()/Timegeneration.getV_cruise(name))+rij.getCt(),this);  
 	}
 
