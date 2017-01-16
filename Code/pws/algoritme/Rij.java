@@ -185,11 +185,11 @@ public class Rij {
 				else {
 					if (!checkAfter(getLeftVliegtuig(wt).getAt() + sep, vt)) {
 						vtl[getLeftVliegtuig(wt).getAt() + sep] = vt;
-						vt.assignTime(getRightVliegtuig(wt).getAt() + sep);
+						vt.assignTime(getLeftVliegtuig(wt).getAt() + sep);
 						vt.setV_current(vt.getAfstand() / (wt - ct));
 						printShit(vt);
 						//extra kosten deze stap = (wt-abraham.getAt()+sep)*Kosten van te laat;\
-						totalcostL12 = ((wt + SepTime.getSepTime(vt.getKlasse(), getRightVliegtuig(wt).getKlasse()) - getRightVliegtuig(wt).getAt()) * costlate);
+						totalcostL12 = ((wt + SepTime.getSepTime(vt.getKlasse(), getLeftVliegtuig(wt).getKlasse()) - getRightVliegtuig(wt).getAt()) * costlate);
 					} else {
 						checkBefore(wt, vt);
 						checknPlace(abraham.getAt() + sep + 1, vt);
