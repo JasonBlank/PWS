@@ -184,7 +184,7 @@ public class Rij {
 
 				else {
 					if (!checkAfter(getLeftVliegtuig(wt).getAt() + sep, vt)) {
-						vtl[getRightVliegtuig(wt).getAt() + sep] = vt;
+						vtl[getLeftVliegtuig(wt).getAt() + sep] = vt;
 						vt.assignTime(getRightVliegtuig(wt).getAt() + sep);
 						vt.setV_current(vt.getAfstand() / (wt - ct));
 						printShit(vt);
@@ -471,7 +471,7 @@ public class Rij {
 	}
 
 	private Vliegtuig getRightVliegtuig(long wt) { //Geeft het dichstbijzijnde geplande vliegtuig rechts van wt
-		for (int i = 1; i < 2800 - wt; i++) {
+		for (int i = 1; i < (2800 - wt); i++) {
 			if (vtl[(int) wt + i] != null) {
 				//System.out.println("Gotten right: " + vtl[(int)wt+i]);
 				return vtl[(int) wt + i];
