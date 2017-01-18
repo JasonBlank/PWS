@@ -77,6 +77,20 @@ public class MainAlgoritme implements Runnable{
 			}
 
 		}else{
+			int kost = 0;
+			for(int i=0; i<2800; i++){
+				int verschil = 0;
+				if(Rij.getVtl()[i] != null){
+					verschil = i - Timegeneration.getTt(Rij.getVtl()[i].getName());
+					if(verschil <= 0){
+						kost -= verschil*Rij.getCostearly();
+					}
+					else{
+						kost += verschil*Rij.getCostlate();
+					}
+				}
+			}
+			System.out.println(kost);
 			System.out.println("Klaaaaaaarrrrrr");
 			running = false;
 		}

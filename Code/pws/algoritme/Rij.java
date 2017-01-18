@@ -9,11 +9,11 @@ public class Rij {
 
 	private long bt = System.currentTimeMillis() / 1000;                //Begin time 						R E A L T I M E
 	static int ct, wt;                                                    //Current time en Wanted time:		I N D E X T I M E
-	private Vliegtuig[] vtl = new Vliegtuig[2800];                        //Vliegtuig timeline
+	private static Vliegtuig[] vtl = new Vliegtuig[2800];                        //Vliegtuig timeline
 	private int sep, maxsep = 189;                                        //Seperation
 	private Vliegtuig plane_found;                                            //Willekeurige naam want ik had daar zin in. Dit is de
-	private final int costearly = 100;                                        //variabele waar het gevonden al ingeplande vliegtuig
-	private final int costlate = 139;                                                                    //tijdelijk in komt voor berekeningen enzo.
+	private final static int costearly = 100;                                        //variabele waar het gevonden al ingeplande vliegtuig
+	private final static int costlate = 139;                                                                    //tijdelijk in komt voor berekeningen enzo.
 	private int totalcost;
 	private int totalcostL1;
 	private int totalcostL11 = 0;
@@ -34,12 +34,19 @@ public class Rij {
 	/*---------------
 	|    GETTERS    |
 	---------------*/
+	static int getCostearly(){
+		return costearly;
+	}
+	
+	static int getCostlate(){
+		return costlate;
+	}
 
 	int getCt() {
 		return ct;
 	}
 
-	Vliegtuig[] getVtl() {
+	static Vliegtuig[] getVtl() {
 		return vtl;
 	}
 
