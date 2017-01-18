@@ -132,9 +132,13 @@ public class Rij {
 			if (checkAfter(wt, vt)) {
 				System.out.println("\nSituatie 1");
 				System.out.println("Vliegtuigen links en rechts gevonden van " + vt);
+				int neededspaceRight, neededspaceLeft = getLeftVliegtuig(wt).getAt() - wt + SepTime.getSepTime(getLeftVliegtuig(wt).getKlasse(), vt.getKlasse());
+				if(getRightVliegtuig(wt) == null){
+					neededspaceRight = 0;
+				}else {
+					neededspaceRight = SepTime.getSepTime(vt.getKlasse(), getRightVliegtuig(wt).getKlasse());
+				}
 
-				int neededspaceRight = SepTime.getSepTime(vt.getKlasse(), getRightVliegtuig(wt).getKlasse());
-				int neededspaceLeft = getLeftVliegtuig(wt).getAt() - wt + SepTime.getSepTime(getLeftVliegtuig(wt).getKlasse(), vt.getKlasse());
 				int neededspaceTotal = -(neededspaceLeft + neededspaceRight);
 				int[] mooiedingen = CosttotalL1(neededspaceTotal, wt, vt);
 				int x = mooiedingen[1];
@@ -300,6 +304,9 @@ public class Rij {
 						}
 					}
 				}
+			}else{
+				System.out.println("Zit tegen rechtergrens aan");
+				return true;
 			}
 		}
 		System.out.println("CheckAfter() heeft geen vliegtuigen na" + vt + " gevonden");
@@ -492,7 +499,7 @@ public class Rij {
 		boolean broken = false;
 		Vliegtuig vtR = getLeftVliegtuig(wt), vtL;
 		Vliegtuig[] lijst1 = new Vliegtuig[1], lijst2 = new Vliegtuig[1];
-		int[] dtime_list1 = new int[1], dtime_list2, dtime_cum2 = new int[1], dtime_cum1 = new int[1];
+		int[] dtime_list1 = new int[1], dtime_list2;
 
 		if(vtR != null) {
 			lijst1[0] = vtR;
@@ -511,8 +518,8 @@ public class Rij {
 					n++;
 					System.out.println("N: " + n);
 
-					dtime_list2 = new int[n + 1];		//Check n
-					lijst2 = new Vliegtuig[n + 1];		//Check n
+					dtime_list2 = new int[n + 1];
+					lijst2 = new Vliegtuig[n + 1];
 
 					for (int j = 0; j < n; j++) {
 						lijst2[j] = lijst1[j];
@@ -533,12 +540,12 @@ public class Rij {
 			}
 		}
 		if(wt - dtime - movedTime >= 0 && broken){
-			dtime_list1[n] = dtime - movedTime; // Check index
+			dtime_list1[n] = dtime - movedTime;
 		}else{
 			//Geen ruimte meer om naar links te schuiven
 			plaatsRechts(wt, dtime - movedTime);
 		}
-		System.out.println("plaatsLeft(): wat ik tot nu toe heb: ");
+		System.out.println("plaatsLinks(): wat ik tot nu toe heb: ");
 		for(int i = 0; i < n; i++){
 			System.out.println("|" + i + "\t\t" + lijst1[i] + "\t\t" + dtime_list1[i]); // Check index
 		}
@@ -546,13 +553,13 @@ public class Rij {
 			System.out.println("&&&&&&&&&&\nplaatsLinks(): " + n + " vliegtuigen gevonden");
 		//Je hebt nu een lijst genaamd lijst1 met alle te verplaatsen vliegtuigen, en een lijst genaamd dtime_list1 met alle tijden tussen die vliegtuigen.
 		int dt = 0;
-		for (int i = 0; i < lijst1.length; i++) {//Check loop conditions
+		for (int i = 0; i < lijst1.length; i++) {
 			if(n-i > 0) {
-				Vliegtuig temp = lijst1[n - i - 1];                        //Check index
+				Vliegtuig temp = lijst1[n - i - 1];
 				System.out.println("Start of dt opstapeling no " + i);
 				for (int j = lijst1.length; j < dtime_list1.length; j++) {
-					dt += dtime_list1[n - j - 1];                                //Check index
-					System.out.println(dtime_list1[n - j - 1]);                //Check index
+					dt += dtime_list1[n - j - 1];
+					System.out.println(dtime_list1[n - j - 1]);
 				}
 				System.out.println("Einde van dt opstapeling: " + dt);
 				vtl[temp.getAt()] = null;
@@ -593,8 +600,8 @@ public class Rij {
 					n++;
 					System.out.println("N: " + n);
 
-					dtime_list2 = new int[n + 1];		//Check n
-					lijst2 = new Vliegtuig[n + 1];		//Check n
+					dtime_list2 = new int[n + 1];
+					lijst2 = new Vliegtuig[n + 1];
 
 					for (int j = 0; j < n; j++) {
 						lijst2[j] = lijst1[j];
@@ -602,7 +609,7 @@ public class Rij {
 					}
 
 					lijst2[n] = vtR;
-					dtime_list2[n - 1] = (vtR.getAt() - vtL.getAt() - SepTime.getSepTime(vtL.getKlasse(), vtR.getKlasse()));	//Check index
+					dtime_list2[n - 1] = (vtR.getAt() - vtL.getAt() - SepTime.getSepTime(vtL.getKlasse(), vtR.getKlasse()));
 
 					System.out.println("plaatsRechts(): " + vtR + " gevonden. dtime t.o.v. " + vtL + ": " + dtime_list2[n-1]);
 					lijst1 = lijst2;
@@ -615,25 +622,25 @@ public class Rij {
 			}
 		}
 		if(wt + dtime - movedTime >= 0 && broken){
-			dtime_list1[n] = dtime - movedTime; // Check index
+			dtime_list1[n] = dtime - movedTime;
 		}else{
 			//Geen ruimte meer om naar Rechts te schuiven
 			plaatsLinks(wt, dtime - movedTime);
 		}
 		System.out.println("plaatsRechts(): wat ik tot nu toe heb: ");
 		for(int i = 0; i < n; i++){
-			System.out.println("|" + i + "\t\t" + lijst1[i] + "\t\t" + dtime_list1[i]); // Check index
+			System.out.println("|" + i + "\t\t" + lijst1[i] + "\t\t" + dtime_list1[i]);
 		}
 
 		System.out.println("&&&&&&&&&&\nplaatsRechts(): " + n + " vliegtuigen gevonden");
 		//Je hebt nu een lijst genaamd lijst1 met alle te verplaatsen vliegtuigen, en een lijst genaamd dtime_list1 met alle tijden tussen die vliegtuigen.
 		int dt = 0;
-		for (int i = 0; i < lijst1.length; i++) {					//Check loop conditions
+		for (int i = 0; i < lijst1.length; i++) {
 			if(n-i > 0) {
-				Vliegtuig temp = lijst1[n - i - 1];                        //Check index
+				Vliegtuig temp = lijst1[n - i - 1];
 				for (int j = lijst1.length; j < dtime_list1.length; j++) {
-					dt += dtime_list1[n - j - 1];                                //Check index
-					System.out.println(dtime_list1[n - j - 1]);                //Check index
+					dt += dtime_list1[n - j - 1];
+					System.out.println(dtime_list1[n - j - 1]);
 				}
 				System.out.println("dt opstapeling no " + i + ": " + dt);
 				vtl[temp.getAt()] = null;
@@ -647,7 +654,7 @@ public class Rij {
 	}
 	//--------------------------------------------------------------------------------------------------------------------------
 	private void checkAlles() {
-		boolean hihi = false;
+		boolean foundsth = false;
 		banaan:
 		for (int i = 0; i < vtl.length; i++) {
 			if (vtl[i] != null) {
@@ -659,83 +666,11 @@ public class Rij {
 				int sep = SepTime.getSepTime(vt1.getKlasse(), vt2.getKlasse());
 				if (vt2.getAt() - vt1.getAt() < sep) {
 					System.out.println("!!!!!!!!!!   " + vt1 + " en " + vt2 + " zijn te dicht op elkaar gepland. Seconden te kort: " + (vt2.getAt() - vt1.getAt() - sep));
-					hihi = true;
+					foundsth = true;
 				}
 				i = vt2.getAt();
 			}
 		}
-		if (!hihi) System.out.println("checkAll(): Alles oké");
-	}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-	private void plaatsLinks2(long wt, int dtime, Vliegtuig vt) {
-		Vliegtuig vtR = getLeftVliegtuig(wt);
-		Vliegtuig vtL;
-
-		int movedTime = 0;
-		int[] dlist1 = new int[0];
-		int[] dlist2;
-
-		int n = 0;
-		Vliegtuig[] rij1 = new Vliegtuig[n + 1];
-		Vliegtuig[] rij2;
-		rij1[0] = vtR;
-
-		if(vtR != null) {
-			vtL = getLeftVliegtuig(vtR.getAt());
-			for(int g = 0;true;g++){
-				if(vtl!= null) {
-
-					movedTime += (vtR.getAt() - vtL.getAt() - SepTime.getSepTime(vtL.getKlasse(), vtR.getKlasse()));
-
-					n++;
-					System.out.println("plaatsLinks(): n hoort te beginnen bij 1: " + n);
-					rij2 = new Vliegtuig[n + 1];
-					dlist2 = new int[n];
-					for (int j = 0; j < rij1.length; j++) {
-						rij2[j] = rij1[j];
-					}
-					rij2[n] = vtL;
-					rij1 = rij2;
-
-					if (n > 0)
-						dlist2[n - 1] = vtR.getAt() - vtL.getAt() - SepTime.getSepTime(vtL.getKlasse(), vtR.getKlasse());
-					dlist1 = dlist2;
-
-					if (movedTime >= dtime)
-						break;
-				}else break;
-			}
-		}
-		else{
-			System.out.println("Geen vliegtuigen links van " + vt);
-			return;
-		}
-
-		for(int i = 0; i < dlist1.length; i++){
-			int dt = 0;
-			for(int j = 0; j < i; j++){
-				dt += dlist1[j];
-			}
-
-
-		}
+		if (!foundsth) System.out.println("checkAll(): Alles oké");
 	}
 }
