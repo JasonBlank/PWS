@@ -90,7 +90,7 @@ public class MainAlgoritme implements Runnable{
 					}
 				}
 			}
-			System.out.println(kost);
+			System.out.println("Kosten: " + kost/100);
 			System.out.println("Klaaaaaaarrrrrr");
 			running = false;
 		}
