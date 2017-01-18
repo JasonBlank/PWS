@@ -59,20 +59,27 @@ public class MainAlgoritme implements Runnable{
 		}
 	}
 
-	private void update(double dtime, Timegeneration tg){
+	private void update(double dtime, Timegeneration tg) {
 		Vliegtuig[] vtl = rij.getVtl();
-		for(int i = 0; i < vtl.length;i++){
-			if(vtl[i] != null){
+		for (int i = 0; i < vtl.length; i++) {
+			if (vtl[i] != null) {
 				vtl[i].update(dtime);
 			}
 		}
 
 		int[] ptl = tg.getPresentTimeLine();
 		int ct = rij.getCt();
-		if(ptl[ct] != 0){
-			Vliegtuig vt = new Vliegtuig(ptl[ct], 180000, Timegeneration.getKlasse(ptl[ct]), rij);
-		}
+		if (ct < 2800) {
+			if (ptl[ct] != 0) {
+				if (ct < 2800) {
+					Vliegtuig vt = new Vliegtuig(ptl[ct], 180000, Timegeneration.getKlasse(ptl[ct]), rij);
+				}
+			}
 
+		}else{
+			System.out.println("Klaaaaaaarrrrrr");
+			running = false;
+		}
 	}
 
 
