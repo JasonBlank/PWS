@@ -62,7 +62,7 @@ public class Rij {
 		int tijddan = 0;
 		int totaltimeleft = 0;
 		int totaltimeright = 0;
-		while (dtime > 0) {
+		while (dtime > 0 & x < gekkeFunctieVroeg(wt,org).length) {
 			if ((costearly * xn) < (yn * costlate)) {
 				int[] var = gekkeFunctieVroeg(wt, org);
 				if (var != null) {
@@ -219,10 +219,7 @@ public class Rij {
 						plaatsRechts(wt, y);
 						System.out.println("Alles naar rechts verplaatst speciaal voor " + vt);
 
-						vtl[wt] = vt;
-						vt.assignTime(wt);
-						vt.setV_current(vt.getAfstand() / (wt - ct));
-						printShit(vt);
+						checknPlace(wt, vt);
 					}
 				}
 			}
@@ -235,8 +232,8 @@ public class Rij {
 				sep = SepTime.getSepTime(vt.getKlasse(), plane_found.getKlasse());
 				if (!checkBefore(plane_found.getAt() - sep, vt)) {					//Kijken of vt naar links kan met sep tussen plane_found en vt
 					checkAfter(wt,vt);
-					vtl[getRightVliegtuig(wt).getAt() - sep] = vt;
-					vt.assignTime(getRightVliegtuig(wt).getAt() - sep);
+					vtl[plane_found.getAt() - sep] = vt;
+					vt.assignTime(plane_found.getAt() - sep);
 					vt.setV_current(vt.getAfstand() / (vt.getAt() - ct));
 					printShit(vt);
 					//extra kosten deze stap = ((plane_found.getAt()-sep)-wt)*Kosten van te vroeg;
@@ -444,7 +441,7 @@ public class Rij {
 		ct = (int) (((System.currentTimeMillis() / 1000.0) - bt) * (double) MainAlgoritme.cycles_per_second);
 	}
 
-	int[] gekkeFunctieVroeg(long wt, Vliegtuig org) {
+	private int[] gekkeFunctieVroeg(long wt, Vliegtuig org) {
 		Vliegtuig vtg = org;
 		Vliegtuig wyd = getLeftVliegtuig(wt);
 		int n = 0;
@@ -472,7 +469,7 @@ public class Rij {
 		return list1;
 	}
 
-	int[] gekkeFunctieLaat(long wt, Vliegtuig org) {
+	private int[] gekkeFunctieLaat(long wt, Vliegtuig org) {
 		Vliegtuig vtg = org;
 		Vliegtuig wyd = getRightVliegtuig(wt);
 		int n = 0;
@@ -501,7 +498,7 @@ public class Rij {
 	}
 
 
-	Vliegtuig getLeftVliegtuig(long wt) { //Geeft het dichstbijzijnde geplande vliegtuig links van wt
+	private Vliegtuig getLeftVliegtuig(long wt) { //Geeft het dichstbijzijnde geplande vliegtuig links van wt
 		for (int i = (int) wt; i > 0; i--) {
 			if (vtl[i - 1] != null) {
 				//System.out.println("Gotten left: " + vtl[i - 1]);
@@ -526,7 +523,7 @@ public class Rij {
 		int movedTime = 0, n = 0;
 		boolean broken = false;
 		Vliegtuig vtR = getLeftVliegtuig(wt), vtL;
-		Vliegtuig[] lijst1 = new Vliegtuig[1], lijst2 = new Vliegtuig[1];
+		Vliegtuig[] lijst1 = new Vliegtuig[1], lijst2;
 		int[] dtime_list1 = new int[1], dtime_list2;
 
 		if(vtR != null) {
@@ -535,7 +532,10 @@ public class Rij {
 		for (int i = 1; true; i++) {
 			if(vtR != null) vtL = getLeftVliegtuig(vtR.getAt());
 			else break;
-			if (!(wt - i >= 0)) break;
+			if (!(wt - i >= 0)) {
+				wt = wt + (dtime-movedTime);
+				break;
+			}
 			else {
 				if (vtL != null) {
 					if (movedTime + vtR.getAt() - vtL.getAt() - SepTime.getSepTime(vtL.getKlasse(), vtR.getKlasse()) >= dtime){
@@ -571,7 +571,7 @@ public class Rij {
 			dtime_list1[n] = dtime - movedTime;
 		}else{
 			//Geen ruimte meer om naar links te schuiven
-			plaatsRechts(wt, dtime - movedTime);
+			plaatsRechts(wt + (dtime-movedTime), dtime - movedTime);
 		}
 
 		if(lijst1[0] != null && dtime_list1[0] == 0){
@@ -591,9 +591,9 @@ public class Rij {
 			if(n-i > 0) {
 				Vliegtuig temp = lijst1[n - i - 1];
 				System.out.println("Start of dt opstapeling no " + i);
-				for (int j = lijst1.length; j < dtime_list1.length; j++) {
-					dt += dtime_list1[n - j - 1];
-					System.out.println(dtime_list1[n - j - 1]);
+				for (int j = lijst1.length; j > i; j--) {
+					dt += dtime_list1[j - 1];
+					System.out.println(dtime_list1[j - 1]);
 				}
 				System.out.println("Einde van dt opstapeling: " + dt);
 				vtl[temp.getAt()] = null;
@@ -623,8 +623,10 @@ public class Rij {
 		for (int i = 1; true; i++) {
 			if(vtL != null) vtR = getRightVliegtuig(vtL.getAt());
 			else break;
-			if (!(wt + i <= 2800)) break;
-			else {
+			if (!(wt + i <= 2800)){
+				wt += dtime - movedTime;
+				break;
+			} else {
 				if (vtR != null) {
 					if (movedTime + vtR.getAt() - vtL.getAt() - SepTime.getSepTime(vtL.getKlasse(), vtR.getKlasse()) >= dtime){
 						broken = true;
@@ -659,7 +661,7 @@ public class Rij {
 			dtime_list1[n] = dtime - movedTime;
 		}else{
 			//Geen ruimte meer om naar Rechts te schuiven
-			plaatsLinks(wt, dtime - movedTime);
+			plaatsLinks(wt - dtime + movedTime, dtime - movedTime);
 		}
 
 		if(lijst1[0] != null && dtime_list1[0] == 0){
@@ -678,9 +680,9 @@ public class Rij {
 		for (int i = 0; i < lijst1.length; i++) {
 			if(n-i > 0) {
 				Vliegtuig temp = lijst1[n - i - 1];
-				for (int j = lijst1.length; j < dtime_list1.length; j++) {
-					dt += dtime_list1[n - j - 1];
-					System.out.println(dtime_list1[n - j - 1]);
+				for (int j = lijst1.length; j > i; j--) {
+					dt += dtime_list1[j - 1];
+					System.out.println(dtime_list1[j - 1]);
 				}
 				System.out.println("dt opstapeling no " + i + ": " + dt);
 				vtl[temp.getAt()] = null;

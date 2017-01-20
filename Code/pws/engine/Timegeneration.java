@@ -8,7 +8,7 @@ public class Timegeneration {
 	|    VARIABLE DECLARATIONS    |
 	-----------------------------*/
 
-	public static int n = 20;
+	private static int n = 20;
 	private static int tt;                            // Target time van vliegtuig n
 	private static int lt;                            // Latest time van vliegtuig n
 	private static int v_cruise;                      // Optimale (cruise) snelheid van vliegtuig n
