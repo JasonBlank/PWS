@@ -177,16 +177,16 @@ public class Rij {
 				System.out.println("\nSituatie 2");
 				sep = SepTime.getSepTime(getLeftVliegtuig(wt).getKlasse(), vt.getKlasse());
 				System.out.println(getLeftVliegtuig(wt) + " gevonden in situatie 2");
-
-				if (!checkBefore(wt - sep, getLeftVliegtuig(wt))) {                                                            //hier kijken of er ruimte is is voor plane_found om naar links te gaan
-					System.out.println(plane_found + " kan en gaat naar links zodat " + vt + " geplaatst kan worden om " + wt);
-					vtl[plane_found.getAt()] = null;
-					plane_found.assignTime(wt - sep);
-					vtl[plane_found.getAt()] = plane_found;
-					plane_found.setV_current(plane_found.getAfstand() / (plane_found.getAt() - ct));
-					printShit(plane_found);
-					//Extra kosten van deze stap = (plane_found.getAt()+sep-wt)*kosten van te vroeg;
-					totalcostL12 = (plane_found.getAt() + SepTime.getSepTime(plane_found.getKlasse(), vt.getKlasse()) - wt) * costearly;
+				Vliegtuig temp = getLeftVliegtuig(wt);
+				if (!checkBefore(wt - sep, temp)) {                                                            //hier kijken of er ruimte is is voor plane_found om naar links te gaan
+					System.out.println(temp + " kan en gaat naar links zodat " + vt + " geplaatst kan worden om " + wt);
+					vtl[temp.getAt()] = null;
+					temp.assignTime(wt - sep);
+					vtl[temp.getAt()] = temp;
+					temp.setV_current(temp.getAfstand() / (temp.getAt() - ct));
+					printShit(temp);
+					//Extra kosten van deze stap = (temp.getAt()+sep-wt)*kosten van te vroeg;
+					totalcostL12 = (temp.getAt() + SepTime.getSepTime(temp.getKlasse(), vt.getKlasse()) - wt) * costearly;
 					vtl[wt] = vt;
 					vt.assignTime(wt);
 					vt.setV_current(vt.getAfstand() / (wt - ct));
@@ -194,20 +194,35 @@ public class Rij {
 				}
 
 				else {
-					if (!checkAfter(getLeftVliegtuig(wt).getAt() + sep, vt)) {
+					if (!checkAfter(getLeftVliegtuig(wt).getAt() + sep, vt)) { //Check of vt iets naar rechts kan zodat er sep zit tussen plane_found en sep
 						vtl[getLeftVliegtuig(wt).getAt() + sep] = vt;
 						vt.assignTime(getLeftVliegtuig(wt).getAt() + sep);
 						vt.setV_current(vt.getAfstand() / (wt - ct));
 						printShit(vt);
-						//extra kosten deze stap = (wt-plane_found.getAt()+sep)*Kosten van te laat;\
-						totalcostL12 = ((wt + SepTime.getSepTime(vt.getKlasse(), getLeftVliegtuig(wt).getKlasse()) - getLeftVliegtuig(wt).getAt()) * costlate);
-					} else {
-						checknPlace(getLeftVliegtuig(wt).getAt() + sep + 1, vt);
 
-						//geen kosten functie wat wordt doorgestuurd
-						//we willen dus dat we hier sws naar case false-false gaan. Zie voor uitleg true.true
-						//dit kunnen we doen zoals bij true.true uitgelegd. Maar ook mis door ze ze meteen door te sturen naar false.false
-						//maar ik denk dat het makkelijkst is om manier te doen zoals bij true.true omdat het anders wel erg moeilijk wordt om het te programmeren in false.false
+						totalcostL12 = ((wt + SepTime.getSepTime(vt.getKlasse(), getLeftVliegtuig(wt).getKlasse()) - getLeftVliegtuig(wt).getAt()) * costlate);
+					} else {														//Er is geen ruimte voor beide om te verschuiven. Op naar situatie True-True (copypasta'd)
+						int neededspaceRight, neededspaceLeft = getLeftVliegtuig(wt).getAt() - wt + SepTime.getSepTime(getLeftVliegtuig(wt).getKlasse(), vt.getKlasse());
+						if(getRightVliegtuig(wt) == null){
+							neededspaceRight = 0;
+						}else {
+							neededspaceRight = SepTime.getSepTime(vt.getKlasse(), getRightVliegtuig(wt).getKlasse());
+						}
+
+						int neededspaceTotal = -(neededspaceLeft + neededspaceRight);
+						int[] mooiedingen = CosttotalL1(neededspaceTotal, wt, vt);
+						int x = mooiedingen[1];
+						int y = mooiedingen[2];
+
+						plaatsLinks(wt, x);
+						System.out.println("Alles naar links verplaatst speciaal voor " + vt);
+						plaatsRechts(wt, y);
+						System.out.println("Alles naar rechts verplaatst speciaal voor " + vt);
+
+						vtl[wt] = vt;
+						vt.assignTime(wt);
+						vt.setV_current(vt.getAfstand() / (wt - ct));
+						printShit(vt);
 					}
 				}
 			}
@@ -218,23 +233,36 @@ public class Rij {
 				//Links is ruimte dus op naar links met Vx.
 				//Zo verder kijken
 				sep = SepTime.getSepTime(vt.getKlasse(), plane_found.getKlasse());
-				if (!checkBefore(plane_found.getAt() - sep, vt)) {
+				if (!checkBefore(plane_found.getAt() - sep, vt)) {					//Kijken of vt naar links kan met sep tussen plane_found en vt
 					checkAfter(wt,vt);
-					vtl[plane_found.getAt() - sep] = vt;
-					vt.assignTime(plane_found.getAt() - sep);
-					vt.setV_current(vt.getAfstand() / (wt - ct));
+					vtl[getRightVliegtuig(wt).getAt() - sep] = vt;
+					vt.assignTime(getRightVliegtuig(wt).getAt() - sep);
+					vt.setV_current(vt.getAfstand() / (vt.getAt() - ct));
 					printShit(vt);
 					//extra kosten deze stap = ((plane_found.getAt()-sep)-wt)*Kosten van te vroeg;
-					totalcostL13 = (wt - SepTime.getSepTime(vt.getKlasse(), plane_found.getKlasse())) * costearly;
-				} else {
-					checknPlace(plane_found.getAt() - sep + 1, vt);
-
-					if (!checkAfter(wt + 1, vt)) {
-						vtl[wt + 1] = vt;
-						vt.assignTime(wt + 1);
-						vt.setV_current(vt.getAfstand()/ (wt + 1 - ct));
-						totalcostL13 = (sep - 1) * 100 + costlate;
+					totalcostL13 = (wt - vt.getAt()) * costearly;
+				} else {																//Vt kan niet naar links en dus gaan we naar True.True (copypasta'd)
+					int neededspaceRight, neededspaceLeft = wt - getLeftVliegtuig(wt).getAt() - SepTime.getSepTime(getLeftVliegtuig(wt).getKlasse(), vt.getKlasse());
+					if(getRightVliegtuig(wt) == null){
+						neededspaceRight = 0;
+					}else {
+						neededspaceRight = getRightVliegtuig(wt).getAt() - wt - SepTime.getSepTime(vt.getKlasse(), getRightVliegtuig(wt).getKlasse());
 					}
+
+					int neededspaceTotal = -(neededspaceLeft + neededspaceRight);
+					int[] list = CosttotalL1(neededspaceTotal, wt, vt);
+					int x = list[1];
+					int y = list[2];
+
+					plaatsLinks(wt, x);
+					System.out.println("Alles naar links verplaatst speciaal voor " + vt);
+					plaatsRechts(wt, y);
+					System.out.println("Alles naar rechts verplaatst speciaal voor " + vt);
+
+					vtl[wt] = vt;
+					vt.assignTime(wt);
+					vt.setV_current(vt.getAfstand() / (wt - ct));
+					printShit(vt);
 				}
 				//-----------------------------------------------------------------------------------------------
 			} else {
@@ -309,7 +337,7 @@ public class Rij {
 				return true;
 			}
 		}
-		System.out.println("CheckAfter() heeft geen vliegtuigen na" + vt + " gevonden");
+		System.out.println("CheckAfter() heeft geen vliegtuigen na " + vt + " gevonden");
 		return false;
 	}
 	//belangrijk
@@ -545,6 +573,12 @@ public class Rij {
 			//Geen ruimte meer om naar links te schuiven
 			plaatsRechts(wt, dtime - movedTime);
 		}
+
+		if(lijst1[0] != null && dtime_list1[0] == 0){
+			dtime_list1[0] = dtime;
+			n = 1;
+		}
+
 		System.out.println("plaatsLinks(): wat ik tot nu toe heb: ");
 		for(int i = 0; i < n; i++){
 			System.out.println("|" + i + "\t\t" + lijst1[i] + "\t\t" + dtime_list1[i]); // Check index
@@ -627,6 +661,12 @@ public class Rij {
 			//Geen ruimte meer om naar Rechts te schuiven
 			plaatsLinks(wt, dtime - movedTime);
 		}
+
+		if(lijst1[0] != null && dtime_list1[0] == 0){
+			dtime_list1[0] = dtime;
+			n = 1;
+		}
+
 		System.out.println("plaatsRechts(): wat ik tot nu toe heb: ");
 		for(int i = 0; i < n; i++){
 			System.out.println("|" + i + "\t\t" + lijst1[i] + "\t\t" + dtime_list1[i]);
