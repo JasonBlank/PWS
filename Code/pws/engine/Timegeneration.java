@@ -22,7 +22,7 @@ public class Timegeneration {
 	static int v_maxlist[];                           // Lijst van maximale snelheden (v_max) van alle vliegtuigen
 	static int klasselist[];                          // Lijst van gewichtsklasses van alle vliegtuigen
 	private int presenttimeline[] = new int[2801];    // Tijdlijn met de indeling van de planning van vliegtuigen
-	
+
 
 	/*-------------------
 	|    CONSTRUCTOR    |

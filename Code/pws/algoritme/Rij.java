@@ -29,15 +29,15 @@ public class Rij {
 	private int landingsbaan;
 	private int KostL1waardes[] = new int[3];
 	private int KostL2waardes[] = new int[3];
-	
-	
+
+
 	/*---------------
 	|    GETTERS    |
 	---------------*/
 	static int getCostearly(){
 		return costearly;
 	}
-	
+
 	static int getCostlate(){
 		return costlate;
 	}
@@ -155,7 +155,7 @@ public class Rij {
 				printShit(vt);
 
 				// - (x - y - z) = y - x + z
-				
+
 				/* int neededspaceRight = -(plane_found.getAt()-wt-SepTime.getSepTime(vt.getKlasse(),plane_found.getKlasse()));
 				checkBefore(wt,vt);
 				int neededspaceLeft = -(wt- plane_found.getAt() - SepTime.getSepTime(plane_found.getKlasse(),vt.getKlasse()));

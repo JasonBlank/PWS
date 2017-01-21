@@ -11,7 +11,7 @@ public class Vliegtuig {
 	------------------------------*/
 
 	private double afstand_tot_landingsbaan, v_current;					//Afstand in m; Snelheid in m/s
-	// zie paar regels later								//Gewichtsklasse (1-4); Zuinigste snelheid in m/s 
+	// zie paar regels later								//Gewichtsklasse (1-4); Zuinigste snelheid in m/s
 	private int lt, ft, at;												//Last time, first time en assigned time
 	private int name;												//Naam van vliegtuig om te kunnen gebruiken in console output
 	private Rij rij;
@@ -33,11 +33,11 @@ public class Vliegtuig {
 	Vliegtuig(int name,double afstand_tot_landingsbaan, int klasse, Rij rij) {
 		this.afstand_tot_landingsbaan = afstand_tot_landingsbaan;
 		this.klasse = klasse;
-		v_current = Timegeneration.getV_cruise(name); 
+		v_current = Timegeneration.getV_cruise(name);
 		this.rij = rij;
 		this.name = name;
 		System.out.println("\n-----------------------------------------------------------------------------\n\n"+toString() + " reporting for duty");
-		rij.checknPlace((int)(this.getAfstand()/Timegeneration.getV_cruise(name))+rij.getCt(),this);  
+		rij.checknPlace((int)(this.getAfstand()/Timegeneration.getV_cruise(name))+rij.getCt(),this);
 	}
 
 

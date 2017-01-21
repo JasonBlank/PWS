@@ -26,32 +26,35 @@ class Window extends JFrame{
 		setVisible(true);
 		double time = System.currentTimeMillis();
 	}
-	
+
 	private void initUI(){
 		ImageIcon ding = new ImageIcon("air_plane_airport.png");
 		setIconImage(ding.getImage());
-		
+
 		setUndecorated(false);
-		setTitle("Algoritme");
+		setTitle("v1.0");
 		setLocationRelativeTo(rootPane);
 		setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
-		setBackground(Color.WHITE);
+		setBackground(Color.BLACK);
 		setResizable(true);
-		setSize(800,600);
-
-		JButton button = new JButton("KmSmYsElF");
+		setSize(100,100);
+		setLocation(400,400);
+		JTextArea jtext = new JTextArea(40,40);
+		jtext.append("heyy test");
+		this.add(jtext);
+		JButton button = new JButton("Exit");
 		button.addActionListener((ActionEvent event) -> {
 			System.exit(WindowConstants.EXIT_ON_CLOSE);
 		});
 
 		JMenuBar menubar = new JMenuBar();
-		
+
 		JMenu file = new JMenu("File");
 		JMenuItem exit = new JMenuItem("Exit");
 		exit.addActionListener((ActionEvent e) -> {System.exit(3);});
 		file.add(exit);
 		menubar.add(file);
-		
+
 		JMenu view = new JMenu("View");
 		JMenuItem small = new JMenuItem("Small");
 		small.addActionListener((ActionEvent e) -> {setSize(200,200);});
@@ -63,14 +66,14 @@ class Window extends JFrame{
 		fullscreen.addActionListener((ActionEvent e) -> {setSize(Toolkit.getDefaultToolkit().getScreenSize());setLocation(2, 3);});
 		view.add(fullscreen);
 		menubar.add(view);
-		
-		setJMenuBar(menubar);
-		
+
+		//setJMenuBar(menubar);
+
 		createLayout(button);
-		
-		
+
+
 	}
-	
+
 	private void createLayout(JComponent... arg) {
 
         Container pane = getContentPane();
@@ -79,7 +82,7 @@ class Window extends JFrame{
         pane.setLayout(gl);
 
         gl.setAutoCreateContainerGaps(true);
-        
+
         gl.setHorizontalGroup(gl.createSequentialGroup().addComponent(arg[0]));
 
         gl.setVerticalGroup(gl.createSequentialGroup().addComponent(arg[0]));
