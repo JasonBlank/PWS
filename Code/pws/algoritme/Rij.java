@@ -126,7 +126,7 @@ public class Rij {
 	// hoofdfunctie moet nog een keer want anders kunnen we niet voor twee banenchecken. Dit kunnen we ook later doen, eerst zien of dit lukt
 
 	void checknPlace(int wt, Vliegtuig vt) {                                                //Hoofd controle functie; wt is Wanted Time
-		checkAlles();
+		//checkAlles();
 		//---------------------------------------------------------------------------------------------------
 		if (checkBefore(wt, vt)) {                                                        //true is problematisch; false is ruimte
 			if (checkAfter(wt, vt)) {
