@@ -24,8 +24,8 @@ public class MainAlgoritme implements Runnable{
 	|    CONSTRUCTOR    |
 	-------------------*/
 
-	public MainAlgoritme(Object window){
-		this.window = window;
+	public MainAlgoritme(){
+		//this.window = window;
 	}
 
 
